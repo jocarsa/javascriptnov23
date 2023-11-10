@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <title>Aprendiendo Javascript</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <div id="primero"></div>
+        <div class="segundo"></div>
+        <div name="tercero"></div>
+        <div></div>
+        <div miPropioAtributo="cuarto"></div>
+    </body>
+    <script>
+        document.querySelector("#primero").innerHTML = "Hola ID desde Javascript";
+        document.querySelector(".segundo").innerHTML = "Hola clase desde Javascript";
+        document.querySelectorAll("div")[3].innerHTML = "Hola etiqueta desde Javascript";
+        document.querySelector("[name='tercero']").innerHTML = "Hola atributo desde Javascript";
+        document.querySelector("[miPropioAtributo='cuarto']").innerHTML = "Hola atributo personalizado desde Javascript";
+    </script>
+</html>

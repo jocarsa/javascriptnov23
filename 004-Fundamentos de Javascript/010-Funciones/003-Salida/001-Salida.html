@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <title>Aprendiendo Javascript</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <div id="elemento"></div>
+    </body>
+    <script>
+        function saluda(nombre,edad){
+            cadena = ""
+            cadena += "Hola "+nombre+"<br>";
+            cadena += "Tienes "+edad+" años<br>";
+            cadena += "Hoy es viernes<br>";
+            cadena += "Y yo te saludo<br>";
+            return cadena;
+        }
+        
+        document.write(saluda("Jose Vicente",45));
+    </script>
+</html>

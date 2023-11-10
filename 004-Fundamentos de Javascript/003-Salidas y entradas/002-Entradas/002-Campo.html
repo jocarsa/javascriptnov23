@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <title>Aprendiendo Javascript</title>
+    </head>
+    <body>
+        <input type="text" id="nombre">
+    </body>
+    <script>
+        document.getElementById("nombre").onblur = function(){
+            alert("Tu nombre es: "+this.value)
+        }
+    </script>
+</html>

@@ -1,0 +1,10 @@
+#jvcalendario .dia{
+    width:100px;
+    height:100px;
+    border:1px solid grey;
+    display:inline-block;
+}
+#jvcalendario{
+    width:800px;
+    height:800px;
+}

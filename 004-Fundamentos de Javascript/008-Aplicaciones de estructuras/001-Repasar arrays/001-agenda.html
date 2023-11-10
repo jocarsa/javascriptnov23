@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <title>Aprendiendo Javascript</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        
+    </body>
+    <script>
+        var agenda = [];
+        agenda[0] = [];
+        agenda[0]['nombre'] = "Jose Vicente";
+        agenda[0]['telefono'] = "12345";
+        agenda[0]['email'] = "info@jocarsa.com";
+        
+        agenda[1] = [];
+        agenda[1]['nombre'] = "Juan";
+        agenda[1]['telefono'] = "12345";
+        agenda[1]['email'] = "juan@jocarsa.com";
+        
+        agenda[2] = [];
+        agenda[2]['nombre'] = "Jorge";
+        agenda[2]['telefono'] = "12345";
+        agenda[2]['email'] = "juan@jocarsa.com";
+        
+        for(var i = 0;i<=2;i++){
+            document.write("Tengo un registro<br>");
+            document.write("El nombre es: "+agenda[i]['nombre']+"<br>");
+            document.write("El telefono es: "+agenda[i]['telefono']+"<br>");
+            document.write("El email es: "+agenda[i]['email']+"<br>");
+        }
+    </script>
+</html>

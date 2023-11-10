@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <title>Aprendiendo Javascript</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <button>Pulsame</button>
+    </body>
+    <script>
+        document.querySelector("button").oncontextmenu = function(){
+            console.log("Has hecho click en el boton");
+            return false;
+        }
+    </script>
+</html>
