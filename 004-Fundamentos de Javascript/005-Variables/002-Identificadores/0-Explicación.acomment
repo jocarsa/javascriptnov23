@@ -1,0 +1,68 @@
+En programación, un identificador es un nombre que se utiliza para identificar una variable, función, propiedad, o cualquier otro elemento en el código fuente. En el contexto de variables en JavaScript, los identificadores son nombres que asignas a variables cuando las declaras. Aquí hay algunas reglas y pautas sobre los identificadores de variables en JavaScript:
+
+### Reglas para Identificadores:
+
+1. **Caracteres Permitidos:**
+   - Pueden contener letras (mayúsculas o minúsculas).
+   - Pueden contener dígitos (0-9).
+   - Pueden contener guiones bajos (`_`) y signos de dólar (`$`).
+   - No pueden comenzar con un dígito.
+
+2. **Sensibilidad a Mayúsculas y Minúsculas:**
+   - Los identificadores son sensibles a mayúsculas y minúsculas. Por ejemplo, `nombre` y `Nombre` serían identificadores distintos.
+
+3. **Palabras Reservadas:**
+   - No pueden ser palabras reservadas de JavaScript. Por ejemplo, no puedes nombrar una variable `var`, ya que `var` es una palabra clave en JavaScript.
+
+### Ejemplos Válidos de Identificadores:
+
+```javascript
+let nombreCompleto = "Juan Pérez";
+let edadActual = 30;
+let $saldoCuenta = 1000;
+let _variable_privada = true;
+```
+
+### Ejemplos Inválidos de Identificadores:
+
+```javascript
+let 1numero = 5; // No puede empezar con un dígito
+let mi-variable = "Texto"; // No puede contener guiones
+let break = "Algo"; // No puede ser una palabra reservada
+```
+
+### Convenciones para Nombres de Identificadores:
+
+Aunque no hay reglas estrictas, hay convenciones comunes que se siguen en la comunidad de desarrollo para mejorar la legibilidad del código:
+
+- **Camel Case:**
+  - `nombreVariable`, `edadUsuario`, `saldoCuenta`.
+  - La primera palabra comienza con minúscula y las palabras siguientes comienzan con mayúscula.
+
+- **Snake Case:**
+  - `nombre_variable`, `edad_usuario`, `saldo_cuenta`.
+  - Todas las palabras están en minúsculas y separadas por guiones bajos.
+
+- **Pascal Case:**
+  - `NombreVariable`, `EdadUsuario`, `SaldoCuenta`.
+  - Similar al camel case, pero la primera palabra también comienza con mayúscula.
+
+### Buenas Prácticas:
+
+- Utiliza nombres descriptivos que indiquen el propósito de la variable.
+- Evita nombres de variables demasiado cortos o demasiado largos.
+- Mantén consistencia en tu estilo de nomenclatura para mejorar la legibilidad del código.
+
+Ejemplos de buenas prácticas:
+
+```javascript
+// Bueno
+let nombreCompleto = "Juan Pérez";
+let edadUsuario = 30;
+
+// Evitar
+let n = "Juan Pérez";
+let e = 30;
+```
+
+Seguir estas buenas prácticas y convenciones hace que tu código sea más comprensible para otros desarrolladores y para ti mismo en el futuro.

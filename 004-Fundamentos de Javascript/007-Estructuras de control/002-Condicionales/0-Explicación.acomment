@@ -1,0 +1,113 @@
+Las estructuras de control condicional en JavaScript permiten ejecutar bloques de código según si una condición es verdadera o falsa. Las principales estructuras de control condicional son `if`, `else if`, `else` y `switch`. A continuación, se explica cada una de ellas:
+
+### 1. Estructura `if`:
+
+La estructura `if` permite ejecutar un bloque de código si la condición dada es verdadera.
+
+```javascript
+if (condición) {
+  // Código a ejecutar si la condición es verdadera
+}
+```
+
+#### Ejemplo:
+
+```javascript
+let edad = 18;
+
+if (edad >= 18) {
+  console.log("Eres mayor de edad");
+}
+```
+
+### 2. Estructura `else`:
+
+La estructura `else` se utiliza en combinación con `if` para ejecutar un bloque de código cuando la condición en el `if` es falsa.
+
+```javascript
+if (condición) {
+  // Código a ejecutar si la condición es verdadera
+} else {
+  // Código a ejecutar si la condición es falsa
+}
+```
+
+#### Ejemplo:
+
+```javascript
+let edad = 15;
+
+if (edad >= 18) {
+  console.log("Eres mayor de edad");
+} else {
+  console.log("Eres menor de edad");
+}
+```
+
+### 3. Estructura `else if`:
+
+La estructura `else if` se utiliza para evaluar múltiples condiciones en secuencia.
+
+```javascript
+if (condición1) {
+  // Código a ejecutar si la condición1 es verdadera
+} else if (condición2) {
+  // Código a ejecutar si la condición1 es falsa y la condición2 es verdadera
+} else {
+  // Código a ejecutar si todas las condiciones anteriores son falsas
+}
+```
+
+#### Ejemplo:
+
+```javascript
+let nota = 75;
+
+if (nota >= 90) {
+  console.log("A");
+} else if (nota >= 80) {
+  console.log("B");
+} else if (nota >= 70) {
+  console.log("C");
+} else {
+  console.log("Reprobado");
+}
+```
+
+### 4. Estructura `switch`:
+
+La estructura `switch` se utiliza para evaluar una expresión y ejecutar diferentes bloques de código según el valor de esa expresión.
+
+```javascript
+switch (expresión) {
+  case valor1:
+    // Código a ejecutar si expresión es igual a valor1
+    break;
+  case valor2:
+    // Código a ejecutar si expresión es igual a valor2
+    break;
+  // ... otros casos ...
+  default:
+    // Código a ejecutar si ningún caso coincide
+}
+```
+
+#### Ejemplo:
+
+```javascript
+let diaSemana = 3;
+
+switch (diaSemana) {
+  case 1:
+    console.log("Lunes");
+    break;
+  case 2:
+    console.log("Martes");
+    break;
+  // ... otros casos ...
+  default:
+    console.log("Día no válido");
+}
+```
+
+Estas estructuras de control condicional son esenciales para crear programas que tomen decisiones basadas en ciertas condiciones, lo que permite que el flujo del programa se adapte dinámicamente a diferentes situaciones.

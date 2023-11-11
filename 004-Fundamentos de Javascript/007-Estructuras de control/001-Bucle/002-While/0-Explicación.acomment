@@ -1,0 +1,58 @@
+La estructura de control de bucle `while` en JavaScript permite ejecutar un bloque de código mientras una condición específica sea verdadera. La sintaxis básica de un bucle `while` es la siguiente:
+
+```javascript
+while (condición) {
+  // Código a repetir
+}
+```
+
+- **Condición:** La expresión booleana que se evalúa antes de cada iteración. Si la condición es verdadera, el bloque de código se ejecuta; de lo contrario, el bucle se detiene.
+
+### Ejemplo Básico de Bucle `while`:
+
+```javascript
+let contador = 0;
+
+while (contador < 5) {
+  console.log(contador);
+  contador++;
+}
+```
+
+En este ejemplo, el bucle `while` imprimirá los números del 0 al 4. La condición `contador < 5` se evalúa antes de cada iteración. Si la condición es verdadera, el bloque de código se ejecuta y `contador` se incrementa en 1; de lo contrario, el bucle se detiene.
+
+### Uso de `while` para Leer Entrada de Usuario:
+
+```javascript
+let respuestaUsuario = "";
+
+while (respuestaUsuario !== "listo") {
+  respuestaUsuario = prompt("¿Estás listo? (Ingresa 'listo' para continuar)");
+}
+
+console.log("¡Perfecto! Continuemos.");
+```
+
+En este ejemplo, el bucle `while` solicitará al usuario que ingrese "listo". El bucle continuará ejecutándose hasta que el usuario ingrese "listo".
+
+### Control de Flujo en Bucle `while`:
+
+Puedes utilizar las mismas estructuras de control de flujo, como `break` y `continue`, para alterar el comportamiento del bucle `while`.
+
+```javascript
+let i = 0;
+
+while (i < 5) {
+  if (i === 2) {
+    i++;
+    continue; // Salta la iteración cuando i es 2
+  }
+  console.log(i);
+  i++;
+  if (i === 4) {
+    break; // Sale del bucle cuando i es 4
+  }
+}
+```
+
+En resumen, el bucle `while` es útil cuando no se conoce de antemano el número exacto de iteraciones y se desea repetir un bloque de código mientras una condición sea verdadera. Es importante tener cuidado para evitar bucles infinitos asegurándote de que la condición eventualmente sea falsa.

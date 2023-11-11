@@ -1,0 +1,88 @@
+En JavaScript, las variables son utilizadas para almacenar y manipular datos en el programa. Una variable es un contenedor que puede contener distintos tipos de datos, como números, cadenas de texto, objetos, funciones, entre otros. Aquí hay algunos conceptos clave sobre variables en JavaScript:
+
+### Declaración de Variables:
+
+En JavaScript, puedes declarar variables utilizando la palabra clave `var`, `let`, o `const`. La forma moderna preferida es `let` y `const`, ya que ofrecen un mejor manejo del ámbito y algunas características adicionales.
+
+#### `let` (mutable):
+
+```javascript
+let nombre = "Juan";
+let edad = 25;
+```
+
+#### `const` (inmutable):
+
+```javascript
+const pi = 3.1416;
+const gravedad = 9.8;
+```
+
+### Asignación de Valores:
+
+Puedes asignar un valor a una variable utilizando el operador de asignación (`=`).
+
+```javascript
+let velocidad = 50;
+```
+
+### Tipos de Datos:
+
+JavaScript es un lenguaje de tipado dinámico, lo que significa que no es necesario declarar explícitamente el tipo de dato de una variable. El tipo de dato de una variable puede cambiar dinámicamente durante la ejecución del programa.
+
+```javascript
+let mensaje = "Hola, mundo!"; // String
+let numero = 42; // Number
+let esVerdadero = true; // Boolean
+let lista = [1, 2, 3]; // Array
+let persona = { nombre: "Ana", edad: 30 }; // Object
+let funcion = function() { console.log("¡Hola!"); }; // Function
+```
+
+### Reglas para Nombres de Variables:
+
+- Pueden contener letras, dígitos, guiones bajos (_) y signos de dólar ($).
+- Deben comenzar con una letra, un guión bajo (_) o un signo de dólar ($).
+- Son sensibles a mayúsculas y minúsculas (`nombre` y `Nombre` son variables diferentes).
+
+### Ámbito de las Variables:
+
+El ámbito de una variable define dónde puede ser accesible. Las variables declaradas con `let` y `const` tienen ámbito de bloque, mientras que las declaradas con `var` tienen ámbito de función.
+
+```javascript
+function ejemplo() {
+  var variableFuncion = "Esta es una variable de función";
+  if (true) {
+    let variableBloque = "Esta es una variable de bloque";
+    console.log(variableFuncion); // Acceso permitido
+    console.log(variableBloque); // Acceso permitido
+  }
+  console.log(variableFuncion); // Acceso permitido
+  console.log(variableBloque); // Error: variableBloque no está definida en este ámbito
+}
+```
+
+### Constantes:
+
+Las variables declaradas con `const` no pueden ser reasignadas. Deben recibir un valor en el momento de la declaración y no pueden cambiar después.
+
+```javascript
+const PI = 3.1416;
+PI = 3.14; // Error: no se puede reasignar una constante
+```
+
+### Uso de Variables:
+
+```javascript
+let nombre = "Juan";
+let edad = 25;
+
+console.log("Nombre:", nombre);
+console.log("Edad:", edad);
+
+// Operaciones con variables
+let nuevaEdad = edad + 5;
+console.log("Nueva Edad:", nuevaEdad);
+```
+
+Estos son los conceptos básicos de variables en JavaScript. La elección de la palabra clave (`var`, `let`, `const`) y el manejo adecuado del ámbito son aspectos importantes al trabajar con variables en JavaScript.

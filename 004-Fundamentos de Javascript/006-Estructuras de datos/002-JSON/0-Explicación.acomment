@@ -1,0 +1,83 @@
+JSON, que significa "JavaScript Object Notation" (Notación de Objetos de JavaScript), es un formato de intercambio de datos ligero y de fácil lectura. Aunque su nombre incluye "JavaScript", JSON es un formato de datos independiente del lenguaje de programación y se utiliza ampliamente en diversas aplicaciones. En JavaScript, se utiliza principalmente para intercambiar datos entre un servidor y un cliente, y para almacenar datos de configuración.
+
+### Sintaxis Básica de JSON:
+
+JSON utiliza una sintaxis similar a la notación de objetos y arrays en JavaScript. A continuación, se presenta un ejemplo básico de un objeto JSON:
+
+```json
+{
+  "nombre": "Juan",
+  "edad": 30,
+  "ciudad": "Ejemploville",
+  "esEstudiante": false,
+  "hobbies": ["lectura", "viajes"]
+}
+```
+
+En este ejemplo:
+
+- Los nombres de las propiedades están entre comillas dobles.
+- Los valores pueden ser cadenas de texto, números, booleanos, arrays, objetos o `null`.
+- Los pares clave-valor están separados por comas.
+- Los objetos JSON pueden anidarse y los arrays pueden contener otros objetos JSON.
+
+### Convertir entre JavaScript y JSON:
+
+JavaScript proporciona métodos para convertir entre objetos JavaScript y JSON. Estos métodos son `JSON.stringify()` y `JSON.parse()`.
+
+#### 1. `JSON.stringify()`:
+
+Convierte un objeto JavaScript en una cadena de texto JSON.
+
+```javascript
+let persona = { nombre: "Juan", edad: 30, esEstudiante: false };
+let personaJSON = JSON.stringify(persona);
+console.log(personaJSON);
+```
+
+#### 2. `JSON.parse()`:
+
+Convierte una cadena de texto JSON en un objeto JavaScript.
+
+```javascript
+let personaJSON = '{"nombre":"Juan","edad":30,"esEstudiante":false}';
+let persona = JSON.parse(personaJSON);
+console.log(persona);
+```
+
+### Uso Común de JSON:
+
+- **Intercambio de Datos:** Se utiliza para enviar y recibir datos entre un servidor y un cliente en aplicaciones web.
+
+- **Configuración:** Puede utilizarse para almacenar configuraciones de aplicaciones en un formato fácilmente legible.
+
+- **Almacenamiento de Datos:** Puede ser utilizado para almacenar datos estructurados en archivos.
+
+### Limitaciones de JSON en JavaScript:
+
+- **Funciones:** JSON no admite la representación de funciones.
+
+- **Datos Binarios:** JSON es un formato de texto y no es adecuado para representar datos binarios grandes.
+
+- **Referencias Circulares:** No maneja automáticamente referencias circulares en objetos.
+
+### Ejemplo de Uso en JavaScript:
+
+```javascript
+let persona = {
+  nombre: "Juan",
+  edad: 30,
+  esEstudiante: false,
+  hobbies: ["lectura", "viajes"]
+};
+
+// Convertir a JSON
+let personaJSON = JSON.stringify(persona);
+console.log(personaJSON);
+
+// Convertir de JSON a objeto JavaScript
+let personaDeserializada = JSON.parse(personaJSON);
+console.log(personaDeserializada);
+```
+
+En resumen, JSON en JavaScript es un formato de intercambio de datos que proporciona una estructura fácil de leer y escribir para representar objetos y datos. Se utiliza comúnmente en aplicaciones web y otros contextos para transmitir información estructurada entre sistemas.

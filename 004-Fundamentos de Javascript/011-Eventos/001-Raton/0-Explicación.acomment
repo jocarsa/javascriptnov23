@@ -1,0 +1,79 @@
+Los eventos de ratón en JavaScript son eventos que se activan cuando el usuario interactúa con la interfaz utilizando el ratón. Estos eventos permiten responder a acciones como clics, movimientos, desplazamientos, entre otros. Aquí hay algunos eventos de ratón comunes y cómo puedes trabajar con ellos:
+
+### Eventos de Clic:
+
+1. **`click`:** Se activa cuando se hace clic en un elemento.
+
+```javascript
+document.getElementById("miElemento").addEventListener("click", function() {
+  alert("Elemento clicado");
+});
+```
+
+2. **`dblclick`:** Se activa cuando se hace doble clic en un elemento.
+
+```javascript
+document.getElementById("miElemento").addEventListener("dblclick", function() {
+  alert("Doble clic en el elemento");
+});
+```
+
+### Eventos de Ratón:
+
+3. **`mousedown`:** Se activa cuando se presiona un botón del ratón.
+
+```javascript
+document.getElementById("miElemento").addEventListener("mousedown", function() {
+  console.log("Botón del ratón presionado");
+});
+```
+
+4. **`mouseup`:** Se activa cuando se suelta un botón del ratón.
+
+```javascript
+document.getElementById("miElemento").addEventListener("mouseup", function() {
+  console.log("Botón del ratón liberado");
+});
+```
+
+5. **`mousemove`:** Se activa cuando se mueve el ratón sobre un elemento.
+
+```javascript
+document.getElementById("miElemento").addEventListener("mousemove", function(event) {
+  console.log(`Ratón moviéndose en las coordenadas: (${event.clientX}, ${event.clientY})`);
+});
+```
+
+### Eventos de Desplazamiento (Scroll):
+
+6. **`scroll`:** Se activa cuando se realiza un desplazamiento (scroll) en la página.
+
+```javascript
+window.addEventListener("scroll", function() {
+  console.log("Página desplazada");
+});
+```
+
+### Coordenadas del Ratón:
+
+El objeto de evento proporciona las coordenadas del ratón (`clientX` y `clientY`) relativas a la ventana del navegador.
+
+```javascript
+document.getElementById("miElemento").addEventListener("mousemove", function(event) {
+  console.log(`Ratón moviéndose en las coordenadas: (${event.clientX}, ${event.clientY})`);
+});
+```
+
+### Cambios de Estado del Botón del Ratón:
+
+El objeto de evento también puede indicar qué botón del ratón se está utilizando durante un evento.
+
+```javascript
+document.getElementById("miElemento").addEventListener("mousedown", function(event) {
+  console.log(`Botón del ratón presionado: ${event.button}`);
+});
+```
+
+En este caso, `event.button` devuelve un código que indica qué botón se presionó (0 para el botón izquierdo, 1 para el botón central, y 2 para el botón derecho).
+
+Estos son solo algunos ejemplos de eventos de ratón en JavaScript. Puedes utilizar estos eventos para crear interactividad en tu aplicación web, responder a las acciones del usuario y mejorar la experiencia general del usuario en tu página.

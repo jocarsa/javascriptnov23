@@ -1,0 +1,71 @@
+La palabra clave `return` en funciones de JavaScript se utiliza para especificar el valor que la función debe devolver cuando es invocada. Cuando una función alcanza una declaración `return`, la ejecución de la función se detiene y el valor especificado se devuelve al lugar desde donde se llamó a la función. Aquí hay algunos aspectos clave del uso de `return` en funciones:
+
+### Uso Básico:
+
+```javascript
+function sumar(a, b) {
+  return a + b;
+}
+
+let resultado = sumar(3, 5);
+console.log(resultado); // Imprimirá 8
+```
+
+En este ejemplo, la función `sumar` devuelve la suma de los dos parámetros `a` y `b`. Cuando llamamos a la función con `sumar(3, 5)`, el valor devuelto (8) se almacena en la variable `resultado`.
+
+### Valor Predeterminado:
+
+Una función puede tener una declaración `return` sin un valor específico para devolver. En este caso, la función devuelve `undefined` de forma predeterminada.
+
+```javascript
+function saludar(nombre) {
+  if (!nombre) {
+    return; // No devuelve un valor específico
+  }
+  return `Hola, ${nombre}!`;
+}
+
+let saludo = saludar("Juan");
+console.log(saludo); // Imprimirá "Hola, Juan!"
+```
+
+### Finalización Temprana:
+
+El uso de `return` también permite la finalización temprana de la ejecución de una función. Por ejemplo, puedes utilizar `return` dentro de una estructura condicional para salir de la función antes de que alcance el final.
+
+```javascript
+function dividir(a, b) {
+  if (b === 0) {
+    console.error("¡Error! No se puede dividir por cero.");
+    return; // Finaliza la función
+  }
+  return a / b;
+}
+
+let resultado = dividir(10, 0);
+// Imprimirá el error en la consola, pero 'resultado' será undefined
+```
+
+### Múltiples Valores de Retorno:
+
+Una función puede devolver cualquier tipo de valor, incluidos números, cadenas, objetos y booleanos. Incluso puedes devolver múltiples valores utilizando una estructura de datos, como un array o un objeto.
+
+```javascript
+function obtenerInformacionUsuario() {
+  let nombre = "Juan";
+  let edad = 25;
+  let ciudad = "Madrid";
+  return { nombre, edad, ciudad };
+}
+
+let usuario = obtenerInformacionUsuario();
+console.log(usuario.nombre); // Imprimirá "Juan"
+console.log(usuario.edad);   // Imprimirá 25
+console.log(usuario.ciudad); // Imprimirá "Madrid"
+```
+
+### Importancia de `return`:
+
+El uso de `return` es fundamental en funciones, ya que permite que la función comunique y comparta resultados con otras partes del código. También es esencial para construir funciones que realicen tareas específicas y devuelvan resultados útiles. Sin `return`, una función puede realizar operaciones internas pero no proporcionaría información útil al código que la llamó.
+
+Recuerda que una vez que se alcanza una declaración `return` en una función, la ejecución de la función se detiene, y cualquier código que aparezca después de la declaración `return` no se ejecutará.

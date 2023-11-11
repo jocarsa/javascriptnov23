@@ -1,0 +1,66 @@
+En JavaScript, puedes declarar variables utilizando las palabras clave `var`, `let`, o `const`. La forma moderna y preferida es `let` y `const` debido a sus características más avanzadas y al mejor manejo del ámbito. A continuación, se explica cada una de estas declaraciones de variables:
+
+### `var`:
+
+La palabra clave `var` fue la forma original de declarar variables en JavaScript, pero tiene algunas peculiaridades que han llevado a su desuso en favor de `let` y `const`. `var` tiene un ámbito de función y no respeta el ámbito de bloque.
+
+```javascript
+var x = 5;
+```
+
+### `let`:
+
+`let` se introdujo en ECMAScript 6 (ES6) y es preferido sobre `var`. `let` tiene un ámbito de bloque, lo que significa que la variable solo es válida dentro del bloque en el que se declaró.
+
+```javascript
+let y = 10;
+```
+
+### `const`:
+
+`const` se utiliza para declarar constantes, es decir, variables que no pueden ser reasignadas después de su declaración. Al igual que `let`, `const` tiene un ámbito de bloque.
+
+```javascript
+const PI = 3.1416;
+```
+
+### Asignación de Valores:
+
+Después de declarar una variable, puedes asignarle un valor utilizando el operador de asignación (`=`).
+
+```javascript
+let nombre = "Juan";
+const edad = 25;
+```
+
+### Tipos de Datos y Dinamismo:
+
+En JavaScript, no es necesario declarar explícitamente el tipo de dato de una variable. El tipo de dato se infiere dinámicamente.
+
+```javascript
+let mensaje = "Hola, mundo!"; // String
+let numero = 42; // Number
+let esVerdadero = true; // Boolean
+let lista = [1, 2, 3]; // Array
+let persona = { nombre: "Ana", edad: 30 }; // Object
+```
+
+### Reglas para Nombres de Variables:
+
+- Pueden contener letras, dígitos, guiones bajos (_) y signos de dólar ($).
+- Deben comenzar con una letra, un guión bajo (_) o un signo de dólar ($).
+- Son sensibles a mayúsculas y minúsculas (`nombre` y `Nombre` son variables diferentes).
+
+### Ejemplos de Uso:
+
+```javascript
+let a = 5;
+let b = 3;
+
+let suma = a + b;
+console.log("La suma es:", suma);
+```
+
+En este ejemplo, se declaran dos variables `a` y `b`, se les asignan valores y se realiza la suma de ambos valores.
+
+La elección de la palabra clave (`var`, `let`, `const`) dependerá del contexto y de los requisitos específicos del código. La tendencia actual es utilizar `let` y `const` en lugar de `var` debido a su comportamiento más predecible y a su mejor manejo del ámbito.

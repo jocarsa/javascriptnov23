@@ -1,0 +1,80 @@
+Los eventos basados en campos de entrada (input) son eventos que se activan cuando el usuario interactúa con elementos `<input>`, `<textarea>`, y otros elementos relacionados con la entrada de datos en formularios HTML. Aquí hay algunos eventos comunes y ejemplos de cómo trabajar con ellos:
+
+### Evento `input`:
+
+El evento `input` se activa cuando el contenido de un elemento de entrada cambia. Puedes usarlo para realizar acciones en tiempo real mientras el usuario está escribiendo.
+
+```javascript
+let miInput = document.getElementById("miInput");
+
+miInput.addEventListener("input", function(event) {
+  console.log("Contenido del input cambiado:", event.target.value);
+});
+```
+
+### Evento `change`:
+
+El evento `change` se activa cuando el valor de un elemento de entrada cambia y el elemento pierde el foco (cuando se deselecciona).
+
+```javascript
+let miInput = document.getElementById("miInput");
+
+miInput.addEventListener("change", function(event) {
+  console.log("Valor del input cambiado:", event.target.value);
+});
+```
+
+### Evento `focus` y `blur`:
+
+El evento `focus` se activa cuando un elemento de entrada obtiene el foco, y `blur` se activa cuando pierde el foco.
+
+```javascript
+let miInput = document.getElementById("miInput");
+
+miInput.addEventListener("focus", function() {
+  console.log("Input ha obtenido el foco");
+});
+
+miInput.addEventListener("blur", function() {
+  console.log("Input ha perdido el foco");
+});
+```
+
+### Eventos de Teclado con Inputs:
+
+Puedes combinar eventos de teclado con eventos de input para realizar acciones específicas mientras el usuario escribe.
+
+```javascript
+let miInput = document.getElementById("miInput");
+
+miInput.addEventListener("keydown", function(event) {
+  console.log("Tecla presionada en el input:", event.key);
+});
+```
+
+### Validación de Formulario en Tiempo Real:
+
+Puedes utilizar eventos de entrada para realizar validación en tiempo real mientras el usuario completa un formulario.
+
+```javascript
+let miInput = document.getElementById("miInput");
+
+miInput.addEventListener("input", function(event) {
+  let valor = event.target.value;
+  let esValido = validarEntrada(valor);
+
+  if (!esValido) {
+    // Realizar acciones para indicar que la entrada no es válida
+    console.log("La entrada no es válida");
+  } else {
+    console.log("La entrada es válida");
+  }
+});
+
+function validarEntrada(valor) {
+  // Lógica de validación
+  return valor.length >= 6;
+}
+```
+
+Estos son solo algunos ejemplos de cómo trabajar con eventos basados en campos de entrada en JavaScript. Estos eventos son útiles para crear una experiencia de usuario interactiva y para realizar validaciones y acciones en tiempo real mientras el usuario interactúa con formularios y elementos de entrada.

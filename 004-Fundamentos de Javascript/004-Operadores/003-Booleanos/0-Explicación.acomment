@@ -1,0 +1,73 @@
+Los operadores booleanos en JavaScript son utilizados para realizar operaciones lógicas entre expresiones booleanas (aquellas que evalúan a `true` o `false`). Aquí están los operadores booleanos más comunes:
+
+### 1. Operador AND (`&&`):
+
+El operador AND (`&&`) devuelve `true` si ambas expresiones son `true`. Si al menos una de las expresiones es `false`, el resultado es `false`.
+
+```javascript
+var x = true;
+var y = false;
+
+console.log(x && y); // false
+```
+
+### 2. Operador OR (`||`):
+
+El operador OR (`||`) devuelve `true` si al menos una de las expresiones es `true`. Solo devuelve `false` si ambas expresiones son `false`.
+
+```javascript
+var x = true;
+var y = false;
+
+console.log(x || y); // true
+```
+
+### 3. Operador NOT (`!`):
+
+El operador NOT (`!`) invierte el valor de una expresión booleana. Si la expresión es `true`, el resultado será `false`, y viceversa.
+
+```javascript
+var x = true;
+console.log(!x); // false
+```
+
+### Ejemplos Combinados:
+
+```javascript
+var edad = 25;
+var tienePermiso = true;
+
+// AND lógico
+console.log(edad > 18 && tienePermiso); // true
+
+// OR lógico
+console.log(edad > 18 || tienePermiso); // true
+
+// NOT lógico
+console.log(!(edad > 18)); // false
+```
+
+### Uso en Condiciones:
+
+Los operadores booleanos son comúnmente utilizados en estructuras condicionales para controlar el flujo del programa.
+
+```javascript
+var tieneCuenta = true;
+var saldo = 1000;
+
+if (tieneCuenta && saldo > 0) {
+    console.log("Puedes hacer una compra.");
+} else {
+    console.log("No puedes hacer una compra.");
+}
+```
+
+En este ejemplo, la compra es permitida si el usuario tiene una cuenta (`tieneCuenta` es `true`) y tiene un saldo positivo (`saldo > 0`).
+
+### Notas Importantes:
+
+- La evaluación de operadores lógicos sigue la lógica de cortocircuito. En una expresión `a && b`, si `a` es `false`, `b` no se evaluará porque el resultado ya será `false`. De manera similar, en una expresión `a || b`, si `a` es `true`, `b` no se evaluará porque el resultado ya será `true`.
+
+- La precedencia de operadores (`&&`, `||`, `!`) puede afectar el resultado de las expresiones complejas. Puedes usar paréntesis para controlar el orden de evaluación si es necesario.
+
+Estos operadores booleanos son fundamentales para la lógica de control de flujo y la toma de decisiones en programas JavaScript.

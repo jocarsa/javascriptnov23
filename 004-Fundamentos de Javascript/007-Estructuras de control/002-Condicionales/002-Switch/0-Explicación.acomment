@@ -1,0 +1,84 @@
+La estructura de control `switch` en JavaScript se utiliza para tomar decisiones basadas en el valor de una expresión. Esta estructura es especialmente útil cuando se quiere comparar el valor de una variable con múltiples casos y ejecutar diferentes bloques de código según el caso que coincida. La sintaxis básica de `switch` es la siguiente:
+
+```javascript
+switch (expresión) {
+  case valor1:
+    // Código a ejecutar si expresión es igual a valor1
+    break;
+  case valor2:
+    // Código a ejecutar si expresión es igual a valor2
+    break;
+  // ... otros casos ...
+  default:
+    // Código a ejecutar si ningún caso coincide
+}
+```
+
+- **Expresión:** Es la expresión cuyo valor se va a comparar con los casos.
+
+- **Caso (`case`):** Cada `case` especifica un valor que se compara con la expresión. Si la expresión coincide con el valor de un `case`, se ejecuta el bloque de código asociado. Si no hay coincidencias y se proporciona un bloque `default`, se ejecuta ese bloque.
+
+- **Break:** La palabra clave `break` se utiliza para salir del `switch` después de ejecutar un bloque de código. Si se omite, la ejecución continuará en el siguiente `case`, incluso si la expresión no coincide.
+
+### Ejemplo de `switch`:
+
+```javascript
+let diaSemana = 3;
+
+switch (diaSemana) {
+  case 1:
+    console.log("Lunes");
+    break;
+  case 2:
+    console.log("Martes");
+    break;
+  case 3:
+    console.log("Miércoles");
+    break;
+  case 4:
+    console.log("Jueves");
+    break;
+  case 5:
+    console.log("Viernes");
+    break;
+  case 6:
+  case 7:
+    console.log("Fin de semana");
+    break;
+  default:
+    console.log("Día no válido");
+}
+```
+
+En este ejemplo, la variable `diaSemana` tiene el valor 3, por lo que se ejecutará el bloque de código asociado al `case 3`, y se imprimirá "Miércoles" en la consola.
+
+### Uso de `break` y `default`:
+
+- **`break`:** Se utiliza para salir del `switch` después de ejecutar un bloque de código. Si se omite, la ejecución continuará en el siguiente `case`.
+
+- **`default`:** Es opcional y se ejecuta si ninguno de los `case` coincide con el valor de la expresión.
+
+### Nota sobre `break`: 
+
+La falta de un `break` después de un `case` puede llevar a un "fall-through" (caída a través), lo que significa que se ejecutarán los bloques de código de los `case` subsiguientes hasta que se encuentre un `break` o se termine el `switch`.
+
+```javascript
+let numero = 2;
+
+switch (numero) {
+  case 1:
+    console.log("Uno");
+  case 2:
+    console.log("Dos");
+    break;
+  case 3:
+    console.log("Tres");
+    break;
+  default:
+    console.log("Número no válido");
+}
+```
+
+En este ejemplo, aunque `numero` es 2, ambos bloques de código de `case 2` y `case 3` se ejecutarán porque no hay un `break` después de `case 1`. El `break` en `case 2` evita que se ejecute el bloque de `case 3`.
+
+La estructura `switch` es útil cuando se tienen múltiples condiciones para evaluar en función de un único valor. Sin embargo, en muchos casos, se prefiere el uso de estructuras `if-else if-else` para mayor flexibilidad y claridad en la lógica del programa.

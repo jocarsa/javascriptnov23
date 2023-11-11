@@ -1,0 +1,85 @@
+Las estructuras de control de bucle, también conocidas como estructuras de iteración, son fundamentales en programación para repetir bloques de código mientras se cumple una condición. En JavaScript, hay tres estructuras de control de bucle principales: `for`, `while` y `do-while`. A continuación, se explica cada una de ellas:
+
+### 1. Bucle `for`:
+
+El bucle `for` es una estructura de control que se utiliza para repetir un bloque de código un número específico de veces. Consiste en tres partes: la inicialización, la condición y la expresión de iteración.
+
+```javascript
+for (inicialización; condición; expresión de iteración) {
+  // Código a repetir
+}
+```
+
+Ejemplo:
+
+```javascript
+for (let i = 0; i < 5; i++) {
+  console.log(i); // Imprime los números del 0 al 4
+}
+```
+
+### 2. Bucle `while`:
+
+El bucle `while` se utiliza cuando no se conoce de antemano el número de iteraciones y se repite mientras una condición sea verdadera.
+
+```javascript
+while (condición) {
+  // Código a repetir
+}
+```
+
+Ejemplo:
+
+```javascript
+let i = 0;
+while (i < 5) {
+  console.log(i); // Imprime los números del 0 al 4
+  i++;
+}
+```
+
+### 3. Bucle `do-while`:
+
+El bucle `do-while` es similar al `while`, pero garantiza que el bloque de código se ejecute al menos una vez, ya que la condición se evalúa después de la primera ejecución.
+
+```javascript
+do {
+  // Código a repetir
+} while (condición);
+```
+
+Ejemplo:
+
+```javascript
+let i = 0;
+do {
+  console.log(i); // Imprime los números del 0 al 4
+  i++;
+} while (i < 5);
+```
+
+### Control de Flujo en Bucles:
+
+- **`break`:** Sale inmediatamente del bucle actual.
+  
+  ```javascript
+  for (let i = 0; i < 10; i++) {
+    if (i === 5) {
+      break; // Sale del bucle cuando i es 5
+    }
+    console.log(i);
+  }
+  ```
+
+- **`continue`:** Salta a la siguiente iteración del bucle.
+
+  ```javascript
+  for (let i = 0; i < 5; i++) {
+    if (i === 2) {
+      continue; // Salta la iteración cuando i es 2
+    }
+    console.log(i);
+  }
+  ```
+
+Estas estructuras de control de bucle son esenciales para crear programas más dinámicos y eficientes, permitiendo la repetición de acciones mientras se cumplan ciertas condiciones. La elección entre `for`, `while` y `do-while` dependerá de la situación específica y los requisitos del programa.

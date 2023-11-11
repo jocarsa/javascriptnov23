@@ -1,0 +1,95 @@
+En JavaScript, los operadores son símbolos especiales que realizan operaciones en operandos. Los operandos pueden ser valores o variables, y la operación que realiza un operador depende de su tipo. Aquí hay una descripción de algunos de los operadores más comunes en JavaScript:
+
+### 1. Operadores Aritméticos:
+
+- **Suma (`+`):** Suma dos valores.
+  ```javascript
+  var suma = 5 + 3; // Resultado: 8
+  ```
+
+- **Resta (`-`):** Resta el segundo valor del primero.
+  ```javascript
+  var resta = 8 - 3; // Resultado: 5
+  ```
+
+- **Multiplicación (`*`):** Multiplica dos valores.
+  ```javascript
+  var multiplicacion = 4 * 2; // Resultado: 8
+  ```
+
+- **División (`/`):** Divide el primer valor por el segundo.
+  ```javascript
+  var division = 10 / 2; // Resultado: 5
+  ```
+
+- **Módulo (`%`):** Devuelve el resto de la división del primer valor por el segundo.
+  ```javascript
+  var resto = 10 % 3; // Resultado: 1 (porque 10 / 3 = 3 con un resto de 1)
+  ```
+
+### 2. Operadores de Asignación:
+
+- **Asignación (`=`):** Asigna el valor de la derecha al operando de la izquierda.
+  ```javascript
+  var x = 5; // x ahora tiene el valor 5
+  ```
+
+- **Operadores de Asignación Abreviada (`+=`, `-=`, `*=`, `/=`):** Realizan una operación y asignan el resultado al operando izquierdo.
+  ```javascript
+  var y = 10;
+  y += 3; // Equivalente a y = y + 3; // y ahora es 13
+  ```
+
+### 3. Operadores de Comparación:
+
+- **Igual (`==`):** Comprueba si dos valores son iguales (puede realizar conversiones de tipo).
+  ```javascript
+  var a = 5;
+  var b = "5";
+  console.log(a == b); // true
+  ```
+
+- **Igual estricto (`===`):** Comprueba si dos valores son iguales y tienen el mismo tipo.
+  ```javascript
+  var a = 5;
+  var b = "5";
+  console.log(a === b); // false
+  ```
+
+- **No igual (`!=`):** Comprueba si dos valores no son iguales (puede realizar conversiones de tipo).
+  ```javascript
+  var a = 5;
+  var b = "5";
+  console.log(a != b); // false
+  ```
+
+- **No igual estricto (`!==`):** Comprueba si dos valores no son iguales o no tienen el mismo tipo.
+  ```javascript
+  var a = 5;
+  var b = "5";
+  console.log(a !== b); // true
+  ```
+
+### 4. Operadores Lógicos:
+
+- **AND Lógico (`&&`):** Devuelve `true` si ambos operandos son `true`.
+  ```javascript
+  var x = true;
+  var y = false;
+  console.log(x && y); // false
+  ```
+
+- **OR Lógico (`||`):** Devuelve `true` si al menos uno de los operandos es `true`.
+  ```javascript
+  var x = true;
+  var y = false;
+  console.log(x || y); // true
+  ```
+
+- **NOT Lógico (`!`):** Devuelve `true` si el operando es `false`, y viceversa.
+  ```javascript
+  var x = true;
+  console.log(!x); // false
+  ```
+
+Estos son solo algunos de los operadores disponibles en JavaScript. Existen otros operadores, como operadores de incremento/decremento (`++`, `--`), operadores de bit a bit, operadores de desplazamiento, y más. La comprensión de cómo y cuándo utilizar estos operadores es fundamental para escribir código JavaScript efectivo y conciso.

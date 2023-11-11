@@ -1,0 +1,111 @@
+Las estructuras de control del flujo de ejecución en JavaScript son construcciones que permiten controlar el orden de ejecución de las instrucciones en un programa. Estas estructuras permiten tomar decisiones, repetir acciones y alterar el flujo normal de ejecución del código. Las principales estructuras de control son:
+
+### 1. **Estructuras de Selección (Condicionales):**
+
+Las estructuras de selección permiten ejecutar diferentes bloques de código dependiendo de si una condición es verdadera o falsa.
+
+#### a. **Estructura `if`:**
+
+```javascript
+let numero = 10;
+
+if (numero > 0) {
+  console.log("El número es positivo");
+} else if (numero < 0) {
+  console.log("El número es negativo");
+} else {
+  console.log("El número es cero");
+}
+```
+
+#### b. **Estructura `switch`:**
+
+```javascript
+let diaSemana = 3;
+let nombreDia;
+
+switch (diaSemana) {
+  case 1:
+    nombreDia = "Lunes";
+    break;
+  case 2:
+    nombreDia = "Martes";
+    break;
+  // ... otros casos ...
+  default:
+    nombreDia = "Día no válido";
+}
+console.log(nombreDia);
+```
+
+### 2. **Estructuras de Iteración (Bucles):**
+
+Las estructuras de iteración permiten repetir un bloque de código varias veces.
+
+#### a. **Bucle `for`:**
+
+```javascript
+for (let i = 0; i < 5; i++) {
+  console.log(i);
+}
+```
+
+#### b. **Bucle `while`:**
+
+```javascript
+let contador = 0;
+
+while (contador < 5) {
+  console.log(contador);
+  contador++;
+}
+```
+
+#### c. **Bucle `do-while`:**
+
+```javascript
+let i = 0;
+
+do {
+  console.log(i);
+  i++;
+} while (i < 5);
+```
+
+### 3. **Estructuras de Salto:**
+
+#### a. **`break` y `continue`:**
+
+- `break`: Sale de un bucle o una estructura de control.
+- `continue`: Salta a la siguiente iteración de un bucle.
+
+```javascript
+for (let i = 0; i < 5; i++) {
+  if (i === 2) {
+    continue; // Salta la iteración cuando i es 2
+  }
+  console.log(i);
+  if (i === 3) {
+    break; // Sale del bucle cuando i es 3
+  }
+}
+```
+
+### 4. **Estructuras de Control de Excepciones:**
+
+JavaScript permite manejar excepciones mediante las estructuras `try`, `catch` y `finally`.
+
+```javascript
+try {
+  // Bloque de código que podría lanzar una excepción
+  throw new Error("¡Esto es un error!");
+} catch (error) {
+  // Manejo de la excepción
+  console.log("Se produjo un error:", error.message);
+} finally {
+  // Este bloque se ejecuta siempre, ocurra o no una excepción
+  console.log("Finalizando...");
+}
+```
+
+Estas estructuras permiten controlar el flujo de ejecución en función de condiciones y realizar acciones repetitivas, lo que es esencial para construir programas más complejos y flexibles.

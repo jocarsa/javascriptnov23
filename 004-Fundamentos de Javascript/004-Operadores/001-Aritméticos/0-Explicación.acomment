@@ -1,0 +1,70 @@
+Los operadores aritméticos en JavaScript son utilizados para realizar operaciones matemáticas en variables y valores. Aquí tienes una explicación de los operadores aritméticos más comunes:
+
+### 1. Suma (`+`):
+
+```javascript
+var resultado = 5 + 3; // Resultado: 8
+```
+
+La suma `+` se utiliza para sumar dos valores.
+
+### 2. Resta (`-`):
+
+```javascript
+var resultado = 8 - 3; // Resultado: 5
+```
+
+La resta `-` se utiliza para restar el segundo valor del primero.
+
+### 3. Multiplicación (`*`):
+
+```javascript
+var resultado = 4 * 2; // Resultado: 8
+```
+
+La multiplicación `*` se utiliza para multiplicar dos valores.
+
+### 4. División (`/`):
+
+```javascript
+var resultado = 10 / 2; // Resultado: 5
+```
+
+La división `/` se utiliza para dividir el primer valor por el segundo.
+
+### 5. Módulo (`%`):
+
+```javascript
+var resto = 10 % 3; // Resultado: 1
+```
+
+El operador módulo `%` devuelve el resto de la división del primer valor por el segundo.
+
+### Ejemplos Combinados:
+
+```javascript
+var a = 5;
+var b = 2;
+
+var suma = a + b; // 7
+var resta = a - b; // 3
+var multiplicacion = a * b; // 10
+var division = a / b; // 2.5
+var resto = a % b; // 1
+```
+
+### Operadores Aritméticos Abreviados:
+
+Además de los operadores aritméticos básicos, también existen operadores abreviados de asignación que combinan una operación aritmética con la asignación. Estos son útiles para realizar operaciones y actualizar el valor de la variable en un solo paso.
+
+```javascript
+var x = 5;
+
+x += 3; // Equivalente a x = x + 3; // x ahora es 8
+x -= 2; // Equivalente a x = x - 2; // x ahora es 6
+x *= 4; // Equivalente a x = x * 4; // x ahora es 24
+x /= 3; // Equivalente a x = x / 3; // x ahora es 8
+x %= 5; // Equivalente a x = x % 5; // x ahora es 3
+```
+
+Estos son los operadores aritméticos básicos en JavaScript, y son fundamentales para realizar cálculos matemáticos en programas y scripts.

@@ -1,0 +1,65 @@
+En el contexto de JavaScript y el Document Object Model (DOM), los selectores se utilizan para acceder y manipular elementos HTML. Los selectores permiten seleccionar uno o varios elementos del DOM de manera específica. Aquí se presentan algunos métodos comunes para seleccionar elementos en JavaScript:
+
+### 1. Selector por ID:
+
+Para seleccionar un elemento por su ID, puedes utilizar el método `getElementById`:
+
+```javascript
+let miElemento = document.getElementById("miId");
+```
+
+### 2. Selector por Clase:
+
+Para seleccionar elementos por su clase, puedes utilizar el método `getElementsByClassName`. Este método devuelve una colección de elementos, por lo que puedes acceder a ellos por índice.
+
+```javascript
+let misElementos = document.getElementsByClassName("miClase");
+// Para acceder al primer elemento de la colección
+let primerElemento = misElementos[0];
+```
+
+### 3. Selector por Etiqueta:
+
+Para seleccionar todos los elementos de un tipo específico, puedes utilizar el método `getElementsByTagName`. Al igual que `getElementsByClassName`, devuelve una colección.
+
+```javascript
+let misParrafos = document.getElementsByTagName("p");
+// Para acceder al primer párrafo de la colección
+let primerParrafo = misParrafos[0];
+```
+
+### 4. Selector por Nombre:
+
+Si estás trabajando con elementos de formulario, puedes seleccionar elementos por su atributo `name` utilizando el método `getElementsByName`.
+
+```javascript
+let misInputs = document.getElementsByName("miInput");
+// Para acceder al primer input de la colección
+let primerInput = misInputs[0];
+```
+
+### 5. Selector por Selector CSS:
+
+Puedes utilizar el método `querySelector` para seleccionar el primer elemento que coincida con un selector CSS. Si hay varios coincidentes, solo se seleccionará el primero.
+
+```javascript
+let primerParrafo = document.querySelector("p");
+```
+
+### 6. Selector por Selectores CSS:
+
+El método `querySelectorAll` devuelve una NodeList que contiene todos los elementos que coinciden con un selector CSS.
+
+```javascript
+let todosLosParrafos = document.querySelectorAll("p");
+```
+
+### 7. Selección Anidada:
+
+Puedes realizar selecciones anidadas utilizando combinaciones de selectores. Por ejemplo, seleccionar todos los elementos `p` dentro de un elemento con ID `contenedor`.
+
+```javascript
+let parrafosEnContenedor = document.querySelectorAll("#contenedor p");
+```
+
+Estos métodos de selección son esenciales para manipular dinámicamente el contenido y la apariencia de una página web utilizando JavaScript. Además, bibliotecas como jQuery también ofrecen métodos de selección simplificados y potentes.

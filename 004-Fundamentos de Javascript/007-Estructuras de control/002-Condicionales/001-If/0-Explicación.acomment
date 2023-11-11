@@ -1,0 +1,57 @@
+La estructura de control `if` en JavaScript permite ejecutar un bloque de código si una condición específica es verdadera. La sintaxis básica de `if` es la siguiente:
+
+```javascript
+if (condición) {
+  // Código a ejecutar si la condición es verdadera
+}
+```
+
+- **Condición:** Es una expresión booleana que se evalúa como verdadera o falsa. Si la condición es verdadera, se ejecuta el bloque de código dentro del `if`; de lo contrario, se pasa al siguiente bloque de código.
+
+### Ejemplo Básico de `if`:
+
+```javascript
+let edad = 20;
+
+if (edad >= 18) {
+  console.log("Eres mayor de edad");
+}
+```
+
+En este ejemplo, si la variable `edad` es mayor o igual a 18, se ejecutará el bloque de código dentro del `if` y se imprimirá en la consola "Eres mayor de edad".
+
+### Estructura `if` con `else`:
+
+Puedes agregar un bloque de código que se ejecute cuando la condición del `if` es falsa utilizando la estructura `else`.
+
+```javascript
+let edad = 15;
+
+if (edad >= 18) {
+  console.log("Eres mayor de edad");
+} else {
+  console.log("Eres menor de edad");
+}
+```
+
+En este caso, si la condición del `if` es falsa (es decir, si la edad es menor a 18), se ejecutará el bloque de código dentro del `else` y se imprimirá en la consola "Eres menor de edad".
+
+### Estructura `if` con `else if`:
+
+Puedes evaluar múltiples condiciones en secuencia utilizando la estructura `else if`.
+
+```javascript
+let hora = 14;
+
+if (hora < 12) {
+  console.log("Buenos días");
+} else if (hora < 18) {
+  console.log("Buenas tardes");
+} else {
+  console.log("Buenas noches");
+}
+```
+
+En este ejemplo, se evalúan diferentes condiciones en secuencia. Si la hora es antes de las 12, se ejecuta el primer bloque de código; si la hora es entre las 12 y las 18, se ejecuta el segundo bloque de código; de lo contrario, se ejecuta el tercer bloque de código.
+
+La estructura `if` es fundamental para controlar el flujo de ejecución en programas JavaScript y para tomar decisiones basadas en condiciones específicas.

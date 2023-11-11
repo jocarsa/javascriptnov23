@@ -1,0 +1,80 @@
+Cuando se habla de "JavaScript interno en una web HTML con la etiqueta `<script>`", se hace referencia a la inclusión de código JavaScript directamente dentro del documento HTML utilizando la etiqueta `<script>`. Aquí tienes una explicación detallada:
+
+1. **Uso de la Etiqueta `<script>`**:
+
+   La etiqueta `<script>` se utiliza para incluir código JavaScript en una página HTML. Puedes colocar esta etiqueta en la sección `<head>` o en el `<body>` de tu documento HTML. La ubicación exacta dependerá de tus necesidades y preferencias, pero es común encontrarla justo antes del cierre del cuerpo (`</body>`) para mejorar el rendimiento de carga de la página.
+
+   ```html
+   <!DOCTYPE html>
+   <html lang="es">
+   <head>
+       <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <title>JavaScript Interno</title>
+   </head>
+   <body>
+       <!-- Otro contenido HTML -->
+
+       <!-- Script interno en el cuerpo del documento -->
+       <script>
+           // Código JavaScript aquí
+           alert("¡Hola, mundo!");
+       </script>
+   </body>
+   </html>
+   ```
+
+2. **Ubicación del Script**:
+
+   Puedes ubicar la etiqueta `<script>` en diferentes partes del documento HTML según tus necesidades. Colocarla en la parte superior del `<body>` (justo antes del cierre `</body>`) a menudo es una buena práctica para no bloquear la carga inicial de la página. Sin embargo, si necesitas que el script se ejecute antes de que se renderice la página, puedes colocarlo en la sección `<head>`.
+
+3. **Código JavaScript Interno**:
+
+   El código JavaScript que deseas ejecutar se coloca directamente entre las etiquetas `<script>`. En el ejemplo anterior, el código es simple y muestra una alerta con el mensaje "¡Hola, mundo!".
+
+   ```html
+   <script>
+       // Código JavaScript aquí
+       alert("¡Hola, mundo!");
+   </script>
+   ```
+
+4. **Ventajas y Desventajas**:
+
+   - **Ventajas**:
+     - Es conveniente para scripts pequeños y específicos de una página.
+     - No requiere la creación de archivos externos.
+
+   - **Desventajas**:
+     - Puede volverse desorganizado para scripts más grandes.
+     - Dificulta la reutilización del código.
+     - Si se repite en varias páginas, cualquier cambio debe realizarse en cada instancia.
+
+5. **Ejemplo Completo**:
+
+   ```html
+   <!DOCTYPE html>
+   <html lang="es">
+   <head>
+       <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <title>JavaScript Interno</title>
+   </head>
+   <body>
+       <h1>Bienvenido a mi página</h1>
+
+       <script>
+           function saludar() {
+               alert("¡Hola, visitante!");
+           }
+
+           // Llamada a la función cuando la página se carga
+           saludar();
+       </script>
+   </body>
+   </html>
+   ```
+
+   En este ejemplo, el código JavaScript interno incluye una función `saludar()` y se llama a esta función cuando la página se carga, mostrando una alerta de bienvenida al visitante.
+
+Si bien este enfoque es adecuado para scripts más pequeños y específicos, para proyectos más grandes y mantenibles, generalmente se prefiere separar el código JavaScript del HTML y utilizar archivos externos. Esto ayuda a mantener el código más organizado y facilita la reutilización del código en diferentes páginas.

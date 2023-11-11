@@ -1,0 +1,61 @@
+Las salidas en la consola de JavaScript son una forma útil de depurar y mostrar información mientras desarrollas tu código. La consola es una herramienta de desarrollo que proporciona la mayoría de los navegadores web y se utiliza para registrar mensajes, variables, errores y otros datos relevantes durante la ejecución del código. La función principal para generar salidas en la consola es `console.log()`.
+
+### Uso de `console.log()`:
+
+La función `console.log()` se utiliza para imprimir mensajes en la consola del navegador. Puedes pasar uno o más argumentos a esta función, y se mostrarán en la consola.
+
+```javascript
+var mensaje = "Hola, mundo!";
+console.log(mensaje);
+```
+
+En este ejemplo, el mensaje "Hola, mundo!" se imprimirá en la consola del navegador. Puedes utilizar múltiples argumentos separados por comas.
+
+```javascript
+var nombre = "John";
+var edad = 25;
+console.log("Nombre:", nombre, "Edad:", edad);
+```
+
+### Otros Métodos de la Consola:
+
+Además de `console.log()`, la consola de JavaScript proporciona otros métodos útiles para mostrar diferentes tipos de información:
+
+- **`console.warn()` y `console.error()`:** Muestran mensajes de advertencia y error en la consola, respectivamente. Estos mensajes a menudo se destacan con colores distintivos.
+
+  ```javascript
+  console.warn("¡Cuidado!");
+  console.error("¡Error!");
+  ```
+
+- **`console.info()`:** Muestra mensajes informativos en la consola.
+
+  ```javascript
+  console.info("Información adicional.");
+  ```
+
+- **`console.table()`:** Muestra datos tabulares. Es útil para visualizar arrays y objetos.
+
+  ```javascript
+  var datos = [
+      { Nombre: "John", Edad: 25 },
+      { Nombre: "Jane", Edad: 30 }
+  ];
+  console.table(datos);
+  ```
+
+- **`console.clear()`:** Limpia la consola, eliminando cualquier salida anterior.
+
+  ```javascript
+  console.clear();
+  ```
+
+### Acceder a la Consola:
+
+Para abrir la consola en la mayoría de los navegadores:
+
+- **Google Chrome y Mozilla Firefox:** Puedes hacer clic derecho en la página y seleccionar "Inspeccionar" o "Inspeccionar elemento". Luego, ve a la pestaña "Consola".
+  
+- **Microsoft Edge:** Puedes hacer clic derecho y seleccionar "Inspeccionar" o "Inspeccionar elemento". Luego, ve a la pestaña "Consola".
+
+La consola de JavaScript es una herramienta poderosa para depurar y comprender el comportamiento de tu código. Es particularmente útil para principiantes y desarrolladores experimentados por igual.

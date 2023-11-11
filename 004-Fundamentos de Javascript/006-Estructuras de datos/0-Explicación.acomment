@@ -1,0 +1,77 @@
+Las estructuras de datos en JavaScript son formas de organizar y almacenar datos para que puedan ser manipulados y accedidos de manera eficiente. JavaScript admite varias estructuras de datos incorporadas, y también es posible implementar otras estructuras más complejas utilizando objetos y arrays. Aquí hay una descripción de algunas de las estructuras de datos comunes en JavaScript:
+
+### 1. **Arrays:**
+
+Un array es una colección ordenada de elementos. Cada elemento puede ser cualquier tipo de dato, y se accede a ellos mediante un índice.
+
+```javascript
+let miArray = [1, "dos", true];
+console.log(miArray[0]); // 1
+console.log(miArray.length); // 3
+```
+
+### 2. **Objetos:**
+
+Un objeto es una colección de pares clave-valor. Las claves son cadenas o símbolos, y los valores pueden ser cualquier tipo de dato.
+
+```javascript
+let miObjeto = { nombre: "Juan", edad: 30, esEstudiante: false };
+console.log(miObjeto.nombre); // Juan
+console.log(miObjeto.edad); // 30
+```
+
+### 3. **Sets:**
+
+Un Set es una colección de valores únicos. No permite duplicados, y se utiliza para almacenar elementos únicos.
+
+```javascript
+let miSet = new Set([1, 2, 3, 3, 4]);
+console.log(miSet); // Set {1, 2, 3, 4}
+```
+
+### 4. **Maps:**
+
+Un Map es similar a un objeto, pero permite utilizar cualquier tipo de dato como clave. Además, mantiene el orden de inserción.
+
+```javascript
+let miMapa = new Map();
+miMapa.set("nombre", "Ana");
+miMapa.set("edad", 25);
+console.log(miMapa.get("nombre")); // Ana
+console.log(miMapa.get("edad")); // 25
+```
+
+### 5. **Colas (Queues):**
+
+Una cola es una estructura de datos que sigue el principio FIFO (First In, First Out), donde el primer elemento añadido es el primero en ser eliminado.
+
+```javascript
+let miCola = [];
+miCola.push(1);
+miCola.push(2);
+miCola.shift(); // Elimina el primer elemento (1)
+console.log(miCola); // [2]
+```
+
+### 6. **Pilas (Stacks):**
+
+Una pila es una estructura de datos que sigue el principio LIFO (Last In, First Out), donde el último elemento añadido es el primero en ser eliminado.
+
+```javascript
+let miPila = [];
+miPila.push(1);
+miPila.push(2);
+miPila.pop(); // Elimina el último elemento (2)
+console.log(miPila); // [1]
+```
+
+### 7. **Arrays Typed (Arrays Tipados):**
+
+JavaScript también admite arrays tipados que permiten trabajar con datos binarios de manera eficiente. Ejemplos de arrays tipados incluyen `Int8Array`, `Uint8Array`, `Float32Array`, entre otros.
+
+```javascript
+let miArrayTyped = new Int8Array([1, 2, 3]);
+console.log(miArrayTyped); // Int8Array [1, 2, 3]
+```
+
+Estas son algunas de las estructuras de datos básicas en JavaScript. La elección de la estructura de datos dependerá de la tarea específica que estés abordando y de los requisitos de rendimiento.

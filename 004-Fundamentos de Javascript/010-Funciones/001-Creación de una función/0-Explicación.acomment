@@ -1,0 +1,85 @@
+Las funciones en JavaScript son bloques de código reutilizables que realizan una tarea específica. Pueden tomar parámetros como entrada, realizar operaciones y devolver un resultado. La definición básica de una función se realiza con la palabra clave `function`. Aquí hay una descripción detallada de las funciones en JavaScript:
+
+### Declaración de una Función:
+
+```javascript
+function miFuncion(parametro1, parametro2) {
+  // Código a ejecutar
+  return resultado; // Opcional: devuelve un resultado
+}
+```
+
+- **Nombre de la Función:** Es un identificador que se utiliza para llamar a la función.
+
+- **Parámetros:** Son variables que actúan como marcadores de posición para los valores que se pasan a la función cuando se llama.
+
+- **Cuerpo de la Función:** Contiene el código que se ejecutará cuando se llame a la función.
+
+- **Return (Opcional):** La palabra clave `return` indica el valor que la función debe devolver. Si no se utiliza `return`, la función devolverá `undefined` por defecto.
+
+### Llamada a una Función:
+
+Después de declarar una función, puedes llamarla para ejecutar el código que contiene.
+
+```javascript
+let resultado = miFuncion(valor1, valor2);
+```
+
+- **Valores Actuales (Argumentos):** Son los valores reales que se pasan a la función cuando se llama.
+
+- **Resultado:** Es el valor que la función devuelve, y puedes asignarlo a una variable o usarlo de otras formas.
+
+### Ejemplo Simple:
+
+```javascript
+function sumar(a, b) {
+  let resultado = a + b;
+  return resultado;
+}
+
+let suma = sumar(3, 5);
+console.log(suma); // Imprimirá 8
+```
+
+### Funciones Anónimas:
+
+Puedes definir funciones sin asignarles un nombre, lo que se conoce como funciones anónimas. A menudo, se utilizan en contextos donde solo se necesitan temporalmente, como en eventos o como argumentos de otras funciones.
+
+```javascript
+let multiplicar = function(x, y) {
+  return x * y;
+};
+
+let resultadoMultiplicacion = multiplicar(4, 6);
+console.log(resultadoMultiplicacion); // Imprimirá 24
+```
+
+### Funciones Flecha (Arrow Functions):
+
+Las funciones flecha son una forma más concisa de escribir funciones en JavaScript y tienen un comportamiento ligeramente diferente con respecto al ámbito (`this`).
+
+```javascript
+let cuadrado = (x) => x * x;
+let resultadoCuadrado = cuadrado(4);
+console.log(resultadoCuadrado); // Imprimirá 16
+```
+
+### Ámbito de las Variables:
+
+Las variables declaradas dentro de una función tienen un ámbito local, lo que significa que solo son accesibles dentro de esa función. Las variables declaradas fuera de una función tienen un ámbito global y son accesibles en todo el script.
+
+```javascript
+let variableGlobal = "Soy global";
+
+function ejemploFuncion() {
+  let variableLocal = "Soy local";
+  console.log(variableGlobal); // Acceso a variableGlobal
+  console.log(variableLocal);  // Acceso a variableLocal
+}
+
+ejemploFuncion();
+console.log(variableGlobal); // Acceso a variableGlobal fuera de la función
+// console.log(variableLocal); // Esto generará un error ya que variableLocal está fuera de alcance
+```
+
+Las funciones son uno de los conceptos fundamentales en JavaScript y son esenciales para organizar y reutilizar código de manera efectiva.

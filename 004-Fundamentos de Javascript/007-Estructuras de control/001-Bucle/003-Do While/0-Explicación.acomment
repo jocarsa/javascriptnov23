@@ -1,0 +1,54 @@
+La estructura de control de bucle `do-while` en JavaScript permite ejecutar un bloque de código al menos una vez y luego repetirlo mientras una condición específica sea verdadera. A diferencia del bucle `while`, el bloque de código se ejecuta antes de evaluar la condición. La sintaxis básica de un bucle `do-while` es la siguiente:
+
+```javascript
+do {
+  // Código a repetir
+} while (condición);
+```
+
+- **Condición:** La expresión booleana que se evalúa después de cada iteración. Si la condición es verdadera, el bloque de código se ejecuta nuevamente; de lo contrario, el bucle se detiene.
+
+### Ejemplo Básico de Bucle `do-while`:
+
+```javascript
+let contador = 0;
+
+do {
+  console.log(contador);
+  contador++;
+} while (contador < 5);
+```
+
+En este ejemplo, el bucle `do-while` imprimirá los números del 0 al 4. El bloque de código se ejecuta al menos una vez, incluso si la condición es falsa desde el principio.
+
+### Uso de `do-while` para Validación de Entrada de Usuario:
+
+```javascript
+let respuestaUsuario;
+
+do {
+  respuestaUsuario = prompt("¿Estás listo? (Ingresa 'listo' para continuar)");
+} while (respuestaUsuario !== "listo");
+
+console.log("¡Perfecto! Continuemos.");
+```
+
+En este ejemplo, el bucle `do-while` solicitará al usuario que ingrese "listo" al menos una vez. El bucle se repetirá mientras el usuario no ingrese "listo".
+
+### Control de Flujo en Bucle `do-while`:
+
+Puedes utilizar las mismas estructuras de control de flujo, como `break` y `continue`, para alterar el comportamiento del bucle `do-while`.
+
+```javascript
+let i = 0;
+
+do {
+  console.log(i);
+  i++;
+  if (i === 3) {
+    continue; // Salta la iteración cuando i es 3
+  }
+} while (i < 5);
+```
+
+En resumen, el bucle `do-while` es útil cuando se desea que un bloque de código se ejecute al menos una vez, independientemente de la condición. Luego, se repetirá mientras la condición sea verdadera. Al igual que con cualquier bucle, es importante asegurarse de que la condición eventualmente sea falsa para evitar bucles infinitos.

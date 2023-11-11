@@ -1,0 +1,58 @@
+Cuando se habla de "JavaScript como atributo de una etiqueta HTML", se está haciendo referencia a la inclusión de código JavaScript directamente en la etiqueta HTML utilizando el atributo `on` seguido de un evento específico. Este enfoque se utiliza para asociar un script JavaScript con un evento particular en un elemento HTML. Aquí tienes una explicación detallada:
+
+1. **Uso del Atributo `on`**:
+
+   Puedes agregar código JavaScript a un elemento HTML como un atributo utilizando el formato `on[evento]`. Aquí, `[evento]` es el nombre del evento al cual deseas asociar el código JavaScript. Algunos ejemplos comunes de eventos incluyen `click` para clics del mouse, `change` para cambios en los elementos de formulario, `mouseover` para pasar el ratón sobre un elemento, entre otros.
+
+   ```html
+   <button onclick="miFuncion()">Haz clic</button>
+   ```
+
+   En este ejemplo, el código JavaScript (`miFuncion()`) se ejecutará cuando el botón sea clicado.
+
+2. **Código JavaScript en el Atributo**:
+
+   El código JavaScript se coloca directamente dentro de las comillas del atributo `on[evento]`. Puedes incluir llamadas a funciones, expresiones o incluso código en línea.
+
+   ```html
+   <button onclick="alert('¡Haz clic en el botón!')">Haz clic</button>
+   ```
+
+   En este caso, se mostrará una alerta cuando el botón sea clicado.
+
+3. **Ventajas y Desventajas**:
+
+   - **Ventajas**:
+     - Es rápido y fácil de implementar.
+     - Es útil para eventos simples en elementos específicos.
+
+   - **Desventajas**:
+     - Puede volverse complicado de mantener en páginas con mucho código.
+     - Dificulta la separación de preocupaciones y la reutilización de código.
+     - No sigue las mejores prácticas modernas de desarrollo web.
+
+4. **Ejemplo Completo**:
+
+   ```html
+   <!DOCTYPE html>
+   <html lang="es">
+   <head>
+       <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <title>JavaScript como Atributo HTML</title>
+   </head>
+   <body>
+       <button onclick="mostrarMensaje()">Haz clic</button>
+
+       <script>
+           function mostrarMensaje() {
+               alert("¡Haz clic en el botón!");
+           }
+       </script>
+   </body>
+   </html>
+   ```
+
+   En este ejemplo, el código JavaScript (`mostrarMensaje()`) se encuentra dentro de la etiqueta `<script>` en el cuerpo del documento. Cuando se hace clic en el botón, se llama a la función y se muestra una alerta.
+
+Si bien este enfoque puede ser útil en situaciones simples, para proyectos más grandes y mantenibles, se prefiere generalmente separar el código JavaScript del HTML y utilizar métodos más avanzados, como la asignación de eventos en JavaScript y el uso de un enfoque basado en la manipulación del DOM. Esto ayuda a mantener el código más organizado y facilita la gestión de eventos en el desarrollo web moderno.

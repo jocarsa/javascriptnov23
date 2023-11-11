@@ -1,0 +1,115 @@
+La programación orientada a objetos (POO) es un paradigma de programación que organiza el código en torno a objetos, que son instancias de clases. Cada objeto puede contener datos (conocidos como atributos) y métodos (funciones) que operan en esos datos. La POO se basa en varios conceptos clave, que incluyen:
+
+### 1. Clases y Objetos:
+
+- **Clase:** Es una plantilla o un plano para crear objetos. Define los atributos y métodos que los objetos creados a partir de esa clase tendrán.
+
+```javascript
+class Persona {
+  constructor(nombre, edad) {
+    this.nombre = nombre;
+    this.edad = edad;
+  }
+
+  saludar() {
+    console.log(`Hola, soy ${this.nombre} y tengo ${this.edad} años.`);
+  }
+}
+```
+
+- **Objeto:** Es una instancia específica de una clase. Los objetos son instanciados a partir de clases y pueden tener valores únicos para sus atributos.
+
+```javascript
+let persona1 = new Persona("Juan", 25);
+let persona2 = new Persona("Ana", 30);
+
+persona1.saludar(); // Imprimirá "Hola, soy Juan y tengo 25 años."
+persona2.saludar(); // Imprimirá "Hola, soy Ana y tengo 30 años."
+```
+
+### 2. Encapsulamiento:
+
+El encapsulamiento se refiere a la capacidad de una clase para ocultar la implementación interna de sus objetos y permitir el acceso controlado a sus atributos y métodos.
+
+```javascript
+class CuentaBancaria {
+  #saldo = 0; // Atributo privado
+
+  depositar(monto) {
+    this.#saldo += monto;
+  }
+
+  consultarSaldo() {
+    return this.#saldo;
+  }
+}
+
+let cuenta = new CuentaBancaria();
+cuenta.depositar(100);
+console.log(cuenta.consultarSaldo()); // Imprimirá 100
+// console.log(cuenta.#saldo); // Esto generará un error, ya que #saldo es privado
+```
+
+### 3. Herencia:
+
+La herencia permite que una clase herede atributos y métodos de otra clase. La clase que hereda se llama "subclase" o "clase derivada", y la clase de la cual hereda se llama "superclase" o "clase base".
+
+```javascript
+class Animal {
+  comer() {
+    console.log("Comiendo...");
+  }
+}
+
+class Perro extends Animal {
+  ladrar() {
+    console.log("Guau, guau!");
+  }
+}
+
+let miPerro = new Perro();
+miPerro.comer(); // Imprimirá "Comiendo..."
+miPerro.ladrar(); // Imprimirá "Guau, guau!"
+```
+
+### 4. Polimorfismo:
+
+El polimorfismo permite que objetos de diferentes clases respondan al mismo método de manera única.
+
+```javascript
+class Figura {
+  area() {
+    return 0;
+  }
+}
+
+class Cuadrado extends Figura {
+  constructor(lado) {
+    super();
+    this.lado = lado;
+  }
+
+  area() {
+    return this.lado ** 2;
+  }
+}
+
+class Circulo extends Figura {
+  constructor(radio) {
+    super();
+    this.radio = radio;
+  }
+
+  area() {
+    return Math.PI * this.radio ** 2;
+  }
+}
+
+let cuadrado = new Cuadrado(4);
+let circulo = new Circulo(3);
+
+console.log(cuadrado.area()); // Imprimirá 16
+console.log(circulo.area()); // Imprimirá aproximadamente 28.27
+```
+
+La programación orientada a objetos proporciona una forma organizada y modular de diseñar y estructurar el código. Permite la reutilización de código, facilita el mantenimiento y mejora la legibilidad y escalabilidad del programa.

@@ -1,0 +1,71 @@
+En JavaScript, una constante es una variable cuyo valor no puede ser modificado después de su asignación inicial. Se declara utilizando la palabra clave `const`. A diferencia de las variables declaradas con `let` o `var`, las constantes no pueden ser reasignadas.
+
+### Declaración de Constantes:
+
+```javascript
+const PI = 3.1416;
+const nombre = "Juan";
+```
+
+En este ejemplo, `PI` y `nombre` son constantes con valores específicos que no pueden cambiar durante la ejecución del programa.
+
+### Características de las Constantes:
+
+1. **Inmutabilidad:**
+   - Una vez que se asigna un valor a una constante, no se puede cambiar.
+
+```javascript
+const edad = 30;
+edad = 31; // Error: no se puede reasignar una constante
+```
+
+2. **Ámbito de Bloque:**
+   - Al igual que las variables declaradas con `let`, las constantes tienen un ámbito de bloque, lo que significa que solo son válidas dentro del bloque en el que se declaran.
+
+```javascript
+if (true) {
+  const x = 5;
+  console.log(x); // 5
+}
+
+console.log(x); // Error: x no está definido fuera del bloque
+```
+
+### Buenas Prácticas:
+
+- Usa `const` por defecto cuando declares una variable y solo cambia a `let` si sabes que el valor de la variable cambiará.
+
+```javascript
+const nombre = "Juan"; // Buena práctica
+let edad = 30; // Cambia a let si la edad puede cambiar
+```
+
+- Utiliza mayúsculas y guiones bajos para nombrar constantes para distinguirlas fácilmente de las variables.
+
+```javascript
+const PI = 3.1416;
+const NOMBRE_COMPLETO = "Juan Pérez";
+```
+
+### Limitaciones:
+
+Aunque las constantes proporcionan inmutabilidad, ten en cuenta que si una constante almacena un objeto o un array, los elementos internos del objeto o array pueden cambiar, pero la referencia a la constante no puede ser reasignada.
+
+```javascript
+const lista = [1, 2, 3];
+lista.push(4); // Esto es permitido, ya que no reasigna la constante
+
+const persona = { nombre: "Juan", edad: 30 };
+persona.edad = 31; // Esto también es permitido, ya que no reasigna la constante
+```
+
+### Uso Común:
+
+Las constantes se utilizan para representar valores que no cambian durante la ejecución del programa, como valores constantes matemáticos, cadenas de texto predefinidas o cualquier otro valor que se supone que permanecerá constante.
+
+```javascript
+const DIAS_EN_SEMANA = 7;
+const URL_API = "https://api.ejemplo.com";
+```
+
+En resumen, las constantes en JavaScript son variables que no pueden ser reasignadas después de su declaración inicial. Proporcionan inmutabilidad y son útiles para representar valores que no deben cambiar a lo largo del programa.

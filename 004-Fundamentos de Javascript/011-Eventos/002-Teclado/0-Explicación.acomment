@@ -1,0 +1,72 @@
+Los eventos de teclado en JavaScript son eventos que se activan cuando el usuario interactúa con el teclado. Pueden ser útiles para realizar acciones en respuesta a la pulsación de teclas específicas, como enviar un formulario al presionar "Enter" o realizar acciones de navegación mediante combinaciones de teclas. Aquí hay algunos eventos de teclado comunes y cómo puedes trabajar con ellos:
+
+### Eventos de Teclado Básicos:
+
+1. **`keydown`:** Se activa cuando una tecla se presiona hacia abajo. Este evento se produce repetidamente si la tecla se mantiene presionada.
+
+```javascript
+document.addEventListener("keydown", function(event) {
+  console.log(`Tecla presionada: ${event.key}`);
+});
+```
+
+2. **`keypress`:** Se activa cuando una tecla que produce un carácter imprimible se presiona hacia abajo. Este evento también se produce repetidamente si la tecla se mantiene presionada.
+
+```javascript
+document.addEventListener("keypress", function(event) {
+  console.log(`Carácter presionado: ${event.key}`);
+});
+```
+
+3. **`keyup`:** Se activa cuando una tecla se suelta después de haber sido presionada.
+
+```javascript
+document.addEventListener("keyup", function(event) {
+  console.log(`Tecla liberada: ${event.key}`);
+});
+```
+
+### Propiedades del Objeto de Evento:
+
+El objeto de evento proporciona información adicional sobre la tecla y el evento.
+
+- **`event.key`:** Devuelve el valor de la tecla presionada.
+- **`event.keyCode`:** Devuelve el código de la tecla presionada (deprecated, se prefiere `event.key`).
+- **`event.ctrlKey`, `event.shiftKey`, `event.altKey`:** Indican si las teclas Ctrl, Shift o Alt están presionadas durante el evento.
+- **`event.preventDefault()`:** Método para prevenir el comportamiento predeterminado asociado a la tecla.
+
+### Ejemplo de Prevención del Comportamiento Predeterminado:
+
+```javascript
+document.addEventListener("keydown", function(event) {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    console.log("¡La tecla Enter fue presionada!");
+  }
+});
+```
+
+### Combinaciones de Teclas:
+
+Puedes verificar combinaciones de teclas verificando las teclas específicas que se han presionado.
+
+```javascript
+document.addEventListener("keydown", function(event) {
+  if (event.key === "Control" && event.key === "c") {
+    console.log("Combinación de teclas Ctrl+C detectada");
+  }
+});
+```
+
+### Eventos Específicos de Formulario:
+
+En formularios, el evento `submit` se puede usar para realizar acciones cuando se envía el formulario.
+
+```javascript
+document.getElementById("miFormulario").addEventListener("submit", function(event) {
+  event.preventDefault(); // Evita que el formulario se envíe
+  console.log("Formulario enviado");
+});
+```
+
+Estos son solo algunos ejemplos de cómo trabajar con eventos de teclado en JavaScript. Al utilizar estos eventos, puedes crear interactividad en tu aplicación web y responder a las acciones del usuario de manera eficiente.

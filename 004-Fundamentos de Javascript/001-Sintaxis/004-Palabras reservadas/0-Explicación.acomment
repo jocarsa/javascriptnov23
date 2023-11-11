@@ -1,0 +1,46 @@
+En JavaScript, las palabras reservadas son términos que tienen un significado específico y no pueden ser utilizados como identificadores (nombres de variables, funciones, etc.) en el código. Estas palabras están destinadas a realizar funciones específicas en el lenguaje y, por lo tanto, no pueden ser redefinidas o cambiadas de significado. A continuación, se presentan algunas de las palabras reservadas en JavaScript:
+
+1. **Palabras Clave de Declaración:**
+   - `var`: Declara una variable.
+   - `let`: Declara una variable con alcance de bloque.
+   - `const`: Declara una constante cuyo valor no puede ser reasignado.
+
+2. **Palabras Clave de Control de Flujo:**
+   - `if`: Inicia una condición.
+   - `else`: Se ejecuta si la condición de `if` es falsa.
+   - `else if`: Se ejecuta si la condición anterior es falsa y esta condición es verdadera.
+   - `switch`: Inicia una estructura de control de flujo basada en múltiples casos.
+
+3. **Palabras Clave de Bucle:**
+   - `for`: Inicia un bucle con una declaración de inicialización, condición de prueba y expresión de actualización.
+   - `while`: Inicia un bucle con una condición de prueba.
+   - `do`: Inicia un bucle que ejecuta una declaración al menos una vez, y luego se repite mientras se cumple una condición.
+
+4. **Palabras Clave de Funciones:**
+   - `function`: Declara una función.
+   - `return`: Devuelve un valor de una función.
+
+5. **Palabras Clave de Objetos y Propiedades:**
+   - `this`: Hace referencia al objeto actual.
+   - `new`: Crea una instancia de un objeto.
+
+6. **Palabras Clave de Manejo de Errores:**
+   - `try`: Inicia un bloque de código que puede lanzar una excepción.
+   - `catch`: Captura y maneja las excepciones lanzadas en el bloque `try`.
+   - `throw`: Lanza una excepción específica.
+
+7. **Palabras Clave de Tipos de Datos:**
+   - `typeof`: Devuelve una cadena que indica el tipo de una variable o expresión.
+
+8. **Palabras Clave de Iteración:**
+   - `break`: Rompe la ejecución de un bucle.
+   - `continue`: Salta a la siguiente iteración de un bucle.
+
+9. **Palabras Clave de Manejo de Objetos:**
+   - `delete`: Elimina una propiedad de un objeto.
+
+10. **Palabras Clave de Importación/Exportación (en módulos):**
+    - `import`: Permite importar módulos.
+    - `export`: Permite exportar módulos.
+
+Estas son solo algunas de las palabras reservadas en JavaScript. Es importante tener en cuenta que las palabras reservadas son fundamentales para la sintaxis y la estructura del lenguaje, y deben usarse según su propósito específico en el contexto del código que estás escribiendo.

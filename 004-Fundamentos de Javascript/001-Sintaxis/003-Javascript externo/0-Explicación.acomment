@@ -1,0 +1,48 @@
+Para llamar a un archivo JavaScript externo desde un documento HTML, puedes utilizar la etiqueta `<script>` con el atributo `src` (source), que especifica la ubicación del archivo JavaScript que deseas incluir. Aquí tienes una explicación paso a paso:
+
+1. **Crear el Archivo JavaScript Externo**:
+
+   Primero, asegúrate de tener un archivo JavaScript externo. Puede tener una extensión como `.js`. Por ejemplo, crea un archivo llamado `miScript.js` con el siguiente contenido:
+
+   ```javascript
+   // miScript.js
+   function saludar() {
+       alert("¡Hola desde miScript.js!");
+   }
+   ```
+
+2. **Incluir el Archivo JavaScript en el HTML**:
+
+   En el documento HTML, utiliza la etiqueta `<script>` con el atributo `src` para enlazar al archivo JavaScript externo. Puedes hacerlo dentro de la sección `<head>` o al final del `<body>` para mejorar los tiempos de carga.
+
+   ```html
+   <!DOCTYPE html>
+   <html lang="es">
+   <head>
+       <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <title>Archivo JavaScript Externo</title>
+
+       <!-- Incluir el archivo JavaScript externo -->
+       <script src="miScript.js"></script>
+   </head>
+   <body>
+       <h1>Bienvenido a mi página</h1>
+
+       <!-- Llamar a la función desde el archivo externo -->
+       <button onclick="saludar()">Saludar</button>
+   </body>
+   </html>
+   ```
+
+   En este ejemplo, el atributo `src` de la etiqueta `<script>` especifica la ubicación del archivo `miScript.js`. Ahora, la función `saludar()` definida en ese archivo está disponible en tu documento HTML.
+
+3. **Utilizar las Funciones Definidas en el Archivo Externo**:
+
+   Puedes utilizar las funciones y variables definidas en el archivo JavaScript externo en tu documento HTML. En el ejemplo, el botón tiene un evento `onclick` que llama a la función `saludar()` cuando se hace clic.
+
+   ```html
+   <button onclick="saludar()">Saludar</button>
+   ```
+
+   Esta es solo una forma básica de incluir y utilizar archivos JavaScript externos en un documento HTML. Es importante tener en cuenta que esta práctica ayuda a mantener el código más organizado y facilita la reutilización del código en varias páginas.

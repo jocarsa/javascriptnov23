@@ -1,0 +1,40 @@
+En JavaScript, los comentarios de una sola línea se utilizan para agregar anotaciones o explicaciones breves en el código fuente que no afectan la ejecución del programa. Estos comentarios son útiles para hacer el código más comprensible para otros desarrolladores o para ti mismo en el futuro. Aquí hay una explicación de cómo se escriben los comentarios de una sola línea en JavaScript:
+
+### Sintaxis de Comentarios de una Línea:
+
+- **Comentarios con Doble Barra (`//`):**
+  
+  Puedes utilizar la doble barra `//` para iniciar un comentario de una sola línea. Todo lo que sigue después de `//` en esa línea se considera un comentario y no afecta el código.
+
+  ```javascript
+  // Esto es un comentario de una sola línea
+  var x = 5; // También se puede añadir al final de una línea de código
+  ```
+
+- **Comentarios con Diagonal y Asterisco (`/* ... */`):**
+
+  Aunque es más comúnmente usado para comentarios de múltiples líneas, también puedes usar `/*` para iniciar un comentario y `*/` para finalizarlo en la misma línea.
+
+  ```javascript
+  var y = 10; /* Esto es un comentario de una sola línea */
+  ```
+
+### Ejemplo de Uso:
+
+```javascript
+// Declarar una variable
+var edad = 25;
+
+// Mostrar un mensaje de saludo
+console.log("¡Hola, usuario!");
+
+// Operación aritmética
+var resultado = edad * 2; // El doble de la edad
+
+// Imprimir el resultado
+console.log("El doble de la edad es: " + resultado);
+```
+
+En este ejemplo, se utilizan comentarios de una sola línea para explicar cada sección del código. Estos comentarios son opcionales, pero ayudan a entender rápidamente el propósito de cada línea de código.
+
+Recuerda que los comentarios de una sola línea son ignorados por el intérprete de JavaScript durante la ejecución del programa y, por lo tanto, no afectan el comportamiento del código. Su función principal es proporcionar información adicional para los desarrolladores que leen o mantienen el código.

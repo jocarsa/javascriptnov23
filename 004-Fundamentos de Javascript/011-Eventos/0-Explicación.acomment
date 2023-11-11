@@ -1,0 +1,101 @@
+En JavaScript, los eventos son interacciones del usuario o cambios en el estado del documento que activan la ejecución de funciones específicas, conocidas como "manejadores de eventos". Estos eventos pueden ser acciones del usuario, como hacer clic en un botón, mover el ratón, presionar una tecla, entre otros. Aquí hay una explicación detallada sobre eventos en JavaScript:
+
+### Tipos de Eventos Comunes:
+
+1. **Eventos del Ratón:**
+   - `click`: Se activa cuando se hace clic en un elemento.
+   - `dblclick`: Se activa cuando se hace doble clic en un elemento.
+   - `mouseover` y `mouseout`: Se activan cuando el ratón pasa sobre o sale de un elemento, respectivamente.
+
+2. **Eventos del Teclado:**
+   - `keydown`, `keypress`, y `keyup`: Se activan cuando una tecla del teclado se presiona, se mantiene presionada y se suelta, respectivamente.
+
+3. **Eventos de Formulario:**
+   - `submit`: Se activa cuando se envía un formulario.
+   - `change`: Se activa cuando el valor de un elemento de formulario cambia.
+
+4. **Eventos de Ventana:**
+   - `load`: Se activa cuando se ha cargado completamente el documento.
+   - `resize`: Se activa cuando se cambia el tamaño de la ventana del navegador.
+   - `unload`: Se activa cuando se cierra la ventana o se carga una nueva página.
+
+### Asociar Eventos con Elementos HTML:
+
+Puedes asociar eventos a elementos HTML utilizando atributos específicos, como `onclick`, `onmouseover`, etc. También puedes asignar manejadores de eventos utilizando JavaScript.
+
+**Usando Atributos HTML:**
+```html
+<button onclick="miFuncion()">Haz clic</button>
+```
+
+**Usando JavaScript:**
+```html
+<button id="miBoton">Haz clic</button>
+<script>
+  document.getElementById("miBoton").onclick = function() {
+    alert("¡Hola!");
+  };
+</script>
+```
+
+### Agregar Event Listeners:
+
+Es más común y flexible utilizar el método `addEventListener` para asociar eventos a elementos en JavaScript. Este método permite asociar múltiples manejadores de eventos al mismo elemento.
+
+```javascript
+let miBoton = document.getElementById("miBoton");
+
+miBoton.addEventListener("click", function() {
+  alert("¡Hola!");
+});
+
+miBoton.addEventListener("mouseover", function() {
+  console.log("El ratón está sobre el botón");
+});
+```
+
+### Objeto de Evento:
+
+Cuando se activa un evento, se crea un objeto de evento que contiene información sobre el evento, como el tipo de evento, el objetivo, las coordenadas del ratón, etc. Este objeto se pasa como argumento a la función del manejador de eventos.
+
+```javascript
+document.getElementById("miInput").addEventListener("keydown", function(event) {
+  console.log("Tecla presionada:", event.key);
+});
+```
+
+### Detener la Propagación del Evento:
+
+El método `stopPropagation` se utiliza para detener la propagación del evento, evitando que se active en elementos ascendentes.
+
+```javascript
+document.getElementById("miDiv").addEventListener("click", function(event) {
+  alert("Div clicado");
+  event.stopPropagation(); // Detiene la propagación del evento
+});
+```
+
+### Prevenir el Comportamiento Predeterminado:
+
+El método `preventDefault` se utiliza para prevenir el comportamiento predeterminado asociado a un evento, como el envío de un formulario o el seguimiento de un enlace.
+
+```javascript
+document.getElementById("miEnlace").addEventListener("click", function(event) {
+  event.preventDefault(); // Evita que el enlace abra una nueva página
+  alert("Enlace clicado");
+});
+```
+
+### Delegación de Eventos:
+
+La delegación de eventos es una técnica en la que se asigna un manejador de eventos a un elemento padre y se utiliza la información del evento para determinar qué hijo debe manejar el evento.
+
+```javascript
+document.getElementById("miLista").addEventListener("click", function(event) {
+  if (event.target.tagName === "LI") {
+    alert("Elemento de lista clicado: " + event.target.textContent);
+  }
+});
+```
+
+Entender cómo trabajar con eventos es fundamental para crear aplicaciones web interactivas y dinámicas en JavaScript. La capacidad de responder a las acciones del usuario permite crear experiencias más ricas y personalizadas en el navegador.

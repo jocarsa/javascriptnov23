@@ -1,0 +1,74 @@
+Los fundamentos de JavaScript abarcan conceptos esenciales que son la base para comprender y escribir código en este lenguaje de programación. Aquí tienes una descripción de los aspectos fundamentales de JavaScript:
+
+1. **Variables y Tipos de Datos**:
+   - **Variables**: En JavaScript, las variables se utilizan para almacenar y representar datos. Se declaran usando `var`, `let`, o `const`.
+   ```javascript
+   var nombre = "Juan";
+   let edad = 25;
+   const PI = 3.1416;
+   ```
+
+   - **Tipos de Datos**: JavaScript tiene tipos de datos como `string` (cadena de texto), `number` (número), `boolean` (booleano), `array` (arreglo), `object` (objeto), etc.
+
+2. **Operadores**:
+   - **Aritméticos**: `+`, `-`, `*`, `/`, `%` para realizar operaciones matemáticas.
+   - **Comparación**: `==`, `===`, `!=`, `!==`, `<`, `>`, `<=`, `>=` para comparar valores.
+   - **Lógicos**: `&&` (AND), `||` (OR), `!` (NOT) para operaciones lógicas.
+
+3. **Control de Flujo**:
+   - **Condiciones**: Utilizando `if`, `else if`, `else` para ejecutar bloques de código basados en condiciones.
+   ```javascript
+   if (edad >= 18) {
+       console.log("Es mayor de edad");
+   } else {
+       console.log("Es menor de edad");
+   }
+   ```
+
+   - **Bucles**: `for`, `while`, y `do-while` para la iteración.
+   ```javascript
+   for (let i = 0; i < 5; i++) {
+       console.log(i);
+   }
+   ```
+
+4. **Funciones**:
+   - Las funciones permiten encapsular y reutilizar bloques de código.
+   ```javascript
+   function saludar(nombre) {
+       console.log("Hola, " + nombre + "!");
+   }
+   saludar("Juan");
+   ```
+
+5. **Arrays y Objetos**:
+   - Los arrays almacenan colecciones de datos, y los objetos almacenan datos en pares clave-valor.
+   ```javascript
+   let numeros = [1, 2, 3, 4, 5];
+   let persona = { nombre: "Juan", edad: 25 };
+   ```
+
+6. **DOM y Manipulación de Elementos**:
+   - JavaScript se utiliza para interactuar con el DOM y modificar el contenido de una página web.
+   ```javascript
+   document.getElementById("miElemento").innerHTML = "Nuevo contenido";
+   ```
+
+7. **Eventos**:
+   - JavaScript permite manejar eventos del usuario, como clics y pulsaciones de teclas.
+   ```javascript
+   document.getElementById("miBoton").addEventListener("click", function() {
+       console.log("Botón clickeado");
+   });
+   ```
+
+8. **Programación Asíncrona y Promesas**:
+   - JavaScript es asincrónico, lo que significa que puede ejecutar operaciones sin bloquear la ejecución del programa. Las promesas se utilizan para gestionar operaciones asíncronas.
+   ```javascript
+   fetch('https://api.example.com/data')
+       .then(response => response.json())
+       .then(data => console.log(data))
+       .catch(error => console.error('Error:', error));
+   ```
+
+Estos son solo algunos de los fundamentos de JavaScript. Familiarizarte con estos conceptos proporcionará una base sólida para desarrollar aplicaciones web más complejas y comprender mejor los aspectos avanzados de JavaScript.

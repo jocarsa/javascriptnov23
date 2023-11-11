@@ -1,0 +1,72 @@
+En JavaScript, las salidas se refieren a la forma en que el programa muestra información al usuario o al entorno en el que se está ejecutando. Las salidas son fundamentales para la depuración y para proporcionar resultados visibles al usuario. Hay varias formas de generar salidas en JavaScript:
+
+### 1. `console.log()`:
+
+La función `console.log()` se utiliza para imprimir mensajes en la consola del navegador. Es una herramienta comúnmente utilizada para propósitos de depuración y desarrollo.
+
+```javascript
+var mensaje = "Hola, mundo!";
+console.log(mensaje);
+```
+
+Este código imprimirá "Hola, mundo!" en la consola del navegador.
+
+### 2. Modificación del Contenido HTML:
+
+Puedes modificar el contenido de elementos HTML para mostrar información dinámicamente en una página web.
+
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salida en JavaScript</title>
+</head>
+<body>
+    <div id="miElemento"></div>
+
+    <script>
+        var mensaje = "¡Hola, mundo!";
+        document.getElementById("miElemento").innerHTML = mensaje;
+    </script>
+</body>
+</html>
+```
+
+En este ejemplo, el contenido del elemento con el ID "miElemento" se actualiza dinámicamente con el mensaje "¡Hola, mundo!".
+
+### 3. `window.alert()`:
+
+La función `window.alert()` muestra un cuadro de diálogo de alerta con el mensaje proporcionado.
+
+```javascript
+var mensaje = "Hola, mundo!";
+window.alert(mensaje);
+```
+
+Este código mostrará un cuadro de diálogo emergente con el mensaje "Hola, mundo!".
+
+### 4. `window.confirm()`:
+
+La función `window.confirm()` muestra un cuadro de diálogo de confirmación con un botón "Aceptar" y un botón "Cancelar". Devuelve `true` si se hace clic en "Aceptar" y `false` si se hace clic en "Cancelar".
+
+```javascript
+var resultado = window.confirm("¿Estás seguro de continuar?");
+console.log(resultado);
+```
+
+Este código mostrará un cuadro de diálogo de confirmación y registrará en la consola el resultado basado en la elección del usuario.
+
+### 5. `window.prompt()`:
+
+La función `window.prompt()` muestra un cuadro de diálogo de entrada donde el usuario puede ingresar texto. Devuelve el texto ingresado.
+
+```javascript
+var nombre = window.prompt("Por favor, ingresa tu nombre:");
+console.log("Hola, " + nombre + "!");
+```
+
+Este código solicitará al usuario que ingrese su nombre y luego imprimirá un saludo personalizado en la consola.
+
+Estas son algunas de las formas comunes de generar salidas en JavaScript, y la elección de una u otra dependerá del contexto y de los requisitos específicos de tu aplicación.

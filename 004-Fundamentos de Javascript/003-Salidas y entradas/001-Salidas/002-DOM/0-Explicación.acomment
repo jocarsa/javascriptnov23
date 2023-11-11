@@ -1,0 +1,92 @@
+Las salidas en el documento en JavaScript se refieren a la manipulación del contenido visible en una página web. Esta manipulación suele implicar la modificación del contenido HTML o de los estilos CSS para presentar información al usuario de manera dinámica. Algunas de las formas comunes de generar salidas en el documento incluyen:
+
+### 1. `document.write()`:
+
+La función `document.write()` se utiliza para escribir directamente en el documento HTML. Sin embargo, su uso no se recomienda en aplicaciones modernas debido a posibles problemas de rendimiento y seguridad.
+
+```javascript
+document.write("¡Hola, mundo!");
+```
+
+### 2. Modificación del Contenido HTML:
+
+Puedes utilizar JavaScript para acceder y modificar el contenido de elementos HTML en el documento. Un método común es utilizar el método `innerHTML` de un elemento.
+
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salidas en el Documento</title>
+</head>
+<body>
+    <p id="miParrafo">Este es un párrafo.</p>
+
+    <script>
+        var nuevoContenido = "¡Hola, mundo!";
+        document.getElementById("miParrafo").innerHTML = nuevoContenido;
+    </script>
+</body>
+</html>
+```
+
+En este ejemplo, el script JavaScript accede al elemento con el ID "miParrafo" y cambia su contenido a "¡Hola, mundo!".
+
+### 3. Creación de Nuevos Elementos:
+
+Puedes crear nuevos elementos HTML en JavaScript y agregarlos al documento. Esto es útil para generar contenido dinámicamente.
+
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salidas en el Documento</title>
+</head>
+<body>
+    <div id="miContenedor"></div>
+
+    <script>
+        var nuevoElemento = document.createElement("p");
+        nuevoElemento.textContent = "¡Hola, mundo!";
+        document.getElementById("miContenedor").appendChild(nuevoElemento);
+    </script>
+</body>
+</html>
+```
+
+En este ejemplo, se crea un nuevo párrafo (`<p>`) en JavaScript y se agrega al contenedor con el ID "miContenedor".
+
+### 4. Manipulación de Atributos y Estilos:
+
+Además de modificar el contenido HTML, puedes cambiar atributos y estilos de elementos.
+
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salidas en el Documento</title>
+</head>
+<body>
+    <button id="miBoton">Haz clic</button>
+
+    <script>
+        var miBoton = document.getElementById("miBoton");
+
+        // Cambiar el texto del botón
+        miBoton.textContent = "Nuevo Texto";
+
+        // Cambiar el color de fondo del botón
+        miBoton.style.backgroundColor = "lightblue";
+    </script>
+</body>
+</html>
+```
+
+En este ejemplo, se cambia el texto y el color de fondo de un botón.
+
+Estas son algunas de las formas comunes de generar salidas en el documento en JavaScript. La manipulación dinámica del contenido es esencial para crear experiencias interactivas en aplicaciones web.

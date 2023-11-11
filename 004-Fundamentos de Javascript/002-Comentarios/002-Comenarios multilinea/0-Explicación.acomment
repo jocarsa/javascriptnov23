@@ -1,0 +1,55 @@
+En JavaScript, los comentarios de varias líneas se utilizan para incluir explicaciones más extensas o anotaciones que abarcan varias líneas de código. A diferencia de los comentarios de una sola línea, los comentarios de varias líneas se inician con `/*` y se cierran con `*/`. Todo lo que se encuentra entre estos delimitadores se considera un comentario y no afecta la ejecución del programa.
+
+### Sintaxis de Comentarios Multilínea:
+
+```javascript
+/*
+  Este es un comentario
+  que abarca varias líneas.
+  Puede contener información detallada
+  o explicaciones extensas del código.
+*/
+
+var x = 10; // Este es un comentario de una sola línea
+
+/*
+  También puedes utilizar comentarios de varias líneas
+  para "comentar" temporalmente bloques de código.
+  
+  /*
+    Este es otro comentario de varias líneas.
+  */
+
+  var y = 20; // Aquí, se retoma el código normal.
+*/
+```
+
+### Ejemplo de Uso:
+
+```javascript
+/*
+  Este script JavaScript realiza
+  una operación simple de suma y muestra el resultado.
+*/
+
+// Declarar variables
+var num1 = 5;
+var num2 = 7;
+
+/*
+  Realizar la suma de los números y almacenar el resultado
+  en la variable "suma".
+*/
+var suma = num1 + num2;
+
+// Mostrar el resultado en la consola
+console.log("La suma de " + num1 + " y " + num2 + " es: " + suma);
+
+/*
+  Fin del script.
+*/
+```
+
+En este ejemplo, los comentarios de varias líneas se utilizan para proporcionar explicaciones detalladas sobre el propósito de las secciones de código y para agregar comentarios generales al inicio y al final del script.
+
+Los comentarios de varias líneas son útiles cuando se necesita proporcionar información extensa o cuando se desea "comentar" temporalmente bloques de código para desactivarlos durante el desarrollo sin tener que eliminar el código por completo. Recuerda que, al igual que los comentarios de una sola línea, los comentarios de varias líneas son ignorados durante la ejecución del programa.

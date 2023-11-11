@@ -1,0 +1,73 @@
+En JavaScript, las entradas se refieren a la forma en que el programa recibe información del usuario o de su entorno. Las entradas son fundamentales para la interactividad de una aplicación, ya que permiten que el usuario proporcione datos que el programa puede utilizar. Aquí se presentan algunas formas comunes de recibir entradas en JavaScript:
+
+### 1. `window.prompt()`:
+
+La función `window.prompt()` muestra un cuadro de diálogo de entrada donde el usuario puede ingresar texto. La función devuelve el texto ingresado como una cadena.
+
+```javascript
+var nombre = window.prompt("Por favor, ingresa tu nombre:");
+console.log("Hola, " + nombre + "!");
+```
+
+En este ejemplo, el programa solicita al usuario que ingrese su nombre y luego utiliza ese nombre para generar una salida personalizada.
+
+### 2. Formularios HTML:
+
+En el contexto de aplicaciones web, los formularios HTML proporcionan una manera estándar de recibir datos del usuario. Puedes utilizar JavaScript para acceder a los valores ingresados en los campos del formulario.
+
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entradas en JavaScript</title>
+</head>
+<body>
+    <form id="miFormulario">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre">
+        <br>
+        <input type="button" value="Enviar" onclick="obtenerNombre()">
+    </form>
+
+    <script>
+        function obtenerNombre() {
+            var nombre = document.getElementById("nombre").value;
+            alert("Hola, " + nombre + "!");
+        }
+    </script>
+</body>
+</html>
+```
+
+En este ejemplo, el formulario HTML tiene un campo de entrada de texto para el nombre, y el script JavaScript obtiene el valor del campo cuando se hace clic en el botón.
+
+### 3. Otros Eventos de Interacción del Usuario:
+
+Puedes utilizar eventos de interacción del usuario, como clics de ratón o pulsaciones de teclas, para recibir entradas específicas.
+
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entradas en JavaScript</title>
+</head>
+<body>
+    <button onclick="obtenerEntrada()">Haz clic</button>
+
+    <script>
+        function obtenerEntrada() {
+            var entrada = window.prompt("Ingrese algo:");
+            console.log("Entrada del usuario: " + entrada);
+        }
+    </script>
+</body>
+</html>
+```
+
+En este ejemplo, al hacer clic en el botón, se solicitará al usuario que ingrese algo a través de un cuadro de diálogo de entrada.
+
+Estas son algunas de las formas comunes de recibir entradas en JavaScript. La elección de la mejor forma dependerá del contexto de la aplicación y de los requisitos específicos del programa.

@@ -1,0 +1,36 @@
+En JavaScript, las salidas y entradas se refieren a la forma en que el programa interactúa con el usuario y con el entorno en el que se ejecuta. Estas operaciones son fundamentales para la comunicación entre el código y el usuario o el sistema. Aquí hay una explicación de las salidas y entradas en JavaScript:
+
+### Salidas (Output):
+
+Las salidas en JavaScript se utilizan para mostrar información al usuario o para enviar datos a algún dispositivo de salida, como la consola del navegador o la interfaz de usuario de una página web. La función principal para generar salidas en JavaScript es `console.log()`.
+
+#### Ejemplo de Salida en la Consola:
+
+```javascript
+var mensaje = "¡Hola, mundo!";
+console.log(mensaje); // Muestra "¡Hola, mundo!" en la consola del navegador
+```
+
+#### Ejemplo de Salida en el Documento HTML:
+
+```javascript
+var mensaje = "¡Hola, mundo!";
+document.getElementById("miElemento").innerHTML = mensaje;
+```
+
+### Entradas (Input):
+
+Las entradas en JavaScript permiten al usuario proporcionar información al programa. Esto se puede hacer a través de la interacción con elementos de formulario en una página web o mediante la entrada en la consola del navegador. La función principal para recibir entradas en JavaScript es `prompt()`.
+
+#### Ejemplo de Entrada a través de `prompt()`:
+
+```javascript
+var nombreUsuario = prompt("Por favor, introduce tu nombre:");
+console.log("¡Hola, " + nombreUsuario + "!");
+```
+
+En este ejemplo, `prompt()` muestra un cuadro de diálogo al usuario solicitando que ingrese su nombre. La entrada del usuario se almacena en la variable `nombreUsuario`, y luego se utiliza para generar una salida de saludo.
+
+Es importante destacar que `prompt()` devuelve siempre una cadena de texto, incluso si el usuario ingresa un número. Si necesitas recibir un tipo de dato específico, debes convertir la entrada según sea necesario.
+
+Estas operaciones de entrada y salida son cruciales para la interactividad en aplicaciones web y para la depuración al mostrar información relevante en la consola del navegador durante el desarrollo.

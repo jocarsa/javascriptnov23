@@ -1,0 +1,35 @@
+Este esquema es un índice estructurado para aprender JavaScript, organizado en categorías temáticas clave. A continuación, te proporciono una breve explicación de cada sección:
+
+1. **Comentarios**: Inicia explicando la importancia de los comentarios en el código para hacerlo más comprensible. Los comentarios son anotaciones que no afectan la ejecución del código y son útiles para documentar y explicar partes del mismo.
+
+2. **Entradas y Salidas**:
+    - **Salidas**: Trata sobre cómo mostrar información al usuario, como la salida de datos en la consola o en la interfaz de usuario.
+    - **Entradas**: Se refiere a cómo recibir datos del usuario, como la entrada de datos desde el teclado.
+
+3. **Operadores**:
+    - **Aritméticos**: Cubre operaciones matemáticas básicas como suma, resta, multiplicación y división.
+    - **Comparación**: Incluye operadores para comparar valores, como igualdad, desigualdad, mayor que, menor que, etc.
+
+4. **Variables**: Explica cómo declarar y utilizar variables para almacenar y manipular datos en el programa.
+
+5. **Tipos de datos**: Se adentra en los diferentes tipos de datos en JavaScript, como números, cadenas, booleanos, objetos, etc.
+
+6. **Estructuras de datos**:
+    - **Colecciones**: Explora arrays y objetos, que son estructuras de datos fundamentales.
+    - **JSON**: Introduce el formato JSON (JavaScript Object Notation) para el intercambio de datos.
+
+7. **Estructuras de control del flujo de la ejecución**:
+    - **Estructuras de bucle**: Describe cómo realizar iteraciones con bucles, como `for` y `while`.
+    - **Estructuras condicionales**: Trata sobre las sentencias `if`, `else if`, y `else` para controlar el flujo basado en condiciones.
+
+8. **Funciones**: Aborda la creación y uso de funciones, que son bloques de código reutilizables.
+
+9. **Selectores (DOM)**: Se centra en cómo seleccionar y manipular elementos HTML usando JavaScript en el Document Object Model (DOM).
+
+10. **Eventos**: Explica cómo gestionar eventos, como clics del mouse o pulsaciones de teclas, para interactuar con el usuario.
+
+11. **Programación orientada a objetos**: Introduce los conceptos básicos de la programación orientada a objetos en JavaScript, como clases y objetos.
+
+12. **Librerías**: Menciona la incorporación de librerías externas para extender las capacidades de JavaScript, como jQuery u otras librerías especializadas.
+
+Este índice proporciona una estructura organizada para aprender JavaScript, desde conceptos básicos hasta temas más avanzados. A medida que avanzas en cada sección, obtendrás una comprensión más profunda de la programación en JavaScript.

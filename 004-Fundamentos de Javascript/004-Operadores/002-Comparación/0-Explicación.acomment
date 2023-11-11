@@ -1,0 +1,78 @@
+Los operadores de comparación en JavaScript se utilizan para comparar dos valores y devolver un resultado booleano (`true` o `false`) según la relación entre ellos. Aquí están los operadores de comparación más comunes:
+
+### 1. Igual (`==`):
+
+El operador igual (`==`) compara si dos valores son iguales, realizando conversiones de tipo si es necesario.
+
+```javascript
+var x = 5;
+var y = "5";
+console.log(x == y); // true (se realiza una conversión de tipo)
+```
+
+### 2. Igual estricto (`===`):
+
+El operador igual estricto (`===`) compara si dos valores son iguales y tienen el mismo tipo de dato.
+
+```javascript
+var x = 5;
+var y = "5";
+console.log(x === y); // false (sin conversión de tipo)
+```
+
+### 3. No igual (`!=`):
+
+El operador no igual (`!=`) compara si dos valores no son iguales, realizando conversiones de tipo si es necesario.
+
+```javascript
+var x = 5;
+var y = "5";
+console.log(x != y); // false (se realiza una conversión de tipo)
+```
+
+### 4. No igual estricto (`!==`):
+
+El operador no igual estricto (`!==`) compara si dos valores no son iguales o no tienen el mismo tipo de dato.
+
+```javascript
+var x = 5;
+var y = "5";
+console.log(x !== y); // true (sin conversión de tipo)
+```
+
+### 5. Mayor que (`>`), Menor que (`<`), Mayor o igual que (`>=`), Menor o igual que (`<=`):
+
+Estos operadores se utilizan para comparar si un valor es mayor, menor, mayor o igual, o menor o igual a otro valor, respectivamente.
+
+```javascript
+var a = 10;
+var b = 5;
+
+console.log(a > b); // true
+console.log(a < b); // false
+console.log(a >= b); // true
+console.log(a <= b); // false
+```
+
+### Ejemplos Combinados:
+
+```javascript
+var edad = 25;
+var permiso = 18;
+
+console.log(edad == permiso); // false
+console.log(edad >= permiso); // true
+console.log(edad < permiso); // false
+```
+
+### Nota Importante sobre la Comparación:
+
+Es a menudo preferible usar el igual estricto (`===`) y el no igual estricto (`!==`) para evitar conversiones automáticas de tipo, ya que pueden conducir a resultados inesperados. La comparación estricta compara tanto el valor como el tipo de dato.
+
+```javascript
+var x = 5;
+var y = "5";
+console.log(x === y); // false (sin conversión de tipo)
+```
+
+Estos operadores de comparación son fundamentales para controlar el flujo del programa y tomar decisiones basadas en las relaciones entre diferentes valores.

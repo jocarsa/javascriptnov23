@@ -1,0 +1,69 @@
+En JavaScript, existen varios objetos por defecto que son fundamentales para el funcionamiento del lenguaje. Estos objetos son parte del entorno de ejecución y están disponibles de forma predeterminada en cualquier script JavaScript. Aquí hay algunos de los objetos por defecto más importantes:
+
+### 1. `Object`:
+
+El objeto `Object` es la raíz de todos los objetos en JavaScript. Todos los objetos heredan de `Object`. Puedes crear objetos de manera literal o utilizando el constructor `Object()`.
+
+```javascript
+let objetoLiteral = { clave: "valor" };
+let objetoConstruido = new Object();
+```
+
+### 2. `Array`:
+
+El objeto `Array` se utiliza para almacenar y manipular conjuntos de datos. Los arrays en JavaScript pueden contener cualquier tipo de datos y tienen numerosos métodos para realizar operaciones como añadir, eliminar o transformar elementos.
+
+```javascript
+let miArray = [1, 2, 3, 4, 5];
+let otroArray = new Array();
+```
+
+### 3. `Function`:
+
+El objeto `Function` es utilizado para definir funciones en JavaScript. Las funciones son objetos de primera clase en JavaScript, lo que significa que pueden ser pasadas como argumentos, devueltas por otras funciones y asignadas a variables.
+
+```javascript
+function miFuncion() {
+  console.log("Hola, soy una función");
+}
+
+let otraFuncion = new Function("console.log('Otra función');");
+```
+
+### 4. `String`:
+
+El objeto `String` se utiliza para representar y manipular cadenas de texto. Proporciona métodos para realizar operaciones comunes con cadenas, como concatenación, búsqueda, reemplazo, etc.
+
+```javascript
+let miCadena = "Hola, soy una cadena";
+let otraCadena = new String("Otra cadena");
+```
+
+### 5. `Number`:
+
+El objeto `Number` se utiliza para representar y manipular números en JavaScript. Proporciona métodos para realizar operaciones matemáticas y conversiones entre diferentes representaciones de números.
+
+```javascript
+let miNumero = 42;
+let otroNumero = new Number(3.14);
+```
+
+### 6. `Boolean`:
+
+El objeto `Boolean` se utiliza para representar y manipular valores booleanos (`true` o `false`). Puede ser creado con el constructor `Boolean()`.
+
+```javascript
+let miBooleano = true;
+let otroBooleano = new Boolean(false);
+```
+
+### 7. `Date`:
+
+El objeto `Date` se utiliza para trabajar con fechas y horas. Proporciona métodos para obtener y establecer la fecha y la hora, así como realizar operaciones relacionadas con el tiempo.
+
+```javascript
+let fechaActual = new Date();
+let otraFecha = new Date("2023-01-01");
+```
+
+Estos son solo algunos ejemplos de los objetos por defecto en JavaScript. Cada uno de estos objetos proporciona funcionalidades específicas y es esencial para el desarrollo de aplicaciones en JavaScript. Además de estos, existen otros objetos por defecto como `RegExp` (para expresiones regulares), `Error` (para representar errores), `Math` (para operaciones matemáticas), entre otros.
