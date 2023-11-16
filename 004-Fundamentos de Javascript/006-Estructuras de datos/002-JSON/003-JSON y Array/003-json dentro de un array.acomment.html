@@ -1,0 +1,49 @@
+En este código HTML, se ha creado un array llamado `agenda`, donde cada elemento del array es un objeto que representa la información de una persona. Cada objeto tiene propiedades como `nombre`, `edad`, `telefono`, `email` y un array `gatos` con nombres de gatos asociados a esa persona. Luego, se utiliza `console.log` para imprimir el contenido del array en la consola del navegador. Vamos a analizar cada parte del código:
+
+```html
+<!doctype html>
+<html lang="es">
+    <head>
+        <title>Aprendiendo Javascript</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        
+    </body>
+    <script>
+        // Declaración de un array llamado 'agenda'
+        var agenda = [
+            {
+                "nombre": "Jose Vicente",
+                "edad": 45,
+                "telefono": "12345",
+                "email": "info@josevicetecarratala.com",
+                "gatos": ['micifu', 'chispas', 'bolita']
+            },
+            {
+                "nombre": "Juan",
+                "edad": 45,
+                "telefono": "12345",
+                "email": "juan@josevicetecarratala.com",
+                "gatos": ['micifu', 'chispas', 'bolita']
+            },
+            {
+                "nombre": "Jorge",
+                "edad": 45,
+                "telefono": "534543",
+                "email": "jorge@josevicetecarratala.com",
+                "gatos": ['micifu', 'chispas', 'bolita']
+            },
+        ];
+
+        // Imprime el contenido del array en la consola
+        console.log(agenda);
+    </script>
+</html>
+```
+
+1. `var agenda = [ ... ];`: Declara un array llamado `agenda`, donde cada elemento del array es un objeto que representa la información de una persona. El array contiene tres objetos, cada uno con propiedades como `nombre`, `edad`, `telefono`, `email` y un array `gatos` asociado.
+
+2. `console.log(agenda);`: Imprime el contenido del array en la consola del navegador. Cada objeto dentro del array representa la información de una persona, y se muestra con todas sus propiedades y valores asociados.
+
+Al cargar esta página en un navegador y abrir la consola del navegador, podrás ver el contenido del array `agenda`. Este ejemplo ilustra cómo puedes organizar información de manera estructurada utilizando arrays de objetos en JavaScript, especialmente útil cuando necesitas almacenar información sobre varias entidades con propiedades similares.

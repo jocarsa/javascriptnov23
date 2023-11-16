@@ -1,0 +1,35 @@
+En este código HTML, se utiliza una estructura de control `if-else` en JavaScript para evaluar una condición y ejecutar bloques de código diferentes según si la condición es verdadera o falsa. A continuación, analizamos el código:
+
+```html
+<!doctype html>
+<html lang="es">
+    <head>
+        <title>Aprendiendo Javascript</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        
+    </body>
+    <script>
+        // Inicializa la variable 'edad' con el valor 45
+        var edad = 45;
+
+        // Utiliza una estructura if-else para evaluar la condición
+        if(edad < 30){
+            document.write("Eres un joven");
+        } else {
+            document.write("Ya no eres un joven");
+        }
+    </script>
+</html>
+```
+
+1. `var edad = 45;`: Inicializa la variable `edad` con el valor 45.
+
+2. `if(edad < 30){ document.write("Eres un joven"); } else { document.write("Ya no eres un joven"); }`: Esta es una estructura `if-else`. La condición dentro de los paréntesis, `edad < 30`, se evalúa. Si esta condición es verdadera, se ejecuta el bloque de código dentro de las llaves `{}` después del `if`. Si la condición es falsa, se ejecuta el bloque de código dentro de las llaves `{}` después del `else`.
+
+3. `document.write("Eres un joven");`: Si la condición `edad < 30` es verdadera, se escribe "Eres un joven".
+
+4. `document.write("Ya no eres un joven");`: Si la condición `edad < 30` es falsa, se escribe "Ya no eres un joven".
+
+En este caso, dado que la edad es 45, que es mayor que 30, la condición es falsa y se ejecuta el bloque de código después del `else`. Por lo tanto, al cargar esta página en un navegador, verás el mensaje "Ya no eres un joven". La estructura `if-else` es útil cuando quieres ejecutar diferentes bloques de código según una condición específica.

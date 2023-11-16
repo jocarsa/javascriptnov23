@@ -1,0 +1,15 @@
+```css
+#jvcalendario .dia {
+    width: 100px;
+    height: 100px;
+    border: 1px solid grey;
+    display: inline-block;
+}
+
+#jvcalendario {
+    width: 800px;
+    height: 800px;
+}
+```
+
+En esta versión del archivo "jvcalendario.css", se han definido estilos CSS para los elementos dentro del contenedor con el ID "jvcalendario". Los elementos con la clase "dia" tendrán un ancho y alto de 100px, un borde de 1px sólido en gris, y se mostrarán en línea. El contenedor "#jvcalendario" tendrá un ancho y alto de 800px. No hay cambios en los archivos HTML y JavaScript en esta versión. ¿Necesitas comentarios sobre alguna otra versión o archivo?

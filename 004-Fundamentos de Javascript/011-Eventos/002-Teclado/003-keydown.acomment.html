@@ -1,0 +1,21 @@
+En el código que proporcionaste, estás escuchando el evento `keydown` en el cuerpo del documento. Actualmente, no estás haciendo nada dentro del manejador de eventos. Si deseas imprimir en la consola un mensaje cada vez que se presiona una tecla, puedes modificar tu código de la siguiente manera:
+
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Aprendiendo Javascript</title>
+    <meta charset="utf-8">
+</head>
+<body>
+    
+</body>
+<script>
+    document.querySelector("body").onkeydown = function(e){
+        console.log("Tecla presionada. Código de tecla: " + e.keyCode);
+    }
+</script>
+</html>
+```
+
+En este código, he agregado un mensaje a la consola que indica que se ha presionado una tecla y he incluido el código de la tecla presionada (`e.keyCode`). Cada tecla tiene un código numérico único asociado, y este código se imprime en la consola cuando se presiona una tecla.

@@ -1,0 +1,25 @@
+Tu código actual está escuchando el evento `focus` en un campo de entrada (`input`). Este evento se activa cuando un elemento obtiene el foco, es decir, cuando el usuario hace clic en el campo de entrada.
+
+Si deseas imprimir un mensaje en la consola cada vez que se activa el evento `focus`, tu código está correcto. Sin embargo, ten en cuenta que para eventos como `focus` y `blur`, también puedes utilizar el método `addEventListener` para adjuntar múltiples manejadores de eventos si lo necesitas.
+
+Aquí hay una versión de tu código usando `addEventListener`:
+
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Aprendiendo Javascript</title>
+    <meta charset="utf-8">
+</head>
+<body>
+    <input type="text">
+    <script>
+        document.querySelector("input").addEventListener("focus", function(e) {
+            console.log("Has entrado al campo");
+        });
+    </script>
+</body>
+</html>
+```
+
+Este código hace lo mismo que tu versión anterior, pero utilizando `addEventListener`. Ambas formas son correctas, y puedes elegir la que te resulte más cómoda.

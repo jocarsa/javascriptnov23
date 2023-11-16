@@ -1,0 +1,25 @@
+Tu código actual escucha el evento `change` en un campo de entrada (`input`). Este evento se activa cuando el valor de un elemento de formulario ha sido cambiado y se pierde el foco.
+
+Tu código está correcto para detectar el evento `change` en el campo de entrada y mostrar un mensaje en la consola cuando el usuario cambia el valor y luego hace clic fuera del campo.
+
+Aquí hay una versión similar usando `addEventListener`:
+
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Aprendiendo Javascript</title>
+    <meta charset="utf-8">
+</head>
+<body>
+    <input type="text">
+    <script>
+        document.querySelector("input").addEventListener("change", function(e) {
+            console.log("Has cambiado el campo");
+        });
+    </script>
+</body>
+</html>
+```
+
+Ambas formas son correctas, y puedes elegir la que te resulte más cómoda.

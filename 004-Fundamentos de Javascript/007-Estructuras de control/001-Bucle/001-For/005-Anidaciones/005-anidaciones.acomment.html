@@ -1,0 +1,30 @@
+En este código HTML, se utiliza un bucle anidado en JavaScript para imprimir la frase "Hoy es el día X del mes Y" para cada día del mes, iterando sobre los meses del año. A continuación, analizamos el código:
+
+```html
+<!doctype html>
+<html lang="es">
+    <head>
+        <title>Aprendiendo Javascript</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        
+    </body>
+    <script>
+        // Utiliza un bucle for anidado para imprimir el mensaje para cada día de cada mes
+        for(var mes = 1; mes <= 12; mes++){
+            for(var dia = 1; dia <= 31; dia++){
+                document.write("Hoy es el día " + dia + " del mes " + mes + "<br>");
+            }
+        }
+    </script>
+</html>
+```
+
+1. `for(var mes = 1; mes <= 12; mes++)`: Este es el bucle externo que itera sobre los meses del año, desde `mes = 1` hasta `mes <= 12`.
+
+2. `for(var dia = 1; dia <= 31; dia++)`: Este es el bucle interno anidado que itera sobre los días del mes, desde `dia = 1` hasta `dia <= 31`. Este bucle se ejecuta para cada iteración del bucle externo.
+
+3. `document.write("Hoy es el día " + dia + " del mes " + mes + "<br>");`: En cada iteración del bucle interno, se utiliza `document.write()` para agregar al HTML la frase "Hoy es el día X del mes Y", donde X es el valor actual de `dia` e Y es el valor actual de `mes`.
+
+Al cargar esta página en un navegador, verás que se imprime la frase para cada día del mes (1 al 31) para cada mes del año (1 al 12). Este ejemplo ilustra cómo puedes usar bucles anidados para realizar operaciones más complejas y generar contenido dinámicamente en función de múltiples variables.

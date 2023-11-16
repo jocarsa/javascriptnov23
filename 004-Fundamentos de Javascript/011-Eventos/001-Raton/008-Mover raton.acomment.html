@@ -1,0 +1,29 @@
+Tu código está configurado para manejar el evento de movimiento del ratón (onmousemove) en el área del cuerpo de tu HTML. La función asociada imprimirá "Estás moviendo el ratón" en la consola del navegador cada vez que muevas el ratón sobre el área del cuerpo.
+
+Aquí está tu código:
+
+```html
+<!doctype html>
+<html lang="es">
+    <head>
+        <title>Aprendiendo Javascript</title>
+        <meta charset="utf-8">
+        <style>
+            html,body{
+                width:100%;
+                height:100%;
+            }
+        </style>
+    </head>
+    <body>
+        
+    </body>
+    <script>
+        document.querySelector("body").onmousemove = function(){
+            console.log("Estás moviendo el ratón");
+        }
+    </script>
+</html>
+```
+
+Cuando muevas el ratón sobre el área del cuerpo, deberías ver el mensaje "Estás moviendo el ratón" en la consola del navegador.

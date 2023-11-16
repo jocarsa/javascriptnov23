@@ -1,0 +1,55 @@
+En este código HTML, se utiliza la estructura de control `switch` en JavaScript para evaluar diferentes casos de una variable y ejecutar bloques de código específicos según el valor de esa variable. A continuación, analizamos el código:
+
+```html
+<!doctype html>
+<html lang="es">
+    <head>
+        <title>Aprendiendo Javascript</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        
+    </body>
+    <script>
+        // Inicializa la variable 'diadelasemana' con el valor "viernes"
+        var diadelasemana = "viernes";
+        
+        // Utiliza la estructura switch para evaluar diferentes casos
+        switch(diadelasemana){
+            case "lunes":
+                document.write("Hoy es el peor día de la semana");
+                break;
+            case "martes":
+                document.write("Hoy es el segundo peor día de la semana");
+                break;
+            case "miercoles":
+                document.write("Ya estamos a mitad de semana");
+                break;
+            case "jueves":
+                document.write("Casi es viernes");
+                break;
+            case "viernes":
+                document.write("Casi es fin de semana");
+                break;
+            case "sabado":
+                document.write("Hoy es el mejor día de la semana");
+                break;
+            case "domingo":
+                document.write("Parece mentira que ya sea casi lunes");
+                break;
+        }
+    </script>
+</html>
+```
+
+1. `var diadelasemana = "viernes";`: Inicializa la variable `diadelasemana` con el valor "viernes".
+
+2. `switch(diadelasemana){ ... }`: Esta es una estructura `switch`. Evalúa el valor de `diadelasemana` y ejecuta el bloque de código correspondiente al caso que coincida.
+
+3. `case "lunes": ... break;`, `case "martes": ... break;`, etc.: Cada `case` representa un posible valor de la variable `diadelasemana`. Si el valor coincide con uno de los casos, se ejecuta el bloque de código dentro de ese `case`. El `break` se utiliza para salir del `switch` después de ejecutar un caso.
+
+4. El último `case`, `case "domingo": ... break;`, representa el caso para el valor "domingo".
+
+5. Si el valor de `diadelasemana` coincide con uno de los casos, se ejecuta el bloque de código correspondiente. En este caso específico, al tener `diadelasemana` con el valor "viernes", se ejecutará el bloque de código dentro de `case "viernes": ...`.
+
+Como resultado, al cargar esta página en un navegador, verás el mensaje "Casi es fin de semana". La estructura `switch` es útil cuando necesitas evaluar una variable con múltiples casos posibles.

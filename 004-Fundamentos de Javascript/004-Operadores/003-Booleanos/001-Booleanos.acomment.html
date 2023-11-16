@@ -1,0 +1,31 @@
+En este código HTML, el script de JavaScript realiza operaciones lógicas y escribe los resultados en el documento. Vamos a analizar cada línea:
+
+```html
+document.write(4==4 && 3==3 && 2==2);
+document.write("<br>");
+document.write(4==4 && 3==3 && 2==1);
+document.write("<br>");
+
+document.write(4==4 || 3==3 || 2==2);
+document.write("<br>");
+document.write(4==4 || 3==3 || 2==1);
+document.write("<br>");
+document.write(4==4 || 3==2 || 2==1);
+document.write("<br>");
+document.write(4==3 || 3==2 || 2==1);
+document.write("<br>");
+```
+
+1. `document.write(4==4 && 3==3 && 2==2);`: Realiza una operación lógica "Y" (`&&`) entre las comparaciones. Todas las comparaciones son verdaderas, por lo que el resultado es `true` (verdadero).
+
+2. `document.write(4==4 && 3==3 && 2==1);`: Realiza una operación lógica "Y" entre las comparaciones. La última comparación (2==1) es falsa, por lo que el resultado es `false` (falso).
+
+3. `document.write(4==4 || 3==3 || 2==2);`: Realiza una operación lógica "O" (`||`) entre las comparaciones. Todas las comparaciones son verdaderas, por lo que el resultado es `true` (verdadero).
+
+4. `document.write(4==4 || 3==3 || 2==1);`: Realiza una operación lógica "O" entre las comparaciones. La última comparación (2==1) es falsa, pero como al menos una de las comparaciones es verdadera, el resultado es `true` (verdadero).
+
+5. `document.write(4==4 || 3==2 || 2==1);`: Realiza una operación lógica "O" entre las comparaciones. La primera comparación (4==4) es verdadera, por lo que el resultado es `true` (verdadero), sin evaluar las otras comparaciones.
+
+6. `document.write(4==3 || 3==2 || 2==1);`: Realiza una operación lógica "O" entre las comparaciones. Todas las comparaciones son falsas, por lo que el resultado es `false` (falso).
+
+En resumen, el script realiza operaciones lógicas "Y" y "O" entre varias comparaciones y escribe los resultados (`true` o `false`) en el documento, con saltos de línea (`<br>`) entre cada resultado. Al cargar esta página en un navegador, podrás ver estos resultados.

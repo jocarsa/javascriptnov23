@@ -1,0 +1,33 @@
+En este código, se ha modificado la función `saluda` para que construya y devuelva una cadena de texto en lugar de escribir directamente en el documento. Luego, se utiliza la función `document.write` para mostrar el resultado en el documento. Aquí está el análisis detallado:
+
+```html
+<!doctype html>
+<html lang="es">
+    <head>
+        <title>Aprendiendo Javascript</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <!-- Se crea un div con id "elemento" en el cuerpo del documento -->
+        <div id="elemento"></div>
+    </body>
+    <script>
+        // Se define la función saluda que acepta dos parámetros: nombre y edad
+        function saluda(nombre, edad){
+            // Se construye una cadena de texto concatenando mensajes con los parámetros proporcionados
+            var cadena = "";
+            cadena += "Hola "+nombre+"<br>";
+            cadena += "Tienes "+edad+" años<br>";
+            cadena += "Hoy es viernes<br>";
+            cadena += "Y yo te saludo<br>";
+            // Se devuelve la cadena construida
+            return cadena;
+        }
+        
+        // Se utiliza document.write para mostrar en el documento el resultado de la función con argumentos específicos
+        document.write(saluda("Jose Vicente", 45));
+    </script>
+</html>
+```
+
+Este enfoque permite tener un mayor control sobre la cadena resultante y decidir cuándo y cómo mostrarla en el documento. La función `saluda` ahora devuelve la cadena construida, y esta cadena se imprime en el documento utilizando `document.write`.

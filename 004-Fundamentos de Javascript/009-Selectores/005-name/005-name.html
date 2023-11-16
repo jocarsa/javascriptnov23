@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <title>Aprendiendo Javascript</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <div name="etiqueta" class="elemento"></div>
+        <div name="etiqueta" class="elemento"></div>
+        <div name="etiqueta" class="elemento"></div>
+        <div name="etiqueta" class="elemento"></div>
+    </body>
+    <script>
+        for(var i = 0;i<=3;i++){
+            document.getElementsByName("etiqueta")[i].innerHTML = "Hola";
+        }
+    </script>
+</html>

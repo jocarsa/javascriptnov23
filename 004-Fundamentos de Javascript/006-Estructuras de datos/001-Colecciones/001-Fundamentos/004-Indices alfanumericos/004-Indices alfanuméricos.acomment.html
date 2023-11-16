@@ -1,0 +1,41 @@
+En este código HTML, se ha declarado un array asociativo en JavaScript llamado `agenda`. Este tipo de array utiliza cadenas como claves en lugar de índices numéricos. Se han asignado valores a distintas propiedades del array, y luego se ha utilizado `console.table` para imprimir el contenido del array en la consola del navegador. Vamos a analizar el código:
+
+```html
+<!doctype html>
+<html lang="es">
+    <head>
+        <title>Aprendiendo Javascript</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        
+    </body>
+    <script>
+        // Se puede utilizar la siguiente forma para declarar un array asociativo
+        // var agenda = new Array();
+        
+        // O simplemente usando corchetes []
+        var agenda = [];
+        
+        // Asigna valores a propiedades del array (array asociativo)
+        agenda['nombre'] = "Jose Vicente";
+        agenda['telefono'] = "12345";
+        agenda['email'] = "info@josevicentecarratala.com";
+        
+        // Imprime el contenido del array en la consola
+        console.table(agenda);
+    </script>
+</html>
+```
+
+1. `var agenda = [];`: Declara un array vacío llamado `agenda` utilizando la notación de corchetes `[]`. Alternativamente, se podría haber utilizado `var agenda = new Array();`.
+
+2. `agenda['nombre'] = "Jose Vicente";`: Asigna el valor "Jose Vicente" a la propiedad `nombre` del array.
+
+3. `agenda['telefono'] = "12345";`: Asigna el valor "12345" a la propiedad `telefono` del array.
+
+4. `agenda['email'] = "info@josevicentecarratala.com";`: Asigna el valor "info@josevicentecarratala.com" a la propiedad `email` del array.
+
+5. `console.table(agenda);`: Imprime el contenido del array en la consola del navegador utilizando `console.table`. En este caso, se mostrará una tabla con tres filas, una para cada propiedad (`nombre`, `telefono`, `email`), y sus respectivos valores.
+
+Al cargar esta página en un navegador y abrir la consola del navegador, podrás ver la tabla que muestra las propiedades y valores del array asociativo. Este ejemplo ilustra cómo puedes utilizar un array asociativo en JavaScript para organizar datos utilizando nombres de propiedades descriptivos.

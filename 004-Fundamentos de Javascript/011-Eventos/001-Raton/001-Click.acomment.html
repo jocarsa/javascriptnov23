@@ -1,0 +1,25 @@
+Tu código HTML y JavaScript está cerca de ser funcional, pero falta un pequeño detalle. El evento `onclick` espera una función como su manejador, pero estás asignando directamente el resultado de `console.log("Has hecho click en el boton")`, lo cual no es una función.
+
+Aquí tienes una corrección:
+
+```html
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Aprendiendo Javascript</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <button id="miBoton">Púlsame</button>
+
+        <script>
+            // Se selecciona el botón por su id y se asigna un manejador de evento
+            document.getElementById("miBoton").onclick = function () {
+                console.log("Has hecho clic en el botón");
+            };
+        </script>
+    </body>
+</html>
+```
+
+He añadido un `id` al botón (`id="miBoton"`) para seleccionarlo fácilmente en JavaScript. Luego, en el script, se utiliza `getElementById` para obtener el botón por su id y se asigna la función anónima al evento `onclick`. Ahora, cuando haces clic en el botón, se imprimirá el mensaje en la consola.

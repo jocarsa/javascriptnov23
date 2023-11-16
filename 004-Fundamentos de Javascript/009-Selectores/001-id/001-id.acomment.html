@@ -1,0 +1,25 @@
+En este código HTML, se utiliza JavaScript para seleccionar un elemento del documento con el identificador "elemento" y luego modificar su contenido utilizando la propiedad `innerHTML`. A continuación, se analiza el código:
+
+```html
+<!doctype html>
+<html lang="es">
+    <head>
+        <title>Aprendiendo Javascript</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <!-- Se crea un div con el identificador "elemento" -->
+        <div id="elemento"></div>
+    </body>
+    <script>
+        // Selecciona el elemento con el identificador "elemento"
+        document.getElementById("elemento").innerHTML = "Hola desde Javascript";
+    </script>
+</html>
+```
+
+1. `<div id="elemento"></div>`: En el cuerpo del documento HTML, se crea un elemento `<div>` con el atributo de identificación (`id`) establecido en "elemento". Este será el elemento que se selecciona y modifica con JavaScript.
+
+2. `document.getElementById("elemento").innerHTML = "Hola desde Javascript";`: Utiliza JavaScript para seleccionar el elemento con el identificador "elemento" mediante `document.getElementById("elemento")`. Luego, modifica su contenido interno utilizando la propiedad `innerHTML`, estableciéndola en el texto "Hola desde Javascript".
+
+Al cargar esta página en un navegador, el contenido del elemento con el identificador "elemento" será reemplazado por el texto "Hola desde Javascript". Este es un ejemplo común de cómo JavaScript puede interactuar con el contenido de una página web y modificar dinámicamente el contenido de los elementos HTML.

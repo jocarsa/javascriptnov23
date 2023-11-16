@@ -1,0 +1,23 @@
+En tu código actual, estás escuchando el evento `keyup` en el cuerpo del documento. Similar al evento `keydown`, el evento `keyup` se activa cuando se suelta una tecla.
+
+Si deseas imprimir un mensaje en la consola cada vez que se suelta una tecla, puedes modificar tu código de la siguiente manera:
+
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Aprendiendo Javascript</title>
+    <meta charset="utf-8">
+</head>
+<body>
+    
+</body>
+<script>
+    document.querySelector("body").onkeyup = function(e){
+        console.log("Tecla liberada. Código de tecla: " + e.keyCode);
+    }
+</script>
+</html>
+```
+
+Este código imprimirá en la consola un mensaje indicando que se ha liberado una tecla y mostrará el código de la tecla correspondiente (`e.keyCode`). Cada tecla tiene un código numérico único asociado, y este código se imprime en la consola cuando se suelta una tecla.

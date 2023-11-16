@@ -1,0 +1,22 @@
+En este código HTML, se utiliza JavaScript para escribir en el documento HTML la frase "Hoy es el día 1 del mes". La función `document.write()` se utiliza para agregar contenido directamente al HTML en el lugar donde se encuentra el script. A continuación, analizaremos el código:
+
+```html
+<!doctype html>
+<html lang="es">
+    <head>
+        <title>Aprendiendo Javascript</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        
+    </body>
+    <script>
+        // Utiliza document.write para agregar contenido al HTML
+        document.write("Hoy es el día 1 del mes<br>");
+    </script>
+</html>
+```
+
+1. `document.write("Hoy es el día 1 del mes<br>");`: La función `document.write()` se utiliza para escribir el contenido entre paréntesis directamente en el HTML. En este caso, se imprime la frase "Hoy es el día 1 del mes" seguida de un salto de línea (`<br>`).
+
+Al cargar esta página en un navegador, verás que la frase se agrega directamente al cuerpo del documento HTML. Es importante tener en cuenta que el uso de `document.write()` puede tener ciertos efectos secundarios y no es la práctica más común para manipular el contenido de la página en el desarrollo web moderno. En su lugar, se suelen utilizar métodos como la manipulación del DOM o la actualización de contenido mediante eventos.

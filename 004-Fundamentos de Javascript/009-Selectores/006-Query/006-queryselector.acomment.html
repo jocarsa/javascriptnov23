@@ -1,0 +1,47 @@
+En este código HTML, se utilizan distintos selectores de JavaScript para seleccionar elementos del DOM (Document Object Model) y modificar su contenido interno. Aquí está el análisis detallado del código:
+
+```html
+<!doctype html>
+<html lang="es">
+    <head>
+        <title>Aprendiendo Javascript</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <!-- Se crean cinco divs con diferentes identificadores y atributos -->
+        <div id="primero"></div>
+        <div class="segundo"></div>
+        <div name="tercero"></div>
+        <div></div>
+        <div miPropioAtributo="cuarto"></div>
+    </body>
+    <script>
+        // Selecciona el elemento con id "primero" y modifica su contenido interno
+        document.querySelector("#primero").innerHTML = "Hola ID desde Javascript";
+
+        // Selecciona el elemento con clase "segundo" y modifica su contenido interno
+        document.querySelector(".segundo").innerHTML = "Hola clase desde Javascript";
+
+        // Selecciona el cuarto elemento <div> (índice 3) y modifica su contenido interno
+        document.querySelectorAll("div")[3].innerHTML = "Hola etiqueta desde Javascript";
+
+        // Selecciona el elemento con el atributo name="tercero" y modifica su contenido interno
+        document.querySelector("[name='tercero']").innerHTML = "Hola atributo desde Javascript";
+
+        // Selecciona el elemento con el atributo personalizado miPropioAtributo="cuarto" y modifica su contenido interno
+        document.querySelector("[miPropioAtributo='cuarto']").innerHTML = "Hola atributo personalizado desde Javascript";
+    </script>
+</html>
+```
+
+- `document.querySelector("#primero").innerHTML = "Hola ID desde Javascript";`: Selecciona el elemento con el ID "primero" y modifica su contenido interno con el texto "Hola ID desde Javascript".
+
+- `document.querySelector(".segundo").innerHTML = "Hola clase desde Javascript";`: Selecciona el elemento con la clase "segundo" y modifica su contenido interno con el texto "Hola clase desde Javascript".
+
+- `document.querySelectorAll("div")[3].innerHTML = "Hola etiqueta desde Javascript";`: Selecciona el cuarto elemento `<div>` en el documento (por índice) y modifica su contenido interno con el texto "Hola etiqueta desde Javascript".
+
+- `document.querySelector("[name='tercero']").innerHTML = "Hola atributo desde Javascript";`: Selecciona el elemento con el atributo `name` igual a "tercero" y modifica su contenido interno con el texto "Hola atributo desde Javascript".
+
+- `document.querySelector("[miPropioAtributo='cuarto']").innerHTML = "Hola atributo personalizado desde Javascript";`: Selecciona el elemento con el atributo personalizado `miPropioAtributo` igual a "cuarto" y modifica su contenido interno con el texto "Hola atributo personalizado desde Javascript".
+
+Estos ejemplos ilustran cómo se pueden utilizar diferentes selectores para acceder y manipular elementos HTML en una página web utilizando JavaScript.

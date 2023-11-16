@@ -1,0 +1,23 @@
+El evento `onmouseover` se activa cuando el ratón pasa por encima del elemento. Sin embargo, en este contexto, `return false;` no tiene ningún efecto para prevenir el comportamiento predeterminado. La función `onmouseover` no espera un valor de retorno específico como lo hace `oncontextmenu`.
+
+Si deseas simplemente imprimir un mensaje en la consola cuando el ratón entra en el botón, puedes hacerlo sin `return false;`. Aquí tienes el código corregido:
+
+```html
+<!doctype html>
+<html lang="es">
+    <head>
+        <title>Aprendiendo Javascript</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <button>Púlsame</button>
+    </body>
+    <script>
+        document.querySelector("button").onmouseover = function(){
+            console.log("Has entrado en el botón");
+        }
+    </script>
+</html>
+```
+
+Con este código, cuando pases el ratón por encima del botón, verás el mensaje "Has entrado en el botón" en la consola del navegador.

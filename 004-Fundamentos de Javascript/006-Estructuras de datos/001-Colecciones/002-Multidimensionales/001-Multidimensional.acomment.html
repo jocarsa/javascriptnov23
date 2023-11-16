@@ -1,0 +1,49 @@
+En este código HTML, se ha creado un array bidimensional en JavaScript llamado `agenda`. Cada elemento del array principal (`agenda[0]` y `agenda[1]`) es a su vez otro array asociativo que almacena información sobre una persona. Luego, se utiliza `console.table` para imprimir el contenido del array bidimensional en la consola del navegador. Vamos a analizar el código:
+
+```html
+<!doctype html>
+<html lang="es">
+    <head>
+        <title>Aprendiendo Javascript</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        
+    </body>
+    <script>
+        // Declaración de un array bidimensional
+        var agenda = [];
+
+        // Asignación de valores al primer elemento del array principal
+        agenda[0] = [];
+        agenda[0]['nombre'] = "Jose Vicente";
+        agenda[0]['telefono'] = "12345";
+        agenda[0]['email'] = "info@jocarsa.com";
+        
+        // Asignación de valores al segundo elemento del array principal
+        agenda[1] = [];
+        agenda[1]['nombre'] = "Juan";
+        agenda[1]['telefono'] = "12345";
+        agenda[1]['email'] = "juan@jocarsa.com";
+        
+        // Imprime el contenido del array bidimensional en la consola
+        console.table(agenda);
+    </script>
+</html>
+```
+
+1. `var agenda = [];`: Declara un array vacío llamado `agenda`.
+
+2. `agenda[0] = [];`: Asigna un array vacío al primer elemento del array principal (`agenda[0]`).
+
+3. `agenda[0]['nombre'] = "Jose Vicente";`: Asigna el valor "Jose Vicente" a la propiedad `nombre` del array asociado al primer elemento del array principal.
+
+4. `agenda[0]['telefono'] = "12345";`: Asigna el valor "12345" a la propiedad `telefono` del array asociado al primer elemento del array principal.
+
+5. `agenda[0]['email'] = "info@jocarsa.com";`: Asigna el valor "info@jocarsa.com" a la propiedad `email` del array asociado al primer elemento del array principal.
+
+6. Se repiten los pasos 2-5 para el segundo elemento del array principal (`agenda[1]`), asignando valores para otra persona.
+
+7. `console.table(agenda);`: Imprime el contenido del array bidimensional en la consola del navegador utilizando `console.table`. En este caso, se mostrará una tabla con dos filas, una para cada elemento del array principal, y las propiedades y valores asociados a cada persona.
+
+Al cargar esta página en un navegador y abrir la consola del navegador, podrás ver la tabla que muestra las personas y sus respectivos datos almacenados en el array bidimensional. Este ejemplo ilustra cómo puedes utilizar un array bidimensional en JavaScript para organizar datos de manera más estructurada.

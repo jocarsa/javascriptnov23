@@ -1,0 +1,22 @@
+Tu código está configurado para imprimir en la consola del navegador un mensaje cuando se presiona una tecla y también imprimir la tecla que se ha presionado (propiedad `key` del objeto de evento).
+
+```html
+<!doctype html>
+<html lang="es">
+    <head>
+        <title>Aprendiendo Javascript</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        
+    </body>
+    <script>
+        document.querySelector("body").onkeypress = function(e){
+            console.log("Has pulsado una tecla");
+            console.log("Tecla pulsada: " + e.key);
+        }
+    </script>
+</html>
+```
+
+Con este código, al presionar una tecla, deberías ver mensajes en la consola que indican que has pulsado una tecla, junto con la tecla específica que has presionado.

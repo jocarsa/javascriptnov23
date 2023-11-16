@@ -1,0 +1,23 @@
+Tu código parece estar bien, pero hay un detalle: `onmouseleave` no espera un valor de retorno específico, por lo que `return false;` no es necesario en este caso.
+
+Aquí está tu código corregido:
+
+```html
+<!doctype html>
+<html lang="es">
+    <head>
+        <title>Aprendiendo Javascript</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <button>Púlsame</button>
+    </body>
+    <script>
+        document.querySelector("button").onmouseleave = function(){
+            console.log("Has salido del botón");
+        }
+    </script>
+</html>
+```
+
+Con este código, cuando el ratón sale del botón, se imprimirá "Has salido del botón" en la consola del navegador.

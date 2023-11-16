@@ -1,0 +1,26 @@
+El código que proporcionaste contiene un error en la línea:
+
+```javascript
+edad++++;
+```
+
+El operador de incremento (`++`) se utiliza para aumentar el valor de una variable en 1. Intentar usarlo dos veces consecutivas como `edad++++` no es válido en JavaScript y generará un error de sintaxis.
+
+Si deseas incrementar la variable `edad` en 1, simplemente usa `edad++`. La línea corregida sería:
+
+```javascript
+edad++;
+```
+
+Entonces, el código corregido sería:
+
+```html
+<script>
+    var edad = 45;
+    document.write("Tu edad es de: " + edad + " años<br>");
+    edad++;
+    document.write("Tu edad es de: " + edad + " años<br>");
+</script>
+```
+
+Esta corrección incrementa correctamente el valor de la variable `edad` en 1 y muestra el mensaje correspondiente en el documento HTML.

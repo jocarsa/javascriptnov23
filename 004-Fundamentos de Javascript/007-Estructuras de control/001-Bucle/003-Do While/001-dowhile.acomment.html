@@ -1,0 +1,31 @@
+En este código HTML, se utiliza un bucle `do-while` en JavaScript para imprimir el mensaje "hola". A diferencia de un bucle `while` convencional, un bucle `do-while` ejecuta el bloque de código al menos una vez, incluso si la condición es falsa. Vamos a analizar el código:
+
+```html
+<!doctype html>
+<html lang="es">
+    <head>
+        <title>Aprendiendo Javascript</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        
+    </body>
+    <script>
+        // Inicializa la variable 'edad' con el valor 40
+        var edad = 40;
+
+        // Utiliza un bucle do-while para imprimir el mensaje al menos una vez
+        do {
+            document.write("hola");
+        } while (edad < 20);
+    </script>
+</html>
+```
+
+1. `var edad = 40;`: Inicializa la variable `edad` con el valor 40.
+
+2. `do { document.write("hola"); } while (edad < 20);`: Este es un bucle `do-while`. El bloque de código dentro del `do` se ejecutará al menos una vez, independientemente de la condición. En este caso, se escribe "hola" en el documento.
+
+3. `while (edad < 20);`: Después de ejecutar el bloque de código en `do`, se evalúa la condición `edad < 20`. Dado que `edad` es 40 y la condición es falsa, el bucle no se repetirá.
+
+Al cargar esta página en un navegador, verás que se imprime "hola" una vez, aunque la condición del bucle es falsa. Esto es característico de los bucles `do-while`, que garantizan que el bloque de código se ejecute al menos una vez antes de verificar la condición.

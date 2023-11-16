@@ -1,0 +1,5 @@
+Tu código está utilizando `oncontextmenu` para manejar el evento de clic derecho en el botón y muestra el mensaje en la consola cuando se hace clic derecho. Además, `return false;` se utiliza para evitar que aparezca el menú contextual predeterminado en el navegador.
+
+Si ejecutas este código y haces clic derecho en el botón, deberías ver el mensaje "Has hecho clic en el botón" en la consola del navegador y el menú contextual del navegador no debería aparecer.
+
+Recuerda que, aunque `return false;` puede funcionar para prevenir el menú contextual en muchos casos, no es una solución totalmente estándar y puede no funcionar en todos los navegadores en todas las situaciones. En algunos casos, es preferible utilizar el método `event.preventDefault()` dentro de la función de manejo de eventos para prevenir el comportamiento predeterminado del navegador de manera más consistente.

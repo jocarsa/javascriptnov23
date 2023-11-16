@@ -1,0 +1,26 @@
+En este código HTML, se utiliza un bucle `for` en JavaScript para imprimir la frase "Hoy es el día X del mes" para cada día del mes, pero en orden inverso. A continuación, analizamos el código:
+
+```html
+<!doctype html>
+<html lang="es">
+    <head>
+        <title>Aprendiendo Javascript</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        
+    </body>
+    <script>
+        // Utiliza un bucle for para imprimir el mensaje para cada día del mes, en orden inverso
+        for(var dia = 31; dia >= 1; dia--){
+            document.write("Hoy es el día " + dia + " del mes<br>");
+        }
+    </script>
+</html>
+```
+
+1. `for(var dia = 31; dia >= 1; dia--)`: Este es un bucle `for` que comienza con `dia = 31`. La condición de continuación del bucle es `dia >= 1`, y en cada iteración, `dia` se decrementa en 1.
+
+2. `document.write("Hoy es el día " + dia + " del mes<br>");`: En cada iteración del bucle, se utiliza `document.write()` para agregar al HTML la frase "Hoy es el día X del mes", donde X es el valor actual de `dia`.
+
+Al cargar esta página en un navegador, verás que se imprime la frase para cada día del mes del 31 al 1, en orden descendente. Es otra forma de ilustrar cómo puedes personalizar la lógica de un bucle `for` para adaptarlo a tus necesidades específicas.

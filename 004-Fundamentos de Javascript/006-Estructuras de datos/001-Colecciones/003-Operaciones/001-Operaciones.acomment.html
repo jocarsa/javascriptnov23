@@ -1,0 +1,72 @@
+En este código HTML, se ha creado un array llamado `frutas` que contiene algunas frutas. Luego, se utilizan varios métodos de array para manipular y modificar el contenido del array. A continuación, analizaremos cada parte del código:
+
+```html
+<!doctype html>
+<html lang="es">
+    <head>
+        <title>Aprendiendo Javascript</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        
+    </body>
+    <script>
+        // Declaración de un array de frutas
+        var frutas = ['manzana', 'pera', 'plátano', 'naranja'];
+
+        // Imprime el array original en la consola
+        console.log(frutas);
+
+        // Obtiene la longitud del array
+        var numero = frutas.length;
+        // Imprime el número de frutas en la consola
+        console.log("Tengo " + numero + " frutas");
+
+        // Agrega un nuevo elemento al final del array
+        frutas.push("kiwi");
+        // Imprime el array después de agregar "kiwi"
+        console.log(frutas);
+
+        // Elimina el último elemento del array
+        frutas.pop();
+        // Imprime el array después de eliminar el último elemento
+        console.log(frutas);
+
+        // Elimina un elemento en una posición específica del array
+        frutas.splice(1, 1);
+        // Imprime el array después de eliminar el elemento en la posición 1
+        console.log(frutas);
+
+        // Invierte el orden de los elementos en el array
+        frutas.reverse();
+        // Imprime el array después de invertir el orden
+        console.log(frutas);
+    </script>
+</html>
+```
+
+1. `var frutas = ['manzana', 'pera', 'plátano', 'naranja'];`: Declara un array llamado `frutas` con cuatro elementos: 'manzana', 'pera', 'plátano', y 'naranja'.
+
+2. `console.log(frutas);`: Imprime el array original en la consola del navegador.
+
+3. `var numero = frutas.length;`: Obtiene la longitud del array y almacena el resultado en la variable `numero`.
+
+4. `console.log("Tengo " + numero + " frutas");`: Imprime en la consola un mensaje que indica la cantidad de frutas en el array.
+
+5. `frutas.push("kiwi");`: Agrega el elemento "kiwi" al final del array.
+
+6. `console.log(frutas);`: Imprime el array después de agregar "kiwi".
+
+7. `frutas.pop();`: Elimina el último elemento del array.
+
+8. `console.log(frutas);`: Imprime el array después de eliminar el último elemento.
+
+9. `frutas.splice(1, 1);`: Elimina un elemento en la posición 1 del array.
+
+10. `console.log(frutas);`: Imprime el array después de eliminar el elemento en la posición 1.
+
+11. `frutas.reverse();`: Invierte el orden de los elementos en el array.
+
+12. `console.log(frutas);`: Imprime el array después de invertir el orden.
+
+Al cargar esta página en un navegador y abrir la consola del navegador, podrás ver los resultados de cada operación en el array `frutas`. Este ejemplo ilustra el uso de algunos métodos básicos de manipulación de arrays en JavaScript.

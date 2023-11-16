@@ -1,0 +1,33 @@
+En este código HTML, se utiliza un bucle `for` en JavaScript para iterar sobre los elementos `<div>` del documento y luego modificar el contenido de cada uno de esos elementos utilizando la propiedad `innerHTML`. A continuación, se analiza el código:
+
+```html
+<!doctype html>
+<html lang="es">
+    <head>
+        <title>Aprendiendo Javascript</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <!-- Se crean cuatro divs -->
+        <div class="elemento"></div>
+        <div class="elemento"></div>
+        <div class="elemento"></div>
+        <div class="elemento"></div>
+    </body>
+    <script>
+        // Utiliza un bucle for para iterar sobre los elementos <div>
+        for(var i = 0; i <= 3; i++){
+            // Modifica el contenido de cada elemento <div> en cada iteración
+            document.getElementsByTagName("div")[i].innerHTML = "Hola";
+        }
+    </script>
+</html>
+```
+
+1. `<div class="elemento"></div>`: Se crean cuatro elementos `<div>`.
+
+2. `for(var i = 0; i <= 3; i++){ ... }`: Se utiliza un bucle `for` para iterar desde 0 hasta 3 (inclusivo). La variable `i` representa el índice de los elementos `<div>`.
+
+3. `document.getElementsByTagName("div")[i].innerHTML = "Hola";`: En cada iteración del bucle, se selecciona un elemento específico `<div>` utilizando `document.getElementsByTagName("div")[i]` y se modifica su contenido interno con la propiedad `innerHTML`, estableciéndola en el texto "Hola".
+
+Al cargar esta página en un navegador, el contenido de cada elemento `<div>` será reemplazado por el texto "Hola". Este es otro ejemplo de cómo JavaScript puede iterar sobre elementos HTML y modificar su contenido dinámicamente, en este caso, utilizando `getElementsByTagName` para seleccionar elementos por su tipo (`<div>` en este caso).

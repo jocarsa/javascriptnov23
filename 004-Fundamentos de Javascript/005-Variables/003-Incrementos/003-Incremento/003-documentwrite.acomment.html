@@ -1,0 +1,26 @@
+En este código HTML, se ha declarado una variable en JavaScript llamada `edad` y se le ha asignado el valor numérico 45. Luego, se utiliza `document.write` para imprimir en el documento HTML el mensaje que incluye el valor de la variable `edad`. Posteriormente, se incrementa y decrementa el valor de la variable `edad` y se imprime nuevamente en el documento HTML. Vamos a analizar el código:
+
+```html
+<script>
+    var edad = 45;
+    document.write("Tu edad es de: " + edad + " años<br>");
+    edad++;
+    document.write("Tu edad es de: " + edad + " años<br>");
+    edad--;
+    document.write("Tu edad es de: " + edad + " años<br>");
+</script>
+```
+
+1. `var edad = 45;`: Declara una variable llamada `edad` y le asigna el valor numérico 45.
+
+2. `document.write("Tu edad es de: " + edad + " años<br>");`: Utiliza `document.write` para imprimir en el documento HTML el mensaje "Tu edad es de: 45 años" con un salto de línea (`<br>`).
+
+3. `edad++;`: Incrementa el valor de la variable `edad` en 1. Después de esta línea, `edad` tendrá el valor 46.
+
+4. `document.write("Tu edad es de: " + edad + " años<br>");`: Imprime en el documento HTML el mensaje "Tu edad es de: 46 años" con un salto de línea.
+
+5. `edad--;`: Decrementa el valor de la variable `edad` en 1. Después de esta línea, `edad` tendrá nuevamente el valor 45.
+
+6. `document.write("Tu edad es de: " + edad + " años<br>");`: Imprime en el documento HTML el mensaje "Tu edad es de: 45 años" con un salto de línea.
+
+Al cargar esta página en un navegador, verás la secuencia de mensajes que reflejan el cambio en el valor de la variable `edad` debido a las operaciones de incremento (`++`) y decremento (`--`).

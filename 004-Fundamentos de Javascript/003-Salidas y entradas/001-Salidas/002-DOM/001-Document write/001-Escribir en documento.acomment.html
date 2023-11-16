@@ -1,0 +1,19 @@
+En este código HTML, tienes un documento HTML básico con una sección `<head>` y `<body>`. Dentro de la sección `<head>`, tienes un título que dice "Aprendiendo Javascript". El contenido del cuerpo (`<body>`) está vacío en este caso.
+
+Ahora, en la parte de JavaScript, tienes un bloque `<script>` que contiene una línea de código:
+
+```javascript
+document.write("Texto escrito desde Javascript");
+```
+
+Voy a explicar esa línea paso a paso:
+
+1. `document`: Esto hace referencia al objeto `document` en el Modelo de Objeto de Documento (DOM) de JavaScript. El objeto `document` representa el documento HTML actual y proporciona métodos para interactuar con él.
+
+2. `.write()`: Este es un método del objeto `document`. El método `write()` se utiliza para escribir contenido directamente en el documento HTML en tiempo de carga.
+
+3. `"Texto escrito desde Javascript"`: Este es el contenido que se escribirá en el documento HTML. En este caso, es un simple texto que dice "Texto escrito desde Javascript".
+
+Entonces, en resumen, el código JavaScript está escribiendo el texto "Texto escrito desde Javascript" directamente en el documento HTML en el lugar donde se encuentra el script. Cuando cargas esta página en un navegador, verás ese texto apareciendo en la página.
+
+Es importante tener en cuenta que el uso de `document.write()` se considera obsoleto en muchos casos, y generalmente se prefiere utilizar métodos más modernos para manipular el DOM, como `innerHTML` o la creación de elementos DOM. Sin embargo, para un ejemplo sencillo como este, `document.write()` funciona.

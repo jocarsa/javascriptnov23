@@ -1,0 +1,49 @@
+En este código HTML, se ha declarado un array en JavaScript llamado `agenda`. Se ha utilizado tanto la notación de corchetes (`[]`) como la notación de claves (propiedades) para asignar valores al array. Además, se han asignado valores a elementos específicos del array utilizando índices numéricos. Posteriormente, se ha utilizado `console.table` para imprimir el contenido del array en la consola del navegador. Vamos a analizar el código:
+
+```html
+<!doctype html>
+<html lang="es">
+    <head>
+        <title>Aprendiendo Javascript</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        
+    </body>
+    <script>
+        // Se puede utilizar la siguiente forma para declarar un array
+        // var agenda = new Array();
+        
+        // O simplemente usando corchetes []
+        var agenda = [];
+        
+        // Asigna valores a propiedades del array (array asociativo)
+        agenda['nombre'] = "Jose Vicente";
+        agenda['telefono'] = "12345";
+        agenda['email'] = "info@josevicentecarratala.com";
+        
+        // Asigna valores a elementos específicos del array utilizando índices numéricos
+        agenda[0] = "La calle de Jose Vicente";
+        agenda[1000] = "Valencia";
+        
+        // Imprime el contenido del array en la consola
+        console.table(agenda);
+    </script>
+</html>
+```
+
+1. `var agenda = [];`: Declara un array vacío llamado `agenda` utilizando la notación de corchetes `[]`. Alternativamente, se podría haber utilizado `var agenda = new Array();`.
+
+2. `agenda['nombre'] = "Jose Vicente";`: Asigna el valor "Jose Vicente" a la propiedad `nombre` del array.
+
+3. `agenda['telefono'] = "12345";`: Asigna el valor "12345" a la propiedad `telefono` del array.
+
+4. `agenda['email'] = "info@josevicentecarratala.com";`: Asigna el valor "info@josevicentecarratala.com" a la propiedad `email` del array.
+
+5. `agenda[0] = "La calle de Jose Vicente";`: Asigna el valor "La calle de Jose Vicente" al elemento con índice 0 del array.
+
+6. `agenda[1000] = "Valencia";`: Asigna el valor "Valencia" al elemento con índice 1000 del array.
+
+7. `console.table(agenda);`: Imprime el contenido del array en la consola del navegador utilizando `console.table`. En este caso, se mostrará una tabla con cuatro filas, una para cada propiedad (`nombre`, `telefono`, `email`) y los dos elementos específicos con índices 0 y 1000.
+
+Al cargar esta página en un navegador y abrir la consola del navegador, podrás ver la tabla que muestra las propiedades y valores del array, incluyendo los elementos específicos con índices numéricos. Este ejemplo ilustra cómo puedes utilizar un array en JavaScript para almacenar y organizar datos de diversas maneras.

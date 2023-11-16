@@ -1,0 +1,28 @@
+En este código HTML, se utiliza JavaScript para seleccionar elementos del documento por su clase (en este caso, "elemento") y luego modificar el contenido del segundo elemento (`[1]` indica el segundo elemento en la colección) utilizando la propiedad `innerHTML`. A continuación, se analiza el código:
+
+```html
+<!doctype html>
+<html lang="es">
+    <head>
+        <title>Aprendiendo Javascript</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <!-- Se crean cuatro divs con la clase "elemento" -->
+        <div class="elemento"></div>
+        <div class="elemento"></div>
+        <div class="elemento"></div>
+        <div class="elemento"></div>
+    </body>
+    <script>
+        // Selecciona el segundo elemento con la clase "elemento" y modifica su contenido
+        document.getElementsByClassName("elemento")[1].innerHTML = "Hola";
+    </script>
+</html>
+```
+
+1. `<div class="elemento"></div>`: Se crean cuatro elementos `<div>` con la clase "elemento".
+
+2. `document.getElementsByClassName("elemento")[1].innerHTML = "Hola";`: Utiliza JavaScript para seleccionar todos los elementos con la clase "elemento" mediante `document.getElementsByClassName("elemento")`. Luego, accede al segundo elemento en la colección (índice 1) y modifica su contenido interno utilizando la propiedad `innerHTML`, estableciéndola en el texto "Hola".
+
+Al cargar esta página en un navegador, el contenido del segundo elemento con la clase "elemento" será reemplazado por el texto "Hola". Este es un ejemplo de cómo JavaScript puede seleccionar y manipular elementos basados en su clase en lugar de su identificador único.

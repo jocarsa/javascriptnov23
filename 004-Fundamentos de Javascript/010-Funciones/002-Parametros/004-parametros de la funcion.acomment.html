@@ -1,0 +1,32 @@
+En este código, la función `saluda` ha sido modificada para aceptar un parámetro `nombre`. Luego, la función se llama cuatro veces con diferentes argumentos para el parámetro `nombre`. Aquí está el análisis detallado:
+
+```html
+<!doctype html>
+<html lang="es">
+    <head>
+        <title>Aprendiendo Javascript</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <!-- Se crea un div con id "elemento" en el cuerpo del documento -->
+        <div id="elemento"></div>
+    </body>
+    <script>
+        // Se define la función saluda que acepta un parámetro nombre
+        function saluda(nombre){
+            // Se utiliza el parámetro nombre en los mensajes escritos en el documento
+            document.write("Hola "+nombre+"<br>");
+            document.write("Hoy es viernes<br>");
+            document.write("Y yo te saludo<br>");
+        }
+        
+        // Se llama a la función saluda cuatro veces con diferentes argumentos para el parámetro nombre
+        saluda(); // Primera llamada sin argumento (nombre será undefined)
+        saluda("Jose Vicente"); // Segunda llamada con el argumento "Jose Vicente"
+        saluda("Juan"); // Tercera llamada con el argumento "Juan"
+        saluda("Jorge"); // Cuarta llamada con el argumento "Jorge"
+    </script>
+</html>
+```
+
+En la primera llamada a `saluda()`, el parámetro `nombre` será `undefined` porque no se proporciona un argumento. En las siguientes tres llamadas, se proporcionan diferentes nombres como argumentos para el parámetro `nombre`. El resultado será que los mensajes incluirán los nombres específicos proporcionados en cada llamada.

@@ -1,0 +1,23 @@
+Este código HTML también es un documento HTML básico con una sección `<head>` y `<body>`. En este caso, dentro de la sección `<body>`, hay un campo de entrada (`<input>`) de tipo texto con el identificador "nombre":
+
+```html
+<input type="text" id="nombre">
+```
+
+En la parte de JavaScript, dentro del bloque `<script>`, hay una línea que asigna un manejador de eventos al campo de entrada cuando pierde el foco (cuando el evento `onblur` ocurre):
+
+```javascript
+document.getElementById("nombre").onblur = function(){
+    alert("Tu nombre es: "+this.value);
+}
+```
+
+Ahora, desglosemos esta línea:
+
+1. `document.getElementById("nombre")`: Utiliza `getElementById` para obtener la referencia al campo de entrada con el identificador "nombre".
+
+2. `.onblur`: Este es un evento de JavaScript que se activa cuando el elemento pierde el foco, es decir, cuando el usuario deja de interactuar con él.
+
+3. `function(){ alert("Tu nombre es: "+this.value); }`: Esta es la función que se ejecutará cuando el campo de entrada pierda el foco. La función muestra una alerta que incluye el mensaje "Tu nombre es:" seguido del valor actual del campo de entrada (`this.value`).
+
+Entonces, cuando un usuario escribe algo en el campo de entrada y luego hace clic fuera de él (pierde el foco), se activa el evento `onblur`, y la función asociada muestra una alerta con el mensaje que incluye el valor ingresado en el campo de entrada. Al cargar esta página en un navegador, podrás ver este comportamiento al interactuar con el campo de entrada y hacer clic fuera de él.

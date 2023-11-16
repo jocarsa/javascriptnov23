@@ -1,0 +1,30 @@
+En este código HTML, se ha declarado una variable en JavaScript llamada `agenda` y se le ha asignado el valor inicial "Jose Vicente". Luego, se utiliza `document.write` para imprimir en el documento HTML mensajes que indican el contenido actual de la variable `agenda`. Posteriormente, se cambia el valor de la variable `agenda` a "Juan" y se imprime nuevamente en el documento HTML. Vamos a analizar el código:
+
+```html
+<!doctype html>
+<html lang="es">
+    <head>
+        <title>Aprendiendo Javascript</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        
+    </body>
+    <script>
+        var agenda = "Jose Vicente";
+        document.write("Mi agenda es: " + agenda + "<br>");
+        agenda = "Juan";
+        document.write("Mi agenda es: " + agenda + "<br>");
+    </script>
+</html>
+```
+
+1. `var agenda = "Jose Vicente";`: Declara una variable llamada `agenda` y le asigna el valor de la cadena "Jose Vicente".
+
+2. `document.write("Mi agenda es: " + agenda + "<br>");`: Imprime en el documento HTML el mensaje "Mi agenda es: Jose Vicente" con un salto de línea (`<br>`).
+
+3. `agenda = "Juan";`: Cambia el valor de la variable `agenda` a la cadena "Juan".
+
+4. `document.write("Mi agenda es: " + agenda + "<br>");`: Imprime en el documento HTML el mensaje "Mi agenda es: Juan" con un salto de línea.
+
+Al cargar esta página en un navegador, verás la secuencia de mensajes que reflejan el cambio en el valor de la variable `agenda` debido a la reasignación.

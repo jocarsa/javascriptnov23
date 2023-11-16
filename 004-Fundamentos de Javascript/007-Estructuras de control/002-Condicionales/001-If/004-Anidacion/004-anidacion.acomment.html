@@ -1,0 +1,41 @@
+En este código HTML, se utiliza una estructura de control anidada `if` en JavaScript para evaluar múltiples condiciones y ejecutar bloques de código diferentes en función de estas condiciones. A continuación, analizamos el código:
+
+```html
+<!doctype html>
+<html lang="es">
+    <head>
+        <title>Aprendiendo Javascript</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        
+    </body>
+    <script>
+        // Inicializa la variable 'edad' con el valor 45
+        var edad = 45;
+
+        // Utiliza una estructura if anidada para evaluar múltiples condiciones
+        if (edad < 30) {
+            // Si la primera condición es verdadera, evalúa otra condición
+            if (edad < 12) {
+                document.write("Eres un niño");
+            } else {
+                document.write("Eres un joven");
+            }
+        } else {
+            // Si la primera condición es falsa, ejecuta este bloque de código
+            document.write("Ya no eres un joven");
+        }
+    </script>
+</html>
+```
+
+1. `var edad = 45;`: Inicializa la variable `edad` con el valor 45.
+
+2. `if (edad < 30) { ... } else { ... }`: Esta es una estructura `if-else` principal. Si la condición `edad < 30` es verdadera, se ejecuta el bloque de código dentro de las llaves `{}` después del `if`. Si la condición es falsa, se ejecuta el bloque de código dentro de las llaves `{}` después del `else`.
+
+3. Dentro del bloque del `if` principal, hay otra estructura `if` anidada que evalúa si la `edad` es menor que 12. Si es verdadero, se escribe "Eres un niño"; de lo contrario, se escribe "Eres un joven".
+
+4. `document.write("Ya no eres un joven");`: Si la condición `edad < 30` en el `if` principal es falsa, se ejecuta este bloque de código.
+
+En este caso, dado que la `edad` es 45 y, por lo tanto, mayor que 30, la primera condición es falsa y se ejecuta el bloque de código después del `else`, escribiendo "Ya no eres un joven". La estructura de control anidada `if` es útil cuando necesitas evaluar varias condiciones en diferentes niveles.

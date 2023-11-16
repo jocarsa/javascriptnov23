@@ -1,0 +1,23 @@
+Tu código está configurado para manejar el evento de liberación del botón del mouse (onmouseup) cuando se suelta el botón sobre el botón en tu HTML. La función asociada imprimirá "Has despulsado el botón" en la consola del navegador.
+
+Aquí está tu código:
+
+```html
+<!doctype html>
+<html lang="es">
+    <head>
+        <title>Aprendiendo Javascript</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <button>Púlsame</button>
+    </body>
+    <script>
+        document.querySelector("button").onmouseup = function(){
+            console.log("Has despulsado el botón");
+        }
+    </script>
+</html>
+```
+
+Cuando presionas y luego sueltas el botón del mouse sobre el botón, deberías ver el mensaje "Has despulsado el botón" en la consola del navegador.

@@ -1,0 +1,23 @@
+Tu código parece correcto para manejar el evento de pulsación del botón (mousedown). Sin embargo, ten en cuenta que `return false;` no es necesario en este caso, ya que este evento no espera un valor de retorno específico.
+
+Aquí está tu código sin el `return false;`:
+
+```html
+<!doctype html>
+<html lang="es">
+    <head>
+        <title>Aprendiendo Javascript</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <button>Púlsame</button>
+    </body>
+    <script>
+        document.querySelector("button").onmousedown = function(){
+            console.log("Has pulsado el botón");
+        }
+    </script>
+</html>
+```
+
+Este código imprimirá "Has pulsado el botón" en la consola del navegador cuando se presione el botón del mouse sobre el botón.

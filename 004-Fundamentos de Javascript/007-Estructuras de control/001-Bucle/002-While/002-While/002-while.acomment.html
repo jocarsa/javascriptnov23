@@ -1,0 +1,35 @@
+En este código HTML, se utiliza un bucle `while` en JavaScript para imprimir la frase "Hoy es el día X" para cada día del mes, donde X representa el número del día. Vamos a analizar el código:
+
+```html
+<!doctype html>
+<html lang="es">
+    <head>
+        <title>Aprendiendo Javascript</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        
+    </body>
+    <script>
+        // Inicializa la variable 'dia' con 1
+        var dia = 1;
+
+        // Utiliza un bucle while para imprimir el mensaje para cada día del mes
+        while(dia <= 31){
+            document.write("Hoy es el día " + dia + "<br>");
+            // Incrementa 'dia' en 1 para pasar al siguiente día
+            dia++;
+        }
+    </script>
+</html>
+```
+
+1. `var dia = 1;`: Inicializa la variable `dia` con el valor 1.
+
+2. `while(dia <= 31)`: Este es un bucle `while` que se ejecuta mientras la condición `dia <= 31` sea verdadera.
+
+3. `document.write("Hoy es el día " + dia + "<br>");`: Dentro del bucle, se utiliza `document.write()` para agregar al HTML la frase "Hoy es el día X", donde X es el valor actual de `dia`.
+
+4. `dia++;`: Al final de cada iteración, se incrementa la variable `dia` en 1 para avanzar al siguiente día del mes.
+
+Este código imprimirá la frase para cada día del mes del 1 al 31 utilizando un bucle `while`. Es otra forma de lograr el mismo resultado que el código con el bucle `for`.

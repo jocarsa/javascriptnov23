@@ -1,0 +1,38 @@
+En este código HTML, se ha declarado un array en JavaScript llamado `agenda`. Se utilizó la notación de corchetes (`[]`) para crear el array y luego se asignaron valores a sus elementos utilizando índices. Finalmente, se utilizó `console.table` para imprimir el contenido del array en la consola del navegador. Vamos a analizar el código:
+
+```html
+<!doctype html>
+<html lang="es">
+    <head>
+        <title>Aprendiendo Javascript</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        
+    </body>
+    <script>
+        // Se puede utilizar la siguiente forma para declarar un array
+        // var agenda = new Array();
+        
+        // O simplemente usando corchetes []
+        var agenda = [];
+        
+        // Asigna valores a los elementos del array
+        agenda[0] = "Jose Vicente";
+        agenda[1] = "Juan";
+        
+        // Imprime el contenido del array en la consola
+        console.table(agenda);
+    </script>
+</html>
+```
+
+1. `var agenda = [];`: Declara un array vacío llamado `agenda` utilizando la notación de corchetes `[]`. Alternativamente, se podría haber utilizado `var agenda = new Array();`.
+
+2. `agenda[0] = "Jose Vicente";`: Asigna el valor "Jose Vicente" al primer elemento del array (`agenda[0]`).
+
+3. `agenda[1] = "Juan";`: Asigna el valor "Juan" al segundo elemento del array (`agenda[1]`).
+
+4. `console.table(agenda);`: Imprime el contenido del array en la consola del navegador utilizando `console.table`. Esta función permite visualizar la estructura del array de manera más organizada en la consola.
+
+Al cargar esta página en un navegador y abrir la consola del navegador (generalmente se puede hacer con clic derecho en la página y seleccionando "Inspeccionar" o "Elemento" y luego yendo a la pestaña "Consola"), verás una tabla que muestra los valores asignados a los elementos del array. En este caso, se mostrarán dos filas, una para "Jose Vicente" y otra para "Juan".

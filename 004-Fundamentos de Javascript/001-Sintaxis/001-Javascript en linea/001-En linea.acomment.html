@@ -1,0 +1,57 @@
+Vamos a analizar el código HTML y JavaScript proporcionado:
+
+```html
+<!doctype html>
+<html lang="es">
+    <head>
+        <title>Aprendiendo Javascript</title>
+    </head>
+    <body onload="alert('Hola mundo desde Javascript')">
+    
+    </body>
+</html>
+```
+
+### Parte HTML:
+
+1. `<!doctype html>`: Esto indica que el documento sigue el estándar HTML5.
+
+2. `<html lang="es">`: Define el inicio del documento HTML y especifica el idioma del contenido como español.
+
+3. `<head>`: Contiene información sobre el documento, como el título que se muestra en la pestaña del navegador.
+
+4. `<title>Aprendiendo Javascript</title>`: Establece el título del documento, que será "Aprendiendo Javascript".
+
+5. `<body onload="alert('Hola mundo desde Javascript')">`: Inicia la sección del cuerpo del documento. El atributo `onload` especifica que cuando la página se cargue, se ejecutará el código JavaScript proporcionado. En este caso, mostrará una alerta con el mensaje "Hola mundo desde Javascript".
+
+### Parte JavaScript:
+
+En este caso, el único código JavaScript presente se encuentra en el atributo `onload` del cuerpo del documento. El código es:
+
+```javascript
+alert('Hola mundo desde Javascript');
+```
+
+Este código utiliza la función `alert()` para mostrar una ventana emergente con el mensaje "Hola mundo desde Javascript" cuando la página se carga.
+
+### Modificación sugerida:
+
+Puedes mejorar la estructura del código dividiendo la parte HTML y JavaScript. Aquí está el código con la modificación:
+
+```html
+<!doctype html>
+<html lang="es">
+    <head>
+        <title>Aprendiendo Javascript</title>
+    </head>
+    <body>
+        <script>
+            window.onload = function() {
+                alert('Hola mundo desde Javascript');
+            };
+        </script>
+    </body>
+</html>
+```
+
+En este ejemplo, se ha movido el código JavaScript a la sección `<script>` dentro del cuerpo del documento. La función `window.onload` se utiliza para asegurarse de que el código se ejecute después de que la página se haya cargado completamente. Esta es una práctica recomendada para separar el contenido HTML y el código JavaScript.

@@ -1,0 +1,30 @@
+¡Buen trabajo al explorar las funciones de fecha en JavaScript! Sin embargo, hay un pequeño ajuste que debes tener en cuenta. En JavaScript, el método `getYear()` está obsoleto y se recomienda usar `getFullYear()` en su lugar. Aquí está tu código con ese cambio:
+
+```html
+<!doctype html>
+<html lang="es">
+    <head>
+        <title>Aprendiendo Javascript</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        
+    </body>
+    <script>
+        var fecha = new Date();
+        
+        console.log(fecha);
+        console.log(fecha.getDate());
+        console.log(fecha.getDay());
+        console.log(fecha.getMonth());
+        console.log(fecha.getFullYear());  // Utiliza getFullYear() en lugar de getYear()
+        console.log(fecha.getHours());
+        console.log(fecha.getMinutes());
+        console.log(fecha.getSeconds());
+        var primerdiadeestemes = new Date(fecha.getFullYear(), fecha.getMonth(), 1);
+        console.log(primerdiadeestemes.getDay());
+    </script>
+</html>
+```
+
+Este cambio asegurará que tu código sea más consistente y esté actualizado con las recomendaciones actuales. ¡Sigue explorando y aprendiendo!

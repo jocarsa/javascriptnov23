@@ -1,0 +1,33 @@
+En este código, la función `saluda` ha sido modificada para aceptar dos parámetros: `nombre` y `edad`. Luego, la función se llama cuatro veces con diferentes argumentos para estos parámetros. Aquí está el análisis detallado:
+
+```html
+<!doctype html>
+<html lang="es">
+    <head>
+        <title>Aprendiendo Javascript</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <!-- Se crea un div con id "elemento" en el cuerpo del documento -->
+        <div id="elemento"></div>
+    </body>
+    <script>
+        // Se define la función saluda que acepta dos parámetros: nombre y edad
+        function saluda(nombre, edad){
+            // Se utilizan los parámetros nombre y edad en los mensajes escritos en el documento
+            document.write("Hola "+nombre+"<br>");
+            document.write("Tienes "+edad+" años<br>");
+            document.write("Hoy es viernes<br>");
+            document.write("Y yo te saludo<br>");
+        }
+        
+        // Se llama a la función saluda cuatro veces con diferentes argumentos para los parámetros nombre y edad
+        saluda(); // Primera llamada sin argumento (nombre y edad serán undefined)
+        saluda("Jose Vicente"); // Segunda llamada con un solo argumento "Jose Vicente" (edad será undefined)
+        saluda("Juan", 45); // Tercera llamada con dos argumentos "Juan" y 45
+        saluda("Jorge", 90); // Cuarta llamada con dos argumentos "Jorge" y 90
+    </script>
+</html>
+```
+
+En la primera llamada a `saluda()`, tanto `nombre` como `edad` serán `undefined` porque no se proporcionan argumentos. En las siguientes llamadas, se proporcionan diferentes combinaciones de nombres y edades como argumentos. El resultado será que los mensajes incluirán la información específica proporcionada en cada llamada.

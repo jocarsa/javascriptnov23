@@ -1,0 +1,33 @@
+En este código HTML, se define la función `saluda()` y se llama a esta función varias veces. Aquí tienes un análisis detallado:
+
+```html
+<!doctype html>
+<html lang="es">
+    <head>
+        <title>Aprendiendo Javascript</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <!-- Se crea un div con id "elemento" en el cuerpo del documento -->
+        <div id="elemento"></div>
+    </body>
+    <script>
+        // Se define la función saluda
+        function saluda(){
+            document.write("Hola Jose Vicente<br>");
+            document.write("Hoy es viernes<br>");
+            document.write("Y yo te saludo<br>");
+        }
+        
+        // Se llama a la función saluda varias veces
+        saluda(); // Primera llamada
+        saluda(); // Segunda llamada
+        saluda(); // Tercera llamada
+        saluda(); // Cuarta llamada
+    </script>
+</html>
+```
+
+En este caso, la función `saluda()` se invoca cuatro veces en secuencia. Cada vez que se llama, la función utiliza `document.write` para imprimir un conjunto de mensajes en el documento. Dado que se llama cuatro veces, verás esos mensajes repetidos en el documento.
+
+Ten en cuenta que el uso de `document.write` tiene algunas limitaciones y no es la práctica recomendada para manipular el contenido del DOM en aplicaciones web modernas. En su lugar, se prefieren métodos más seguros y flexibles, como `innerHTML` o la manipulación directa de elementos del DOM.

@@ -1,0 +1,25 @@
+Este código HTML también es un documento HTML básico con una sección `<head>` y `<body>`. En la sección `<head>`, hay un título y una etiqueta `<meta>` que especifica la codificación de caracteres como UTF-8.
+
+Dentro de la sección `<body>`, hay un botón con el texto "Pulsame" y el identificador "boton":
+
+```html
+<button id="boton">Pulsame</button>
+```
+
+En la parte de JavaScript, dentro del bloque `<script>`, hay una línea que asigna un manejador de eventos al botón cuando se hace clic en él:
+
+```javascript
+document.getElementById("boton").onclick = function(){
+    alert("Has pulsado el botón");
+}
+```
+
+Ahora, desglosemos esta línea:
+
+1. `document.getElementById("boton")`: Utiliza `getElementById` para obtener la referencia al botón con el identificador "boton".
+
+2. `.onclick`: Este es un evento de JavaScript que se activa cuando se hace clic en el elemento al que se le asigna. En este caso, se le asigna una función que se ejecutará cuando se haga clic en el botón.
+
+3. `function(){ alert("Has pulsado el botón"); }`: Esta es la función que se ejecutará cuando se haga clic en el botón. En este caso, la función muestra una ventana emergente (`alert()`) con el mensaje "Has pulsado el botón".
+
+Entonces, cuando el usuario hace clic en el botón "Pulsame", se activa el evento onclick, y la función asociada muestra una alerta indicando que el botón ha sido pulsado. Al cargar esta página en un navegador, podrás ver este comportamiento cuando hagas clic en el botón.

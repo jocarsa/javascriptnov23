@@ -1,0 +1,28 @@
+Tu código ahora incluye las coordenadas (posición) del puntero del ratón (tanto en el eje X como en el eje Y) en el momento del evento onmousemove. La información se imprime en la consola del navegador.
+
+```html
+<!doctype html>
+<html lang="es">
+    <head>
+        <title>Aprendiendo Javascript</title>
+        <meta charset="utf-8">
+        <style>
+            html,body{
+                width:100%;
+                height:100%;
+            }
+        </style>
+    </head>
+    <body>
+        
+    </body>
+    <script>
+        document.querySelector("body").onmousemove = function(e){
+            console.log("Estás moviendo el ratón");
+            console.log(e.pageX+" - "+e.pageY)
+        }
+    </script>
+</html>
+```
+
+Ahora, al mover el ratón, deberías ver mensajes en la consola que indican que estás moviendo el ratón, junto con las coordenadas X e Y del puntero del ratón.

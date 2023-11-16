@@ -1,0 +1,26 @@
+En este código HTML, se utiliza un bucle `for` en JavaScript para imprimir la frase "Hoy es el día X del mes" para cada día del mes, donde X representa el número del día. El bucle se ejecuta desde `dia = 1` hasta `dia <= 31`, imprimiendo el mensaje para cada día del mes. A continuación, analizamos el código:
+
+```html
+<!doctype html>
+<html lang="es">
+    <head>
+        <title>Aprendiendo Javascript</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        
+    </body>
+    <script>
+        // Utiliza un bucle for para imprimir el mensaje para cada día del mes
+        for(var dia = 1; dia <= 31; dia++){
+            document.write("Hoy es el día " + dia + " del mes<br>");
+        }
+    </script>
+</html>
+```
+
+1. `for(var dia = 1; dia <= 31; dia++)`: Este es un bucle `for` que se inicia con `dia = 1`. La condición de continuación del bucle es `dia <= 31`, y en cada iteración, `dia` se incrementa en 1.
+
+2. `document.write("Hoy es el día " + dia + " del mes<br>");`: En cada iteración del bucle, se utiliza `document.write()` para agregar al HTML la frase "Hoy es el día X del mes", donde X es el valor actual de `dia`.
+
+Al cargar esta página en un navegador, verás que se imprime la frase para cada día del mes del 1 al 31. Es una forma de ilustrar cómo se puede utilizar un bucle `for` para repetir una acción un número específico de veces.

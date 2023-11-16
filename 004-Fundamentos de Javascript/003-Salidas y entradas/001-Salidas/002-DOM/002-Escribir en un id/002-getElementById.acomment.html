@@ -1,0 +1,25 @@
+Este código HTML también contiene un documento HTML básico con una sección `<head>` y `<body>`. En este caso, dentro de la sección `<body>`, hay tres elementos `<div>` con diferentes identificadores (`id`):
+
+```html
+<div id="primero">1</div>
+<div id="segundo">2</div>
+<div id="tercero">3</div>
+```
+
+Estos elementos div contienen los números 1, 2 y 3, respectivamente.
+
+Ahora, en la parte de JavaScript, dentro del bloque `<script>`, tienes la siguiente línea:
+
+```javascript
+document.getElementById("segundo").innerHTML = "Segundo";
+```
+
+Voy a desglosar esta línea:
+
+1. `document.getElementById("segundo")`: Utiliza el método `getElementById` para obtener la referencia al elemento HTML que tiene el identificador "segundo". En este caso, se obtiene la referencia al segundo div (`<div id="segundo">2</div>`).
+
+2. `.innerHTML`: Este es un atributo de los elementos DOM que representa el contenido HTML interno de un elemento. En este caso, se está modificando el contenido HTML interno del elemento con el identificador "segundo".
+
+3. `"Segundo"`: Este es el nuevo contenido que se establecerá en el elemento con el identificador "segundo". En otras palabras, se reemplazará el número 2 con la cadena de texto "Segundo".
+
+En resumen, esta línea de JavaScript modifica dinámicamente el contenido del segundo div en tu página HTML, cambiando el número 2 por el texto "Segundo". Al cargar esta página en un navegador, verás que el segundo div muestra ahora el texto "Segundo".
