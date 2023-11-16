@@ -226,41 +226,80 @@
     <ellipse
        style="fill:#800000;stroke:#ffffff;stroke-width:0.565;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="path3028"
-       cx="95.10553"
+       cx="81.054634"
        cy="149.3763"
        rx="8.9072647"
        ry="3.3245425" />
     <ellipse
        style="fill:#800000;stroke:#ffffff;stroke-width:0.565;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="ellipse3186"
-       cx="95.10553"
+       cx="81.054634"
        cy="146.49084"
        rx="8.9072647"
        ry="3.3245425" />
     <ellipse
        style="fill:#800000;stroke:#ffffff;stroke-width:0.565;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="ellipse3188"
-       cx="95.10553"
+       cx="81.054634"
        cy="143.73085"
        rx="8.9072647"
        ry="3.3245425" />
     <ellipse
        style="fill:#800000;stroke:#ffffff;stroke-width:0.565;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="ellipse3190"
-       cx="95.10553"
+       cx="81.054634"
        cy="140.8454"
        rx="8.9072647"
        ry="3.3245425" />
     <text
        xml:space="preserve"
        style="font-size:3.175px;fill:#000000;stroke-width:0.564999;stroke-linecap:round;stroke-linejoin:round"
-       x="106.52188"
-       y="146.34921"
+       x="76.663727"
+       y="156.51102"
        id="text3194"><tspan
          sodipodi:role="line"
          id="tspan3192"
          style="fill:#000000;stroke-width:0.565"
-         x="106.52188"
-         y="146.34921">MySQL</tspan></text>
+         x="76.663727"
+         y="156.51102">MySQL</tspan></text>
+    <ellipse
+       style="fill:#800000;stroke:#ffffff;stroke-width:0.565;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="ellipse3832"
+       cx="105.3928"
+       cy="149.3763"
+       rx="8.9072647"
+       ry="3.3245425" />
+    <ellipse
+       style="fill:#800000;stroke:#ffffff;stroke-width:0.565;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="ellipse3834"
+       cx="105.3928"
+       cy="146.49084"
+       rx="8.9072647"
+       ry="3.3245425" />
+    <ellipse
+       style="fill:#800000;stroke:#ffffff;stroke-width:0.565;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="ellipse3836"
+       cx="105.3928"
+       cy="143.73085"
+       rx="8.9072647"
+       ry="3.3245425" />
+    <ellipse
+       style="fill:#800000;stroke:#ffffff;stroke-width:0.565;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="ellipse3838"
+       cx="105.3928"
+       cy="140.8454"
+       rx="8.9072647"
+       ry="3.3245425" />
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;fill:#000000;stroke-width:0.564999;stroke-linecap:round;stroke-linejoin:round"
+       x="98.61824"
+       y="156.51102"
+       id="text3842"><tspan
+         sodipodi:role="line"
+         id="tspan3840"
+         style="fill:#000000;stroke-width:0.565"
+         x="98.61824"
+         y="156.51102">MongoDB</tspan></text>
   </g>
 </svg>

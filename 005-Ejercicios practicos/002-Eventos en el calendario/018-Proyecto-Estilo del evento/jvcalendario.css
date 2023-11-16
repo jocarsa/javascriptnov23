@@ -1,0 +1,35 @@
+#jvcalendario .dia{
+    width:100px;
+    height:100px;
+    border:1px solid grey;
+    float:left;
+}
+#jvcalendario{
+    width:714px;
+    height:800px;
+    font-family:sans-serif;
+}
+#jvcalendario #jvcabecera{
+    text-align:right;
+    font-size:48px;
+}
+#jvcalendario #jvcabecera button{
+    border:0px;
+    background:grey;
+    border-radius:40px;
+    color:white;
+    width:48px;
+    height:48px;
+    font-size:40px;
+    line-height:48px;
+    position:relative;
+    bottom:5px;
+}
+.evento{
+    background:red;
+    font-size:11px;
+    box-sizing: border-box;
+    padding:5px;
+    margin:5px;
+    color:white;
+}
