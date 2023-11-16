@@ -33,6 +33,7 @@ function presentaCalendario(mimes,miaño){
     for(var i = 0;i<dias.length;i++){
         dias[i].onclick = function(){
             console.log("Has hecho click")
+            
         }
     }
 }
