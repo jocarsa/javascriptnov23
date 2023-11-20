@@ -1,0 +1,38 @@
+En este código, se ha introducido una restricción adicional dentro del método `ponEdad(nuevaedad)` en la clase `Gato`. Ahora, antes de cambiar el valor de la propiedad privada `#edad`, se realiza una validación condicional.
+
+Aquí está la parte del código que ha sido actualizada:
+
+```javascript
+class Gato {
+    #edad; 
+    constructor() {
+        this.#edad = 0;
+    }
+    maulla() {
+        return("El gato está maullando");
+    }
+    dameEdad() {
+        return this.#edad;
+    }
+    ponEdad(nuevaedad) {
+        if (nuevaedad === this.#edad + 1) {
+            this.#edad = nuevaedad;
+        } else {
+            console.error("Operación no permitida");
+        }
+    }
+}
+
+var Micifu = new Gato();
+console.log(Micifu.dameEdad()); // Imprime la edad privada inicial del gato
+
+Micifu.ponEdad(1); // Llama al método para cambiar la edad del gato
+console.log(Micifu.dameEdad()); // Imprime la nueva edad del gato si la condición se cumple
+console.log(Micifu.maulla()); // Imprime que el gato está maullando
+```
+
+La condición `if (nuevaedad === this.#edad + 1)` en el método `ponEdad(nuevaedad)` verifica si el valor `nuevaedad` es exactamente 1 más grande que la edad actual (`this.#edad`). Si la condición se cumple, lo que significa que se intenta aumentar la edad del gato exactamente en 1 unidad, se actualiza el valor de `#edad` a `nuevaedad`.
+
+Si la condición no se cumple (es decir, si `nuevaedad` no es exactamente 1 unidad más grande que la edad actual), se imprime un mensaje de error en la consola mediante `console.error("Operación no permitida")`.
+
+Esta restricción condicional en el método `ponEdad()` ilustra cómo se puede agregar lógica adicional para controlar y limitar los cambios en las propiedades privadas de una clase, permitiendo o denegando ciertas operaciones según las condiciones definidas.

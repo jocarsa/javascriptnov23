@@ -1,0 +1,31 @@
+Cuando se usa `fetch` para realizar una solicitud HTTP y se espera recibir datos en formato JSON como respuesta, se puede utilizar el método `json()` proporcionado por el objeto `Response` para parsear automáticamente la respuesta JSON en JavaScript. Esto convierte los datos recibidos en un objeto JavaScript para su uso en el código.
+
+Aquí hay un ejemplo que muestra cómo recuperar datos en formato JSON utilizando `fetch`:
+
+```javascript
+// Realizar una solicitud GET que devuelve datos en formato JSON
+fetch('https://jsonplaceholder.typicode.com/posts/1')
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Hubo un problema al realizar la solicitud.');
+    }
+    return response.json(); // Parsear la respuesta JSON
+  })
+  .then(data => {
+    console.log(data); // Mostrar los datos recibidos en formato JSON
+    // Aquí puedes trabajar con los datos como un objeto JavaScript
+    console.log('Título:', data.title);
+    console.log('Cuerpo:', data.body);
+  })
+  .catch(error => {
+    console.error('Error:', error);
+  });
+```
+
+En este ejemplo:
+
+- `fetch` realiza una solicitud GET a la URL proporcionada (`https://jsonplaceholder.typicode.com/posts/1`), que devuelve datos en formato JSON.
+- Se utiliza el método `.then()` para verificar si la solicitud fue exitosa y luego se llama a `response.json()` para parsear la respuesta JSON.
+- El segundo `.then()` maneja los datos obtenidos, imprimiéndolos en la consola y mostrando algunos valores específicos (`data.title` y `data.body`) que se obtienen del objeto JSON recibido.
+
+El método `json()` proporcionado por el objeto `Response` de `fetch` es una manera conveniente de trabajar con respuestas JSON, ya que convierte los datos en un objeto JavaScript que puede ser manipulado y utilizado en tu aplicación.

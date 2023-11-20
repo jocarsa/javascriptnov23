@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <title>Aprendiendo Javascript</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        
+    </body>
+    <script>
+        class Gato{
+            #edad; 
+            constructor(){
+                this.#edad = 0;
+            }
+            maulla(){
+                return("El gato está maullando");
+            }
+            dameEdad(){
+                return this.#edad;
+            }
+            ponEdad(nuevaedad){
+                if(nuevaedad == this.#edad+1){
+                    this.#edad = nuevaedad;
+                }else{
+                   console.error("operación no permitida");
+                }
+            }
+        }
+        
+        var Micifu = new Gato();
+        console.log(Micifu.dameEdad());
+        Micifu.ponEdad(1);
+        console.log(Micifu.dameEdad());
+        console.log(Micifu.maulla());
+    </script>
+</html>

@@ -1,0 +1,52 @@
+Claro, para hacer una solicitud `fetch` a un archivo PHP que genera un JSON, primero debes asegurarte de que el archivo PHP esté configurado para devolver datos en formato JSON. Luego, puedes utilizar `fetch` en JavaScript para obtener y trabajar con esos datos JSON.
+
+A continuación, te muestro un ejemplo básico de cómo podrías realizar esto:
+
+Supongamos que tienes un archivo PHP llamado `datos.php` que genera datos en formato JSON:
+
+```php
+<?php
+// Establecer encabezados para indicar que la respuesta es JSON
+header('Content-Type: application/json');
+
+// Aquí se generan los datos en formato JSON (esto es solo un ejemplo)
+$datos = array(
+    "nombre" => "Juan",
+    "edad" => 25,
+    "ciudad" => "Ejemplo"
+);
+
+// Convertir el array a formato JSON y enviarlo como respuesta
+echo json_encode($datos);
+?>
+```
+
+Ahora, en tu archivo HTML o JavaScript, puedes utilizar `fetch` para obtener estos datos desde `datos.php`:
+
+```javascript
+fetch('datos.php') // Realizar una solicitud GET al archivo PHP
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Hubo un problema al realizar la solicitud.');
+    }
+    return response.json(); // Parsear la respuesta JSON
+  })
+  .then(data => {
+    console.log(data); // Mostrar los datos recibidos en formato JSON
+    // Aquí puedes trabajar con los datos como un objeto JavaScript
+    console.log('Nombre:', data.nombre);
+    console.log('Edad:', data.edad);
+    console.log('Ciudad:', data.ciudad);
+  })
+  .catch(error => {
+    console.error('Error:', error);
+  });
+```
+
+En este ejemplo:
+
+1. `fetch('datos.php')` realiza una solicitud GET al archivo `datos.php`, que está configurado para devolver datos en formato JSON.
+2. La función `response.json()` se utiliza para parsear la respuesta JSON devuelta por el archivo PHP.
+3. El segundo `.then()` maneja los datos obtenidos y muestra algunos valores específicos que se obtienen del objeto JSON recibido.
+
+Recuerda que este es un ejemplo simple para ilustrar cómo puedes utilizar `fetch` para obtener datos en formato JSON desde un archivo PHP. En un entorno real, el archivo PHP probablemente estaría interactuando con una base de datos o generando datos de una manera más dinámica.

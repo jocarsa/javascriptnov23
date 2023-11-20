@@ -1,0 +1,46 @@
+En JavaScript, la declaración `return` en un método de una clase se utiliza para devolver un valor específico o resultado de una operación dentro de ese método. En lugar de mostrar información directamente en la consola o realizar una operación que afecte al exterior del método, el `return` permite que el valor calculado dentro del método se utilice en otros lugares de tu programa.
+
+### Funciones con `return` en métodos de una clase:
+
+1. **Devolver valores calculados**: Los métodos pueden realizar cálculos o acciones y devolver el resultado utilizando `return`.
+
+2. **Uso en otros contextos**: El valor devuelto por `return` puede ser almacenado en una variable, utilizado como parte de una expresión, o mostrado en la consola.
+
+### Ejemplo de `return` en un método de una clase en JavaScript:
+
+```javascript
+class Calculadora {
+  constructor() {
+    // No es necesario definir propiedades aquí
+  }
+
+  sumar(a, b) {
+    return a + b;
+  }
+
+  restar(a, b) {
+    return a - b;
+  }
+}
+
+// Crear una instancia de la clase Calculadora
+const calc = new Calculadora();
+
+// Utilizar métodos con return
+const resultadoSuma = calc.sumar(5, 3); // resultadoSuma = 8
+const resultadoResta = calc.restar(10, 4); // resultadoResta = 6
+
+// Usar los valores devueltos por los métodos
+console.log(resultadoSuma); // Imprime: 8
+console.log(resultadoResta); // Imprime: 6
+```
+
+En este ejemplo:
+
+- La clase `Calculadora` tiene dos métodos (`sumar` y `restar`) que toman dos parámetros y devuelven el resultado de la operación mediante `return`.
+
+- Al llamar a estos métodos (`calc.sumar(5, 3)` y `calc.restar(10, 4)`), se almacena el valor devuelto en las variables `resultadoSuma` y `resultadoResta` respectivamente.
+
+- Estos valores devueltos pueden ser utilizados posteriormente en el código, por ejemplo, mostrándolos en la consola o realizando otras operaciones con ellos.
+
+En resumen, `return` en un método de una clase permite que el resultado de la operación dentro de ese método se utilice en otros lugares de tu programa, proporcionando una forma de modularizar y reutilizar lógica al devolver valores específicos.

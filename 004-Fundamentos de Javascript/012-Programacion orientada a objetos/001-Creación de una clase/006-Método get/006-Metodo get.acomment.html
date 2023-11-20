@@ -1,0 +1,26 @@
+El código que has mostrado sigue utilizando la misma funcionalidad de propiedades privadas (`#`) introducidas en ECMAScript 2020 (ES11) como en el ejemplo anterior. Sin embargo, en este caso, se ha agregado un nuevo método llamado `dameEdad()` a la clase `Gato`.
+
+Aquí está la parte del código que se ha añadido:
+
+```javascript
+class Gato {
+    #edad; 
+    constructor() {
+        this.#edad = 0;
+    }
+    maulla() {
+        return("El gato está maullando");
+    }
+    dameEdad() {
+        return this.#edad;
+    }
+}
+
+var Micifu = new Gato();
+console.log(Micifu.dameEdad()); // Imprime la edad privada del gato
+console.log(Micifu.maulla());
+```
+
+La función `dameEdad()` es un método público que permite obtener el valor de la propiedad privada `#edad` desde fuera de la clase. Al llamar a `Micifu.dameEdad()`, se retorna el valor de `#edad`, que en este caso es `0`, ya que se inicializa en el constructor.
+
+Esto demuestra cómo los métodos públicos en una clase pueden proporcionar acceso controlado a propiedades privadas, lo que permite obtener información de estas propiedades sin exponer directamente su valor. En este caso, `dameEdad()` se utiliza para obtener la edad del gato sin revelar directamente la propiedad privada `#edad`.

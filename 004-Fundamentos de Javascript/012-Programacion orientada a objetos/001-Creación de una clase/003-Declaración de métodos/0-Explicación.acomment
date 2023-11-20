@@ -1,0 +1,45 @@
+En una clase de JavaScript, los métodos son funciones asociadas a esa clase que definen el comportamiento o las acciones que los objetos creados a partir de esa clase pueden realizar. Estos métodos son accesibles para las instancias de la clase y se definen dentro del cuerpo de la clase.
+
+### Características de los métodos de una clase:
+
+1. **Funciones dentro de una clase**: Los métodos son funciones que se definen dentro del cuerpo de la clase y están asociados a las instancias de esa clase.
+  
+2. **Acceso a propiedades y otros métodos**: Los métodos pueden acceder a las propiedades y a otros métodos de la misma instancia utilizando la palabra clave `this`.
+
+### Ejemplo de métodos en una clase de JavaScript:
+
+```javascript
+class Persona {
+  constructor(nombre, edad) {
+    this.nombre = nombre;
+    this.edad = edad;
+  }
+
+  saludar() {
+    return `Hola, soy ${this.nombre} y tengo ${this.edad} años.`;
+  }
+
+  cumplirAnios() {
+    this.edad++;
+    return `Feliz cumpleaños, ahora tengo ${this.edad} años.`;
+  }
+}
+
+// Creación de una instancia u objeto de la clase Persona
+const persona1 = new Persona('Juan', 30);
+
+// Acceso a métodos de la instancia
+console.log(persona1.saludar()); // Imprime: Hola, soy Juan y tengo 30 años.
+console.log(persona1.cumplirAnios()); // Imprime: Feliz cumpleaños, ahora tengo 31 años.
+console.log(persona1.edad); // Imprime: 31
+```
+
+En este ejemplo:
+
+- La clase `Persona` tiene dos métodos: `saludar()` y `cumplirAnios()`. Ambos métodos se definen dentro del cuerpo de la clase y están disponibles para todas las instancias de la clase `Persona`.
+
+- `saludar()` devuelve un saludo utilizando las propiedades `nombre` y `edad` de la instancia de `Persona`.
+
+- `cumplirAnios()` incrementa la propiedad `edad` de la instancia en uno y devuelve un mensaje de cumpleaños.
+
+Los métodos de una clase definen el comportamiento de los objetos creados a partir de esa clase y pueden realizar diversas acciones o cálculos utilizando las propiedades de la instancia o realizando otras operaciones específicas.

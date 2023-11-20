@@ -1,0 +1,44 @@
+En JavaScript, antes de la llegada de ECMAScript 2022 (ES12), las clases no tenían un soporte nativo para propiedades privadas, lo que significa que todas las propiedades de una clase eran accesibles desde fuera de la misma. Sin embargo, con la introducción de ECMAScript 2022, se introdujeron las "propiedades privadas" mediante el uso del hashtag (`#`) antes del nombre de la propiedad.
+
+### Características de las propiedades privadas:
+
+1. **Acceso restringido**: Las propiedades privadas solo son accesibles y modificables dentro de la clase que las define. No pueden ser accedidas o modificadas desde fuera de la clase.
+
+2. **Declaración con `#`**: Las propiedades privadas se declaran utilizando el hashtag (`#`) antes del nombre de la propiedad en la clase.
+
+3. **No se pueden heredar**: Las propiedades privadas no se heredan por las subclases. Cada clase hija debe definir sus propias propiedades privadas si es necesario.
+
+### Ejemplo de propiedades privadas en JavaScript (ECMAScript 2022):
+
+```javascript
+class Persona {
+  #edad; // Propiedad privada
+
+  constructor(nombre, edad) {
+    this.nombre = nombre;
+    this.#edad = edad; // Propiedad privada se inicializa en el constructor
+  }
+
+  obtenerEdad() {
+    return this.#edad; // Método para acceder a la propiedad privada
+  }
+
+  cumplirAnios() {
+    this.#edad++;
+  }
+}
+
+// Crear una instancia de la clase Persona
+const persona = new Persona('Juan', 30);
+
+// Intentar acceder a la propiedad privada desde fuera de la clase
+console.log(persona.#edad); // Error: no se puede acceder a una propiedad privada fuera de la clase
+```
+
+En este ejemplo:
+
+- `#edad` es una propiedad privada de la clase `Persona` que no puede ser accedida desde fuera de la clase. Intentar acceder a `#edad` fuera de la clase resultará en un error.
+
+- Se han definido métodos como `obtenerEdad()` y `cumplirAnios()` para interactuar con la propiedad privada `#edad`. Estos métodos son públicos y pueden ser utilizados para leer o modificar el valor de la propiedad privada desde fuera de la clase.
+
+Las propiedades privadas proporcionan encapsulación y privacidad al limitar el acceso directo a los datos de una clase, lo que puede ayudar a evitar manipulaciones no deseadas desde fuera de la clase y mejorar la seguridad y mantenibilidad del código.

@@ -1,0 +1,39 @@
+Claro, en el código que proporcionaste, las novedades respecto al uso de `fetch()` se centran en el manejo de la respuesta utilizando promesas y el método `json()` para obtener los datos del archivo JSON solicitado. Aquí está la explicación de las novedades:
+
+```html
+<!doctype html>
+<html lang="es">
+<head>
+    <title>Aprendiendo Javascript</title>
+    <meta charset="utf-8">
+</head>
+<body>
+    
+</body>
+<script>
+    fetch("datos.json")
+    .then(response => {
+        return response.json();
+    })
+    .then(midatos => {
+        console.log(midatos);
+    })
+</script>
+</html>
+```
+
+### Explicación de las novedades:
+
+1. **Uso de `.then()` para manejar la respuesta:**
+   
+   - `.then()` se utiliza para manejar el resultado exitoso de la solicitud fetch y cualquier transformación de datos necesaria. En este caso, después de hacer la solicitud fetch a "datos.json", se encadena un `.then()` para procesar la respuesta.
+
+2. **Utilización de `response.json()`:**
+
+   - `response.json()` es un método de la interfaz `Response` en JavaScript que toma una respuesta y la convierte en un objeto JavaScript. En este caso, está convirtiendo la respuesta del archivo JSON en un formato que JavaScript puede manipular fácilmente.
+
+3. **Manejo de los datos obtenidos:**
+
+   - Una vez que la respuesta del archivo JSON se ha convertido en un objeto JavaScript utilizando `.json()`, el segundo `.then()` maneja esos datos. En este caso, simplemente los imprime en la consola con `console.log(midatos)`.
+
+En resumen, estas novedades muestran cómo se maneja la respuesta de la solicitud fetch utilizando promesas y cómo se usa el método `json()` para obtener y manipular los datos del archivo JSON solicitado. Esto es útil cuando se trabaja con datos JSON en aplicaciones web, ya que permite procesar y trabajar con la respuesta de una solicitud HTTP de una manera más estructurada y legible.

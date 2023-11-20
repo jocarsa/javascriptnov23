@@ -1,0 +1,44 @@
+Ajax (Asynchronous JavaScript And XML) es una técnica de programación web utilizada para enviar y recibir datos entre un navegador web y un servidor en segundo plano sin tener que recargar toda la página. Aunque el término originalmente hacía referencia al intercambio de datos en formato XML, hoy en día se usa comúnmente con otros formatos, como JSON o texto plano.
+
+### Características principales de Ajax:
+
+1. **Asincronía**: Permite realizar solicitudes al servidor de forma asíncrona, lo que significa que la página web no se bloquea ni se recarga mientras espera la respuesta del servidor.
+
+2. **Actualización parcial**: Con Ajax, es posible actualizar partes específicas de una página web sin tener que recargar la página completa. Esto puede mejorar significativamente la experiencia del usuario.
+
+3. **Tecnologías involucradas**: Se utiliza principalmente con JavaScript para enviar solicitudes al servidor, y se puede utilizar con diferentes tecnologías del lado del servidor, como PHP, Python, Ruby, entre otras.
+
+4. **API nativa**: JavaScript cuenta con una API nativa para trabajar con Ajax, la cual incluye objetos como `XMLHttpRequest` o el método `fetch()` introducido más recientemente.
+
+### Ejemplo básico de uso de Ajax con JavaScript (usando `XMLHttpRequest`):
+
+```javascript
+// Crear un objeto XMLHttpRequest
+let xhr = new XMLHttpRequest();
+
+// Configurar la solicitud
+xhr.open('GET', 'https://api.example.com/data', true);
+
+// Configurar la función de callback que maneja la respuesta
+xhr.onreadystatechange = function() {
+  if (xhr.readyState === XMLHttpRequest.DONE) {
+    if (xhr.status === 200) {
+      // Procesar la respuesta cuando se complete la solicitud
+      console.log(xhr.responseText);
+    } else {
+      console.error('Hubo un problema con la solicitud.');
+    }
+  }
+};
+
+// Enviar la solicitud al servidor
+xhr.send();
+```
+
+En este ejemplo:
+
+- Se crea un objeto `XMLHttpRequest` que representa la solicitud al servidor.
+- Se configura la solicitud mediante el método `open()`, especificando el método HTTP (en este caso, GET), la URL del servidor y si la solicitud es asincrónica (`true`).
+- Se define una función de callback (`onreadystatechange`) que se ejecuta cada vez que cambia el estado de la solicitud. Cuando el estado es `XMLHttpRequest.DONE` (4), se verifica el estado de la respuesta y se procesa el resultado si la solicitud fue exitosa (`status === 200`).
+
+Ajax es una técnica poderosa que se utiliza ampliamente en el desarrollo web moderno para crear aplicaciones web interactivas y dinámicas, permitiendo la carga de datos sin recargar toda la página. Actualmente, también se pueden realizar solicitudes Ajax utilizando métodos más modernos como `fetch()`, que proporcionan una interfaz más fácil de usar y una forma más moderna de trabajar con solicitudes y respuestas HTTP.

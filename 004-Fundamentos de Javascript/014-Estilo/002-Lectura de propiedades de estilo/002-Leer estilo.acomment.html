@@ -1,0 +1,43 @@
+El código HTML proporcionado tiene una estructura similar al anterior, pero en este caso, se ha incorporado el estilo CSS directamente en la sección `<style>` en lugar de modificar el estilo mediante JavaScript en línea. Además, el script de JavaScript se ha colocado dentro de la sección `<head>` y utiliza el evento `window.onload` para ejecutar una función después de que la página haya cargado completamente. Analicemos la parte JavaScript de este código:
+
+```html
+<!doctype html>
+<html lang="es">
+<head>
+    <title>Aprendiendo Javascript</title>
+    <meta charset="utf-8">
+    <style>
+        #contenedor{background:green;}
+    </style>
+    <script>
+        window.onload = function(){
+            console.log(document.getElementById("contenedor").style.background);
+        }
+    </script>
+</head>
+<body>
+    <div id="contenedor"><p>Hola</p></div>
+</body>
+</html>
+```
+
+### Explicación de la parte JavaScript:
+
+1. ```javascript
+   window.onload = function(){
+       console.log(document.getElementById("contenedor").style.background);
+   }
+   ```
+   
+   - `window.onload`: Este evento se dispara cuando todo el contenido de la página (incluidos los estilos, imágenes y otros recursos) se ha cargado completamente en el navegador.
+   
+   - `function(){...}`: Se define una función anónima que se ejecutará cuando se active el evento `onload`. Esto garantiza que la función no se ejecute hasta que todos los elementos de la página estén disponibles para su manipulación.
+
+   - `document.getElementById("contenedor").style.background`: Se accede al elemento con el ID "contenedor" utilizando `document.getElementById()` y luego se accede a su propiedad `style.background`. En este caso, se imprime en la consola el valor del fondo del elemento "contenedor", que en la hoja de estilos tiene un color verde (`background: green;`).
+
+### Notas adicionales:
+
+- El CSS en la sección `<style>` define el estilo del elemento con el ID "contenedor" como `background: green;`, estableciendo su fondo en verde.
+- El código JavaScript en este ejemplo utiliza `window.onload` para asegurarse de que la manipulación del elemento con ID "contenedor" se realice solo después de que la página se haya cargado completamente.
+
+En resumen, este código JavaScript espera a que la página se cargue por completo antes de acceder al estilo de fondo del elemento con el ID "contenedor" y lo muestra en la consola del navegador.
