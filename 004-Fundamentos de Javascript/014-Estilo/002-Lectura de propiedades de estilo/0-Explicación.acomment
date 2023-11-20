@@ -1,0 +1,74 @@
+Claro, la lectura de propiedades de estilo con JavaScript se realiza utilizando el método `.style` junto con el acceso a propiedades específicas de estilo que deseas leer. Puedes obtener valores de propiedades de estilo aplicadas a un elemento en el DOM utilizando este método.
+
+### Acceso y lectura de propiedades de estilo con `.style`:
+
+1. **Acceder a una propiedad de estilo específica:**
+
+   ```javascript
+   // Obtener un elemento del DOM
+   const miElemento = document.getElementById('miElemento');
+
+   // Acceder y obtener una propiedad de estilo existente
+   const colorTexto = miElemento.style.color;
+   console.log(colorTexto); // Muestra el color del texto aplicado al elemento
+   ```
+
+2. **Obtener propiedades de estilo computadas:**
+
+   Además de acceder a las propiedades de estilo definidas en línea o mediante JavaScript, también puedes obtener propiedades de estilo computadas que se aplican al elemento:
+
+   ```javascript
+   // Obtener un elemento del DOM
+   const miElemento = document.getElementById('miElemento');
+
+   // Obtener una propiedad de estilo computada
+   const ancho = window.getComputedStyle(miElemento).width;
+   console.log(ancho); // Muestra el ancho computado del elemento
+   ```
+
+### Notas importantes:
+
+- El acceso a `.style` solo recupera los estilos que se han establecido directamente en línea en el atributo `style` del elemento o a través de manipulaciones de JavaScript.
+- Para obtener propiedades de estilo computadas (los estilos finales después de aplicar todas las reglas CSS), se utiliza `window.getComputedStyle(elemento)` pasando el elemento del que se desean obtener los estilos.
+- Las propiedades de estilo devueltas por `.style` generalmente reflejan los valores establecidos directamente en el elemento, mientras que `getComputedStyle` devuelve el valor final después de aplicar todas las reglas de estilo.
+
+### Ejemplo:
+
+HTML:
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lectura de propiedades de estilo con JavaScript</title>
+    <style>
+        /* Estilos adicionales en hoja de estilos CSS */
+        #miElemento {
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+            background-color: lightblue;
+            font-size: 20px;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="miElemento">Elemento con estilos definidos</div>
+
+    <script>
+        // Acceder al elemento y leer propiedades de estilo
+        const miElemento = document.getElementById('miElemento');
+
+        // Leer propiedades de estilo definidas en línea
+        const colorTexto = miElemento.style.color;
+        console.log(colorTexto); // Muestra el color del texto aplicado al elemento
+
+        // Leer propiedades de estilo computadas
+        const ancho = window.getComputedStyle(miElemento).width;
+        console.log(ancho); // Muestra el ancho computado del elemento
+    </script>
+</body>
+</html>
+```
+
+Este ejemplo muestra cómo el JavaScript accede al elemento con ID `miElemento` y lee tanto propiedades de estilo definidas en línea como propiedades de estilo computadas, usando `.style` y `window.getComputedStyle`, respectivamente.

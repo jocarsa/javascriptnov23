@@ -1,0 +1,51 @@
+Los setters son funciones especiales en JavaScript que permiten asignar un valor a una propiedad específica de un objeto. Estas funciones se definen dentro de la estructura de un objeto y permiten modificar o asignar valores a una propiedad como si estuvieras asignando directamente a un atributo, ejecutando lógica adicional si es necesario antes de la asignación.
+
+### Características principales de los setters:
+
+1. **Definición de setter**: Un setter es una función definida dentro de un objeto utilizando la palabra clave `set` seguida del nombre de la propiedad a la que se quiere asignar un valor.
+
+2. **Acceso a propiedades**: Los setters se invocan automáticamente cuando se intenta asignar un valor a la propiedad correspondiente del objeto.
+
+3. **Recibe un parámetro**: Los setters reciben un parámetro, que es el valor que se intenta asignar a la propiedad.
+
+### Ejemplo de uso de setters en JavaScript:
+
+```javascript
+class Persona {
+  constructor(nombre) {
+    this._nombre = nombre; // Se utiliza una convención con "_"
+  }
+
+  // Setter para establecer el nombre
+  set nombre(nuevoNombre) {
+    this._nombre = nuevoNombre;
+  }
+
+  // Getter para obtener el nombre
+  get nombre() {
+    return this._nombre;
+  }
+}
+
+// Crear una instancia de la clase Persona
+const persona = new Persona('Juan');
+
+// Acceder al getter para obtener el nombre
+console.log(persona.nombre); // Imprime: Juan
+
+// Utilizar el setter para asignar un nuevo nombre
+persona.nombre = 'María';
+
+// Acceder al getter nuevamente para obtener el nombre actualizado
+console.log(persona.nombre); // Imprime: María
+```
+
+En este ejemplo:
+
+- Se define un setter `nombre` dentro de la clase `Persona`, el cual asigna el valor del parámetro `nuevoNombre` a la propiedad `_nombre`.
+
+- Al intentar asignar un valor a `persona.nombre`, el setter se invoca automáticamente y asigna el valor proporcionado a la propiedad `_nombre`.
+
+- Se utiliza un getter `nombre` para obtener el valor actual de la propiedad `_nombre`.
+
+Los setters son útiles para controlar o validar los valores que se asignan a las propiedades de un objeto antes de realizar la asignación. Permiten agregar lógica adicional, como validaciones o transformaciones de datos, antes de asignar un nuevo valor a una propiedad. Esto proporciona un mayor control sobre los datos y su manipulación en un objeto.

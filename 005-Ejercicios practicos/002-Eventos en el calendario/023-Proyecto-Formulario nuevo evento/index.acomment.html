@@ -1,0 +1,16 @@
+El código HTML proporcionado ha experimentado cambios notables con respecto a la versión anterior. Ahora incluye nuevos elementos dentro del contenedor del calendario y del fondo del modal. A continuación, se detalla cada uno de los cambios:
+
+1. **Nuevos elementos agregados al fondo del modal:**
+    - Se han añadido varios elementos `input` dentro del `div` con ID `jvventanamodal`. Estos elementos `input` tienen diferentes tipos, lo que les confiere diferentes funcionalidades y tipos de entrada al usuario:
+        - `<input type="date" id="jvfecha">`: Un campo para seleccionar una fecha.
+        - `<input type="text" id="jvnombre">`: Un campo de texto para introducir un nombre.
+        - `<input type="color" id="jvcolor">`: Un campo de selección de color.
+        - `<input type="time" id="jvhora">`: Un campo para seleccionar una hora.
+
+2. **Propósito de los nuevos elementos:**
+    - Estos nuevos elementos de entrada (`input`) parecen estar destinados a permitir al usuario ingresar información relacionada con una fecha, nombre, color y hora en relación con el evento seleccionado en el calendario. Por ejemplo, el usuario puede estar destinado a introducir la fecha y hora de un evento, su nombre y un código de color asociado.
+
+3. **Relación con el calendario y el modal:**
+    - Los elementos añadidos (`input`) están ubicados dentro del contenedor del modal (`#jvventanamodal`) que ya existía en la estructura. Esto sugiere que estos campos de entrada (`input`) están vinculados al modal que se muestra cuando se hace clic en un día del calendario (`#jvcalendario`) y su respectivo fondo modal (`#jvfondomodal`).
+
+En resumen, los nuevos elementos `input` agregados al fondo del modal parecen ser campos de entrada para recopilar información sobre un evento específico que se relaciona con un día seleccionado en el calendario. Esto puede incluir datos como la fecha, hora, nombre y color asociado con un evento particular del calendario.

@@ -1,0 +1,31 @@
+En este código, hay una mezcla entre el uso de una propiedad privada (`#edad`) y un intento de acceder o modificar directamente una propiedad `edad` que no es privada.
+
+Aquí está la parte del código que ha sido modificada:
+
+```javascript
+class Gato {
+    #edad; 
+    constructor() {
+        this.#edad = 0;
+    }
+    maulla() {
+        return("El gato está maullando");
+    }
+    dameEdad() {
+        return this.#edad;
+    }
+}
+
+var Micifu = new Gato();
+console.log(Micifu.dameEdad()); // Imprime la edad privada del gato
+
+Micifu.edad = 5; // Intento de asignar un valor a una propiedad 'edad' que no existe
+console.log(Micifu.dameEdad()); // Imprime la edad privada del gato
+console.log(Micifu.maulla());
+```
+
+El código `Micifu.edad = 5;` intenta asignar un valor a una propiedad llamada `edad` que no existe directamente en la clase `Gato`. La línea `this.#edad = 0;` dentro del constructor establece la propiedad privada `#edad`, pero la línea `Micifu.edad = 5;` está intentando acceder o establecer una propiedad `edad` fuera de los límites de la clase.
+
+Como `#edad` es una propiedad privada, no se puede acceder directamente a ella desde fuera de la clase usando `Micifu.edad`. Esto no modificará ni afectará al valor de la propiedad `#edad` dentro de la clase `Gato`. Por lo tanto, la segunda impresión de `Micifu.dameEdad()` seguirá mostrando el valor original de `#edad`, que es `0`, y no `5` como se intentó asignar.
+
+En resumen, la asignación directa de `Micifu.edad = 5;` no modificará la propiedad privada `#edad` en la clase `Gato`. Las propiedades privadas no son accesibles o modificables directamente desde fuera de la clase de esta manera.

@@ -1,0 +1,32 @@
+En este código, se continúa utilizando propiedades privadas (`#edad`) en la clase `Gato`, pero se ha agregado un nuevo método llamado `ponEdad(nuevaedad)` que permite modificar el valor de la propiedad privada `#edad`.
+
+Aquí está la parte del código que se ha añadido:
+
+```javascript
+class Gato {
+    #edad; 
+    constructor() {
+        this.#edad = 0;
+    }
+    maulla() {
+        return("El gato está maullando");
+    }
+    dameEdad() {
+        return this.#edad;
+    }
+    ponEdad(nuevaedad) {
+        this.#edad = nuevaedad;
+    }
+}
+
+var Micifu = new Gato();
+console.log(Micifu.dameEdad()); // Imprime la edad privada inicial del gato
+
+Micifu.ponEdad(5); // Llama al método para cambiar la edad del gato
+console.log(Micifu.dameEdad()); // Imprime la nueva edad del gato
+console.log(Micifu.maulla()); // Imprime que el gato está maullando
+```
+
+El método `ponEdad(nuevaedad)` es un método público que permite modificar el valor de la propiedad privada `#edad` desde fuera de la clase. Al llamar a `Micifu.ponEdad(5)`, se establece un nuevo valor para `#edad`, que ahora es `5`.
+
+Esta función muestra cómo un método público en una clase puede proporcionar una forma controlada de modificar propiedades privadas, permitiendo así cambiar información interna de la clase sin exponer directamente la propiedad privada. En este caso, `ponEdad()` se utiliza para cambiar la edad del gato de manera controlada.

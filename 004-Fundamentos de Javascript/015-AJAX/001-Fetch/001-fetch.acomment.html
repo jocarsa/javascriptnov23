@@ -1,0 +1,48 @@
+El código HTML que proporcionaste incluye una etiqueta `<script>` en el elemento `<body>` que utiliza la función `fetch()` para obtener datos de un archivo llamado "datos.json". Sin embargo, en este caso, no se está manejando la respuesta obtenida de la solicitud fetch. La solicitud fetch por sí sola no realizará ninguna acción visible o procesamiento de datos a menos que se maneje la respuesta de alguna manera.
+
+```html
+<!doctype html>
+<html lang="es">
+<head>
+    <title>Aprendiendo Javascript</title>
+    <meta charset="utf-8">
+</head>
+<body>
+    
+</body>
+<script>
+    fetch("datos.json");
+</script>
+</html>
+```
+
+### Explicación de la parte JavaScript:
+
+1. ```javascript
+   fetch("datos.json");
+   ```
+
+   - `fetch()` es una función incorporada de JavaScript que se utiliza para realizar solicitudes HTTP. En este caso, se está haciendo una solicitud GET al archivo "datos.json" ubicado en el mismo directorio que el archivo HTML.
+
+Sin embargo, es importante mencionar que la función `fetch()` devuelve una Promise, la cual necesita ser manejada para obtener y utilizar los datos obtenidos en la respuesta. La forma más común de manejar la respuesta de `fetch()` es encadenar métodos `.then()` y `.catch()` para procesar la respuesta o manejar errores respectivamente. Por ejemplo:
+
+```javascript
+fetch("datos.json")
+  .then(response => {
+    if (!response.ok) {
+      throw new Error("Error en la solicitud");
+    }
+    return response.json(); // Convierte la respuesta a JSON
+  })
+  .then(data => {
+    // Hacer algo con los datos obtenidos (data)
+    console.log(data); // Mostrar los datos en la consola por ejemplo
+  })
+  .catch(error => {
+    console.error("Error: ", error);
+  });
+```
+
+Este código manejará la respuesta de la solicitud fetch, convirtiendo la respuesta a formato JSON si es exitosa y mostrando los datos en la consola. También maneja cualquier error que pueda ocurrir durante la solicitud.
+
+En resumen, el fragmento de código que contiene `fetch("datos.json")` inicia una solicitud HTTP GET para obtener datos del archivo "datos.json", pero para utilizar los datos obtenidos, se necesitará manejar la respuesta usando métodos como `.then()` y `.catch()`.

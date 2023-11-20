@@ -1,0 +1,7 @@
+En el código proporcionado, estás utilizando un bucle `for` para iterar de 0 a 9, y dentro de ese bucle estás declarando una variable `loqueocurreenlasvegas` con `var`.
+
+A pesar de que la variable `loqueocurreenlasvegas` se declara dentro del bucle `for`, debido a que se utiliza la palabra clave `var`, su alcance no está limitado al bloque del bucle `for`. En JavaScript, las variables declaradas con `var` tienen un alcance de función o global, no un alcance de bloque.
+
+En este caso, la variable `loqueocurreenlasvegas` se declara dentro del bucle `for`, pero debido a la palabra clave `var`, su ámbito se eleva al ámbito de la función más cercana, que en este caso es el ámbito global. Por lo tanto, la variable `loqueocurreenlasvegas` será accesible fuera del bucle `for`, y podrás acceder a ella y mostrar su valor en la consola con el `console.log` que está fuera del bucle.
+
+En resumen, la variable `loqueocurreenlasvegas` declarada con `var` dentro del bucle `for` será visible y accesible fuera del bucle debido a su ámbito de función o global, y el `console.log` mostrará su valor correctamente.

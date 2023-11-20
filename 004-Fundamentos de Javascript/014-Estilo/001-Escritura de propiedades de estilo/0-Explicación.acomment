@@ -1,0 +1,65 @@
+Claro, la propiedad `.style` en JavaScript permite acceder y modificar directamente las propiedades de estilo CSS de un elemento HTML específico. Esta propiedad es parte del objeto del DOM y proporciona acceso directo a las reglas de estilo aplicadas a un elemento.
+
+### Acceso y modificación de propiedades CSS con `.style`:
+
+1. **Accediendo a una propiedad de estilo:**
+
+   ```javascript
+   // Obtener un elemento del DOM
+   const miElemento = document.getElementById('miElemento');
+
+   // Acceder y obtener una propiedad de estilo existente
+   const colorTexto = miElemento.style.color;
+   console.log(colorTexto); // Muestra el color del texto aplicado al elemento
+   ```
+
+2. **Modificando propiedades de estilo:**
+
+   ```javascript
+   // Obtener un elemento del DOM
+   const miElemento = document.getElementById('miElemento');
+
+   // Modificar una propiedad de estilo
+   miElemento.style.backgroundColor = 'blue';
+   miElemento.style.fontSize = '18px';
+   ```
+
+### Algunos aspectos a tener en cuenta:
+
+- La propiedad `.style` te permite acceder a estilos en línea o aquellos que se establecen directamente en el atributo `style` del elemento HTML.
+- Los nombres de las propiedades en JavaScript son camelCase (por ejemplo, `backgroundColor` en lugar de `background-color`).
+- La asignación de valores se hace como si fuera un objeto JavaScript, usando el formato `propiedadCamelCase = 'valor';`.
+
+### Ejemplo completo:
+
+HTML:
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Manipulación de estilos con JavaScript</title>
+    <style>
+        /* Estilos adicionales en hoja de estilos CSS */
+        #miElemento {
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div id="miElemento">Elemento con estilos dinámicos</div>
+
+    <script>
+        // Acceder al elemento y modificar sus estilos
+        const miElemento = document.getElementById('miElemento');
+        miElemento.style.backgroundColor = 'lightblue';
+        miElemento.style.fontSize = '20px';
+    </script>
+</body>
+</html>
+```
+
+Este ejemplo muestra cómo el JavaScript accede al elemento con ID `miElemento` y modifica dinámicamente algunos de sus estilos utilizando la propiedad `.style`.
+
+Recuerda que aunque es útil para cambios dinámicos, se recomienda usar clases CSS y manipular el atributo `class` para cambios más amplios y estructurados en la presentación.

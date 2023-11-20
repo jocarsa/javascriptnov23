@@ -1,0 +1,38 @@
+El código que muestras presenta una diferencia clave en el uso de propiedades privadas en las clases de JavaScript. La principal novedad en el primer código es el uso del identificador `#` para declarar una propiedad privada en la clase `Gato`. Esto se introdujo en ECMAScript 2020 (también conocido como ES11) como una forma de crear propiedades privadas en las clases.
+
+Aquí está la sección del código donde se utiliza una propiedad privada en el primer ejemplo:
+
+```javascript
+class Gato {
+    #edad; 
+    constructor() {
+        this.#edad = 0;
+    }
+    maulla() {
+        return("El gato está maullando");
+    }
+}
+
+var Micifu = new Gato();
+console.log(Micifu.edad); // Esto dará como resultado undefined porque #edad es privada
+console.log(Micifu.maulla());
+```
+
+En el segundo ejemplo, se utiliza `this.edad = 0;` para definir la propiedad `edad` directamente en la clase `Gato`. En este caso, la propiedad `edad` es pública y accesible desde fuera de la clase.
+
+```javascript
+class Gato {
+    constructor() {
+        this.edad = 0;
+    }
+    maulla() {
+        return("El gato está maullando");
+    }
+}
+
+var Micifu = new Gato();
+console.log(Micifu.edad); // Esto dará como resultado 0 ya que edad es una propiedad pública
+console.log(Micifu.maulla());
+```
+
+En resumen, la diferencia principal entre estos dos códigos radica en el uso de propiedades privadas (mediante el uso de `#`) en el primer código y propiedades públicas en el segundo. Las propiedades privadas están destinadas a ser accedidas únicamente desde dentro de la clase en la que se definen, mientras que las propiedades públicas son accesibles desde fuera de la clase.

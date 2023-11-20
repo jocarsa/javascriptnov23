@@ -1,0 +1,10 @@
+Comparando los estilos proporcionados anteriormente con la última actualización que has dado, las diferencias se encuentran en la inclusión del estilo `display: none;` en la regla `#jvfondomodal`. Esta propiedad tiene un efecto directo en la visibilidad inicial del fondo del modal en la página.
+
+Aquí está la diferencia específica:
+
+- **`#jvfondomodal`:**
+    - Se ha agregado `display: none;` a esta regla. Esta propiedad CSS oculta el elemento con el ID `jvfondomodal` de forma predeterminada, lo que significa que, al principio, este fondo modal no será visible en la página.
+  
+Esta adición de `display: none;` probablemente indica que el fondo del modal está inicialmente oculto al cargar la página y luego se muestra dinámicamente utilizando JavaScript cuando se activa el modal.
+
+El resto de los estilos en el fragmento CSS permanecen sin cambios en comparación con la versión anterior que compartiste.

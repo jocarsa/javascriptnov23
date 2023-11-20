@@ -1,0 +1,39 @@
+Los getters son funciones especiales en JavaScript que se utilizan para obtener el valor de una propiedad específica de un objeto. Estas funciones se definen dentro de la estructura de un objeto y permiten acceder a una propiedad como si fuera un atributo directo, ejecutando lógica adicional si es necesario antes de devolver el valor.
+
+### Características principales de los getters:
+
+1. **Definición de getter**: Un getter es una función definida dentro de un objeto utilizando la palabra clave `get` seguida del nombre de la propiedad que se quiere "obtener".
+
+2. **Acceso a propiedades**: Los getters se invocan automáticamente cuando se intenta acceder a la propiedad correspondiente del objeto.
+
+3. **No hay paréntesis**: Al acceder a un getter, no se utilizan paréntesis como lo harías al llamar a una función, sino que se accede directamente a la propiedad.
+
+### Ejemplo de uso de getters en JavaScript:
+
+```javascript
+class Persona {
+  constructor(nombre, apellido) {
+    this.nombre = nombre;
+    this.apellido = apellido;
+  }
+
+  // Getter para obtener el nombre completo
+  get nombreCompleto() {
+    return `${this.nombre} ${this.apellido}`;
+  }
+}
+
+// Crear una instancia de la clase Persona
+const persona = new Persona('Juan', 'Pérez');
+
+// Acceder al getter para obtener el nombre completo
+console.log(persona.nombreCompleto); // Imprime: Juan Pérez
+```
+
+En este ejemplo:
+
+- Se define un getter `nombreCompleto` dentro de la clase `Persona`, el cual concatena las propiedades `nombre` y `apellido` para devolver el nombre completo de la persona.
+
+- Al intentar acceder a `persona.nombreCompleto`, el getter se invoca automáticamente y devuelve el valor resultante de la concatenación de las propiedades `nombre` y `apellido`.
+
+Los getters son útiles para realizar cálculos o manipulaciones en los valores de las propiedades antes de devolverlos. Permiten un acceso controlado a los datos de un objeto, ya que puedes agregar lógica adicional antes de proporcionar el valor de la propiedad, lo que puede ser útil para validar datos o realizar operaciones específicas al acceder a ciertos valores.

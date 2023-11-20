@@ -1,0 +1,46 @@
+La validación en los métodos `get` (getters) se refiere a la aplicación de lógica para verificar o validar la información antes de devolver el valor de una propiedad en un objeto. Esta validación se realiza dentro del método `get` para asegurarse de que el valor retornado cumpla con ciertos criterios o restricciones.
+
+### Enfoques comunes para la validación en los métodos `get`:
+
+1. **Verificar límites o restricciones**: Puedes asegurarte de que el valor de la propiedad esté dentro de un rango específico o cumpla con ciertas condiciones antes de devolverlo.
+
+2. **Transformación de datos**: Puedes realizar operaciones o transformaciones en el valor antes de devolverlo. Por ejemplo, convertir una cadena de caracteres en mayúsculas o minúsculas, formatear una fecha, etc.
+
+### Ejemplo de validación en un método `get` en JavaScript:
+
+```javascript
+class Producto {
+  constructor(nombre, precio) {
+    this.nombre = nombre;
+    this._precio = precio; // Convención de "_precio" para propiedad privada
+  }
+
+  // Getter para obtener el precio
+  get precio() {
+    if (this._precio < 0) {
+      console.log("El precio no puede ser negativo. Se establecerá a 0.");
+      return 0; // Devolver un valor predeterminado en caso de que sea negativo
+    }
+    return this._precio;
+  }
+
+  // Setter para asignar un nuevo precio
+  set precio(nuevoPrecio) {
+    this._precio = nuevoPrecio;
+  }
+}
+
+// Crear una instancia de la clase Producto
+const producto = new Producto('Camisa', -20);
+
+// Acceder al getter para obtener el precio
+console.log(producto.precio); // Imprime: El precio no puede ser negativo. Se establecerá a 0. 0
+```
+
+En este ejemplo:
+
+- Se define un getter `precio` en la clase `Producto` que verifica si el precio almacenado en `_precio` es negativo. Si lo es, muestra un mensaje y devuelve un valor predeterminado de `0`.
+
+- Al intentar acceder al getter `precio` de un producto con un precio negativo (`-20`), se muestra un mensaje de validación y se devuelve el valor `0` en lugar del precio negativo.
+
+Este enfoque de validación en los métodos `get` es útil para asegurar que los datos devueltos cumplan con ciertas restricciones o condiciones, proporcionando una capa adicional de control sobre los valores de las propiedades de un objeto.

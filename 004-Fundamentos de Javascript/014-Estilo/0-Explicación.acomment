@@ -1,0 +1,65 @@
+El manejo del estilo CSS desde JavaScript se puede lograr utilizando propiedades y métodos proporcionados por el DOM (Document Object Model) para acceder y modificar elementos HTML y sus estilos asociados.
+
+Hay varias formas de manejar estilos CSS desde JavaScript:
+
+### 1. Accediendo a propiedades de estilo directamente:
+Puedes acceder a las propiedades de estilo directamente a través de la propiedad `style` de un elemento.
+
+```javascript
+// Obtener un elemento del DOM
+const miElemento = document.getElementById('miElemento');
+
+// Modificar un estilo específico
+miElemento.style.color = 'red';
+miElemento.style.fontSize = '20px';
+```
+
+### 2. Usando clases CSS:
+Puedes añadir o quitar clases CSS a un elemento para aplicar estilos predefinidos.
+
+```javascript
+// Obtener un elemento del DOM
+const miElemento = document.getElementById('miElemento');
+
+// Añadir una clase CSS
+miElemento.classList.add('miClase');
+
+// Quitar una clase CSS
+miElemento.classList.remove('otraClase');
+```
+
+### 3. Modificando el atributo `class`:
+Puedes modificar directamente el atributo `class` de un elemento para cambiar completamente su conjunto de clases.
+
+```javascript
+// Obtener un elemento del DOM
+const miElemento = document.getElementById('miElemento');
+
+// Cambiar el atributo de clase
+miElemento.className = 'nuevaClase';
+```
+
+### 4. Utilizando selectores CSS y métodos como `querySelector` y `querySelectorAll`:
+Puedes seleccionar elementos usando selectores CSS y modificar sus estilos.
+
+```javascript
+// Seleccionar un elemento con querySelector
+const miElemento = document.querySelector('.miSelector');
+
+// Modificar estilos
+miElemento.style.backgroundColor = 'blue';
+```
+
+### 5. Creando reglas CSS dinámicamente:
+Puedes crear y aplicar reglas CSS dinámicamente utilizando `insertRule` en un objeto `CSSStyleSheet`.
+
+```javascript
+// Obtener la hoja de estilos
+const hojaEstilos = document.styleSheets[0];
+
+// Crear una nueva regla CSS
+hojaEstilos.insertRule('p { color: green; }', 0);
+```
+
+### Nota importante:
+Es preferible utilizar las hojas de estilo (CSS) para definir estilos siempre que sea posible. Sin embargo, el acceso a través de JavaScript puede ser útil para cambiar estilos dinámicamente en respuesta a eventos o condiciones específicas en la aplicación web.

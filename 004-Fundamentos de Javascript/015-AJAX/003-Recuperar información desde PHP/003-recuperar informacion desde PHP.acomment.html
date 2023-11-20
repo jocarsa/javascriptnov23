@@ -1,0 +1,41 @@
+Claro, en el código que has proporcionado, las novedades principales se centran en el uso de `fetch()` para realizar una solicitud a un archivo PHP y luego procesar la respuesta esperada como JSON. Aquí está la explicación de las novedades:
+
+```html
+<!doctype html>
+<html lang="es">
+<head>
+    <title>Aprendiendo Javascript</title>
+    <meta charset="utf-8">
+</head>
+<body>
+    
+</body>
+<script>
+    fetch("datos.php")
+    .then(response => {
+        return response.json();
+    })
+    .then(midatos => {
+        console.log(midatos);
+    })
+</script>
+</html>
+```
+
+### Explicación de las novedades:
+
+1. **Solicitud a un archivo PHP utilizando `fetch()`:**
+
+   - En este caso, `fetch("datos.php")` realiza una solicitud al archivo PHP llamado "datos.php". La solicitud puede ser de cualquier tipo (GET, POST, etc.), y `fetch()` se encarga de realizar la solicitud y obtener la respuesta.
+
+2. **Tratamiento de la respuesta como JSON:**
+
+   - Similar al uso anterior de `fetch()`, se encadenan métodos `.then()` para manejar la respuesta de la solicitud. El primer `.then()` se utiliza para tratar la respuesta esperada como un archivo JSON.
+
+   - `response.json()` convierte la respuesta del archivo PHP en un objeto JavaScript si la respuesta es un JSON válido. Esto es útil para manipular los datos obtenidos del servidor PHP.
+
+3. **Manejo de los datos obtenidos:**
+
+   - El segundo `.then()` maneja los datos convertidos, los cuales se han asignado a la variable `midatos`. En este caso, simplemente se imprime en la consola utilizando `console.log(midatos)`.
+
+En resumen, estas novedades muestran cómo `fetch()` puede ser utilizado para realizar solicitudes a un archivo PHP y cómo se maneja la respuesta esperada como JSON. Esta es una técnica comúnmente utilizada para interactuar con servidores que devuelven datos en formato JSON, permitiendo su procesamiento y manipulación en aplicaciones web.
