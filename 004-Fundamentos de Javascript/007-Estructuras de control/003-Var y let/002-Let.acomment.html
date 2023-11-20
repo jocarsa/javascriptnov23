@@ -1,0 +1,7 @@
+En el código que proporcionaste, estás utilizando la palabra clave `let` para declarar la variable `loqueocurreenlasvegas` dentro de un bucle `for`. Es importante destacar que `let` tiene un alcance de bloque en JavaScript.
+
+Dentro de la estructura del bucle `for` que utilizas, has declarado `loqueocurreenlasvegas` con `let`. Esto significa que su alcance está limitado al bloque del bucle `for`. Fuera de ese bloque, la variable `loqueocurreenlasvegas` no estará disponible.
+
+Cuando intentas acceder a `loqueocurreenlasvegas` fuera del bucle, específicamente con `console.log(loqueocurreenlasvegas)`, recibirás un error. Esto se debe a que intentas acceder a una variable que fue declarada con `let` y su alcance está restringido al bloque del bucle `for`. Fuera de ese bloque, la variable no es visible o accesible.
+
+En resumen, debido al alcance de bloque de `let`, la variable `loqueocurreenlasvegas` solo será visible y accesible dentro del bloque del bucle `for`, y cualquier intento de acceder a ella fuera de ese bloque resultará en un error.

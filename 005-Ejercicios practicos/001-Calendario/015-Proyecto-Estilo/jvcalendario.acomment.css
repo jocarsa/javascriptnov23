@@ -1,0 +1,25 @@
+El código CSS proporcionado tiene algunas novedades respecto al código inicial:
+
+1. **Cambios en el tamaño del contenedor #jvcalendario**:
+   - Anteriormente: `width: 800px; height: 800px;`
+   - Actualmente: `width: 714px; height: 800px;`
+   - Esto significa que el contenedor `#jvcalendario` ahora tiene un ancho de 714 píxeles en lugar de 800 píxeles, lo que puede resultar en un cambio en la distribución y el diseño de los elementos dentro de este contenedor. La altura permanece igual a 800 píxeles.
+
+2. **Cambios en la fuente del contenedor #jvcalendario**:
+   - Se ha añadido la propiedad `font-family: sans-serif;` al contenedor `#jvcalendario`. Esto especifica que se debe utilizar una fuente sans-serif genérica para el texto dentro de este contenedor.
+
+3. **Estilos añadidos al elemento #jvcabecera dentro de #jvcalendario**:
+   - `text-align: right;` alinea el texto del elemento `#jvcabecera` a la derecha.
+   - `font-size: 48px;` establece el tamaño del texto en 48 píxeles.
+   
+4. **Estilos añadidos a los botones dentro de #jvcabecera**:
+   - `border: 0px;` elimina los bordes de los botones.
+   - `background: grey;` establece un color de fondo gris para los botones.
+   - `border-radius: 40px;` aplica un radio de borde redondeado de 40 píxeles para dar forma circular a los botones.
+   - `color: white;` establece el color del texto en blanco.
+   - `width: 48px; height: 48px;` establece el ancho y el alto de los botones en 48 píxeles.
+   - `font-size: 40px;` define el tamaño del texto en 40 píxeles.
+   - `line-height: 48px;` ajusta la altura de línea para centrar verticalmente el texto en los botones.
+   - `position: relative; bottom: 5px;` mueve los botones 5 píxeles hacia arriba desde su posición original.
+
+Estos cambios afectarán la apariencia y el diseño del elemento `#jvcalendario` y sus elementos secundarios, como los botones y el texto dentro del contenedor. Las modificaciones en el tamaño, la fuente y los estilos de los elementos pueden influir en la disposición y el aspecto visual de la interfaz de usuario.

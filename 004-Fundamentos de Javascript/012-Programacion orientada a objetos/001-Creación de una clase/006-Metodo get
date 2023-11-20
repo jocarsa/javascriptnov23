@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <title>Aprendiendo Javascript</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        
+    </body>
+    <script>
+        class Gato{
+            #edad; 
+            constructor(){
+                this.#edad = 0;
+            }
+            maulla(){
+                return("El gato está maullando");
+            }
+        }
+        
+        var Micifu = new Gato();
+        console.log(Micifu.edad)
+        console.log(Micifu.maulla());
+    </script>
+</html>

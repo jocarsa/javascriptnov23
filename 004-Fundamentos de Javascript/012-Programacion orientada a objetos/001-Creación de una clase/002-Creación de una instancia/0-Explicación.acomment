@@ -1,0 +1,41 @@
+La creación de instancias se refiere al proceso de generar un objeto específico basado en una plantilla o molde, que se define a través de una clase en el contexto de la programación orientada a objetos. En JavaScript, la creación de instancias se realiza mediante la palabra clave `new` seguida del nombre de la clase.
+
+### Pasos para la creación de instancias:
+
+1. **Definición de una clase**: Define una clase que actúa como una plantilla para crear objetos con propiedades y métodos comunes.
+
+2. **Uso de la palabra clave `new`**: Utiliza la palabra clave `new` seguida del nombre de la clase para crear una nueva instancia u objeto basado en esa plantilla.
+
+3. **Inicialización de la instancia**: Si la clase tiene un constructor, este se ejecutará al crear la instancia para inicializar las propiedades del objeto.
+
+### Ejemplo de creación de instancia en JavaScript:
+
+```javascript
+// Definición de una clase
+class Persona {
+  constructor(nombre, edad) {
+    this.nombre = nombre;
+    this.edad = edad;
+  }
+
+  saludar() {
+    return `Hola, soy ${this.nombre} y tengo ${this.edad} años.`;
+  }
+}
+
+// Creación de una instancia u objeto de la clase Persona
+const persona1 = new Persona('Juan', 30);
+const persona2 = new Persona('María', 25);
+
+// Acceso a propiedades y métodos de las instancias
+console.log(persona1.nombre); // Imprime: Juan
+console.log(persona2.saludar()); // Imprime: Hola, soy María y tengo 25 años.
+```
+
+En este ejemplo:
+
+- La clase `Persona` actúa como una plantilla para crear objetos que tienen propiedades como `nombre` y `edad`, así como el método `saludar`.
+- Se crean dos instancias (`persona1` y `persona2`) utilizando la palabra clave `new`, cada una con sus propios valores para `nombre` y `edad`.
+- Se accede a las propiedades (`nombre`) y al método (`saludar()`) de las instancias creadas.
+
+La creación de instancias es fundamental en la programación orientada a objetos, ya que permite crear múltiples objetos basados en una misma clase, con cada uno manteniendo su propio estado y comportamiento.
