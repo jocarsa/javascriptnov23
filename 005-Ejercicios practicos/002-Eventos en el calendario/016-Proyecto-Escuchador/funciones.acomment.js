@@ -1,4 +1,4 @@
-En la nueva actualización del código en la función `presentaCalendario`, se han agregado algunas funcionalidades nuevas. Veamos las modificaciones y las nuevas funcionalidades agregadas en comparación con el código original:
+En la nueva actualización del código en la función `presentaCalendario`, se han agregado algunas funcionalidades nuevas. Veamos las modificaciones y las nuevas funcionalidades agregadas en comparación con el código original:  
 
 1. **Adición de interactividad con los días del calendario:**
    - Se ha añadido un evento de clic (`onclick`) para cada día del calendario creado.
